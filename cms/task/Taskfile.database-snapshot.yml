@@ -26,6 +26,6 @@ tasks:
   deploy:
     desc: Export, build, and push the database snapshot image.
     cmds:
-      - task: database-snapshot:export
-      - task: database-snapshot:build
-      - task: database-snapshot:push
+      - task: export
+      - task: build
+      - task: push
