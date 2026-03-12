@@ -18,6 +18,9 @@ jobs:
   create_npm_package:
     name: Design / Create and Release NPM package
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     defaults:
       run:

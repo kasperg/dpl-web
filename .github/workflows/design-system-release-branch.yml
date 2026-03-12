@@ -26,6 +26,9 @@ jobs:
     name: Design / Create and Release NPM package on branch changes
     uses: ./.github/workflows/design-system-npm-workflow.yml
     needs: create_release
+    permissions:
+      contents: read
+      packages: write
     with:
       npm_version: 0.0.0-${{ needs.create_release.outputs.tag_name }}
       tag_name: ${{ needs.create_release.outputs.tag_name }}

@@ -18,6 +18,9 @@ jobs:
     name: Design / Create and Release NPM package on tagging
     uses: ./.github/workflows/design-system-npm-workflow.yml
     needs: create_release
+    permissions:
+      contents: read
+      packages: write
     with:
       tag_name: ${{ github.ref_name }}
       npm_version: ${{ github.ref_name }}
