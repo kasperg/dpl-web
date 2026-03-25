@@ -12,7 +12,10 @@ COPY composer.* /app/
 COPY assets /app/assets
 COPY packages /app/packages
 COPY patches /app/patches
-RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev
+# In CI/dev, /app is volume-mounted from the host so baked-in vendor is hidden.
+# Skip composer install there to avoid wasted build time.
+ARG SKIP_COMPOSER_INSTALL=false
+RUN if [ "$SKIP_COMPOSER_INSTALL" != "true" ]; then COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev; fi
 COPY . /app
 RUN mkdir -p -v -m775 /app/web/sites/default/files
 

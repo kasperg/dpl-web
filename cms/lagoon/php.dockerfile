@@ -10,7 +10,8 @@ COPY composer.* /app/
 COPY assets /app/assets
 COPY packages /app/packages
 COPY patches /app/patches
-RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev
+ARG SKIP_COMPOSER_INSTALL=false
+RUN if [ "$SKIP_COMPOSER_INSTALL" != "true" ]; then COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev; fi
 COPY . /app
 RUN mkdir -p -v -m775 /app/web/sites/default/files
 
