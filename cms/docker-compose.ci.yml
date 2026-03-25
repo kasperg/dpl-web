@@ -53,8 +53,8 @@ services:
 
   cli:
     build:
-      context: .
-      dockerfile: lagoon/cli.ci.dockerfile
+      args:
+        SKIP_COMPOSER_INSTALL: "true"
     links: *links
     environment:
       CI: true
@@ -62,13 +62,13 @@ services:
 
   nginx:
     build:
-      context: .
-      dockerfile: lagoon/nginx.ci.dockerfile
+      args:
+        SKIP_COMPOSER_INSTALL: "true"
 
   php:
     build:
-      context: .
-      dockerfile: lagoon/php.ci.dockerfile
+      args:
+        SKIP_COMPOSER_INSTALL: "true"
     depends_on:
       - wiremock
     links: *links
