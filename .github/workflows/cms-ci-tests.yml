@@ -16,6 +16,41 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  BuildImages:
+    name: CMS / Build Docker images
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    defaults:
+      run:
+        working-directory: cms
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Build images
+        run: docker compose -f docker-compose.yml -f docker-compose.ci.yml build
+      - name: Add dev dependencies to CLI image
+        run: |
+          docker run --name cli-dev cms-cli composer install --no-interaction --no-progress
+          docker commit cli-dev cms-cli
+          docker rm cli-dev
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Tag and push images to GHCR
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker tag cms-${service} ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker push ${REGISTRY}/dpl-cms-${service}:${TAG}
+          done
+
   ValidateComposer:
     name: CMS / Validate Composer
     runs-on: ubuntu-latest
@@ -30,6 +65,15 @@ jobs:
           php-version: ${{ env.PHP_VERSION }}
           coverage: none
           tools: composer:${{ env.COMPOSER_VERSION }}
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ hashFiles('cms/composer.lock') }}
+          restore-keys: composer-
       - name: Validate composer.json
         run: |
           composer validate --no-check-all --no-check-publish
@@ -54,6 +98,15 @@ jobs:
         tools: composer:${{ env.COMPOSER_VERSION }}, cs2pr
         coverage: none
         extensions: gd
+    - name: Get Composer cache directory
+      id: composer-cache
+      run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+    - name: Cache Composer packages
+      uses: actions/cache@v4
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: composer-${{ hashFiles('cms/composer.lock') }}
+        restore-keys: composer-
     - name: Install Dependencies
       run: |
         composer install --no-interaction --no-progress
@@ -76,6 +129,15 @@ jobs:
           tools: composer:${{ env.COMPOSER_VERSION }}
           coverage: none
           extensions: gd
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ hashFiles('cms/composer.lock') }}
+          restore-keys: composer-
       - name: Install Dependencies
         run: |
           composer install --no-interaction --no-progress
@@ -97,6 +159,15 @@ jobs:
           php-version: ${{ env.PHP_VERSION }}
           coverage: none
           tools: composer:${{ env.COMPOSER_VERSION }}
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ hashFiles('cms/composer.lock') }}
+          restore-keys: composer-
       - name: Install composer dependencies
         run: |
           composer install --no-interaction --no-progress
@@ -121,6 +192,15 @@ jobs:
           tools: composer:${{ env.COMPOSER_VERSION }}
           coverage: xdebug
           extensions: gd
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ hashFiles('cms/composer.lock') }}
+          restore-keys: composer-
       - name: Install Dependencies
         run: |
           composer install --no-interaction --no-progress
@@ -129,6 +209,7 @@ jobs:
 
   LightHouse:
     name: CMS / Test site performance using Lighthouse
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -139,12 +220,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Run Lighthouse test
         run: task ci:lighthouse
       - name: Archive logs
@@ -155,6 +254,7 @@ jobs:
 
   Pa11y:
     name: CMS / Test accessibility using Pa11y
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -165,12 +265,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Run Pa11y
         run: task ci:pa11y
       - name: Archive screenshots
@@ -182,6 +300,7 @@ jobs:
 
   CypressMapped:
     name: CMS / Run Cypress mapped functional tests
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -192,12 +311,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Run Cypress
         run: task ci:cypress:mapped
       - name: Archive videoes
@@ -215,6 +352,7 @@ jobs:
 
   CypressUnmapped:
     name: CMS / Run Cypress unmapped functional tests
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -225,12 +363,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Run Cypress
         run: task ci:cypress:unmapped
       - name: Archive videoes
@@ -248,6 +404,7 @@ jobs:
 
   CypressWebmaster:
     name: CMS / Run Cypress webmaster functional tests
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -258,12 +415,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Run Cypress
         run: task ci:cypress:webmaster
       - name: Archive videoes
@@ -373,6 +548,7 @@ jobs:
 
   CheckOpenApiSpec:
     name: CMS / Check OpenAPI specification
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -383,12 +559,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Validate specification
         run: task ci:openapi:validate
       - name: Download current specification
@@ -402,6 +596,7 @@ jobs:
 
   CheckGraphQlSchema:
     name: CMS / Check GraphQL specification
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -412,6 +607,21 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
@@ -420,6 +630,9 @@ jobs:
         run: task dev:bnf:enable
       - name: Setup site
         run: task ci:reset:clean
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Extract GraphQL schema and generate client
         run: task dev:codegen:bnf-graphql
       - name: Ensure GraphQL client code has not drifted
@@ -427,6 +640,7 @@ jobs:
 
   CheckDrupalConfig:
     name: CMS / Check Drupal Config
+    needs: [BuildImages]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -437,12 +651,30 @@ jobs:
           # Our Taskfile requires a proper checkout to function because of
           # certain vars.
           fetch-depth: 0
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull pre-built images
+        env:
+          TAG: ci-${{ github.sha }}
+          REGISTRY: ghcr.io/${{ github.repository_owner }}
+        run: |
+          for service in cli php nginx varnish node-chrome; do
+            docker pull ${REGISTRY}/dpl-cms-${service}:${TAG}
+            docker tag ${REGISTRY}/dpl-cms-${service}:${TAG} cms-${service}
+          done
       - name: Install go-task
         uses: arduino/setup-task@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup site
         run: task ci:reset
+        env:
+          SKIP_DOCKER_BUILD: "true"
+          SKIP_COMPOSER_INSTALL: "true"
       - name: Export configuration
         run: task dev:cli -- drush config-export -y
       - name: Check for uncommited configuration after install
