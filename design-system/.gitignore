@@ -34,3 +34,8 @@ storybook-static
 
 #zipped files generated when using dapple. 
 dist.zip
+build-storybook.log
+
+# Visual regression testing
+__visual_snapshots__
+__visual_report__
