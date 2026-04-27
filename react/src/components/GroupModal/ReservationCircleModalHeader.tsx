@@ -24,8 +24,8 @@ const ReservationCircleModalHeader: FC<ReservationCircleModalHeaderProps> = ({
         </span>
       </StatusCircleIcon>
       <div>
-        <h2 className="modal-loan__title text-header-h2">{header}</h2>
-        <p className="text-body-medium-regular color-secondary-gray mt-4" />
+        <h2 className="modal-loan__title">{header}</h2>
+        <p className="modal-loan__subtitle" />
       </div>
     </>
   );

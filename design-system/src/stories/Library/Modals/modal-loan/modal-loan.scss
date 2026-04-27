@@ -4,7 +4,19 @@
   width: 100%;
 
   &__title {
+    @include typography($typo__h2);
     padding-right: $s-xl;
+  }
+
+  &__subtitle {
+    @include typography($typo__body-placeholder);
+    color: $color__text-secondary-gray;
+    margin-top: $s-xs;
+  }
+
+  &__warning {
+    margin-top: 48px;
+    margin-bottom: 48px;
   }
 
   @include media-query__small {

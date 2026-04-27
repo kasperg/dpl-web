@@ -25,7 +25,7 @@ const FeeDetailsContent: FC<FeeDetailsContentProps> = ({ feeDetailsData }) => {
     <div className="modal-loan__container">
       <div className="modal-loan__header">
         <div>
-          <h2 className="modal-loan__title text-header-h2">
+          <h2 className="modal-loan__title">
             {t("turnedInText", {
               placeholders: { "@date": creationDateFormatted }
             })}

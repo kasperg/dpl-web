@@ -26,7 +26,7 @@ const StatusCircleModalHeader: FC<StatusCircleModalHeaderProps> = ({
       <div className="modal-loan__header">
         <div className="mr-32">{statusCircleComponent}</div>
         <div>
-          <h2 className="modal-loan__title text-header-h2">{header}</h2>
+          <h2 className="modal-loan__title">{header}</h2>
           {subHeader && <div className="text-body-large">{subHeader}</div>}
         </div>
       </div>
