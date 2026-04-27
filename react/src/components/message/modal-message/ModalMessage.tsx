@@ -32,7 +32,7 @@ const ModalMessage: FC<ModalMessageProps> = React.forwardRef((props) => {
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...messageProps}
       />
-      <div className="modal-cta__buttons mt-48">
+      <div className="modal-cta__buttons">
         {ctaButton && (
           <Button
             dataCy={ctaButton.dataCy ?? "modal-cta-button"}

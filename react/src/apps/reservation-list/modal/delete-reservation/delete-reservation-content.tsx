@@ -33,7 +33,7 @@ const DeleteReservationContent: FC<
           count: reservationsCount
         })}
       </h2>
-      <div className="mt-48 color-secondary-gray">
+      <div className="modal-cta__description">
         <p className="text-body-medium-regular">
           {t("deleteReservationModalDeleteQuestionText", {
             count: reservationsCount

@@ -27,11 +27,11 @@ const AcceptModal: FC<AcceptModalProps> = ({ accept }) => {
     >
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{t("acceptModalHeaderText")}</h2>
-        <div className="mt-48 color-secondary-gray">
+        <div className="modal-cta__description">
           <p className="text-body-medium-regular">{t("acceptModalBodyText")}</p>
           <p className="text-links mt-24">{t("acceptModalAreYouSureText")}</p>
         </div>
-        <div className="modal-cta__buttons mt-48">
+        <div className="modal-cta__buttons">
           <Button
             label={t("acceptModalCancelButtonText")}
             buttonType="none"
