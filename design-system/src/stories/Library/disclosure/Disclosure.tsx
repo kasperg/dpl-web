@@ -27,10 +27,10 @@ const Disclosure: React.FC<DisclosureProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   return (
-    <details className={clsx("disclosure text-body-large")} open={defaultOpen}>
+    <details className="disclosure" open={defaultOpen}>
       <summary
         className={clsx(
-          "disclosure__headline text-body-large",
+          "disclosure__headline",
           removeHeadlinePadding && "disclosure__headline--no-padding",
         )}
         onClick={() => {
@@ -38,7 +38,7 @@ const Disclosure: React.FC<DisclosureProps> = ({
         }}
       >
         {!withAvailability && icon && (
-          <div className="disclosure__icon bg-identity-tint-120">
+          <div className="disclosure__icon">
             <img
               className="invert"
               src={`icons/collection/${icon}.svg`}
@@ -48,7 +48,7 @@ const Disclosure: React.FC<DisclosureProps> = ({
         )}
         <Heading
           level={headingLevel}
-          className={`text-body-large disclosure__text ${
+          className={`disclosure__text ${
             withAvailability ? "disclosure__text--shorter" : ""
           }`}
         >
@@ -58,12 +58,13 @@ const Disclosure: React.FC<DisclosureProps> = ({
           <AvailabilityLabel availability="Hjemme" status="available" />
         )}
         <ExpandMoreIcon
-          className={`disclosure__expand noselect ${
+          className={`disclosure__expand ${
             isOpen ? "disclosure__expand-open" : ""
           }`}
         />
       </summary>
       {contentPadding ? (
+        // eslint-disable-next-line local-rules/single-bem-block
         <div className="disclosure__content-padding rich-text">{children}</div>
       ) : (
         children

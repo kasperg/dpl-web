@@ -19,7 +19,7 @@ const Disclosure: FC<DisclosureProps> = ({
 }) => {
   return (
     <details
-      className={clsx("disclosure text-body-large", className)}
+      className={clsx("disclosure", className)}
       open={open}
       data-cy={dataCy}
     >
