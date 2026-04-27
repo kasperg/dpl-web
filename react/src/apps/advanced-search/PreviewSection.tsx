@@ -42,19 +42,19 @@ const PreviewSection: React.FC<PreviewSectionProps> = ({
       })}
     >
       <div className="pagefold-triangle--large pagefold-inherit-parent" />
-      <h3 className="text-body-medium-medium mb-24 capitalize-first">
+      <h3 className="input-and-preview__heading">
         {t("advancedSearchPreviewHeadlineText")}
       </h3>
       <p
         data-cy={`${dataCy}-preview`}
-        className="text-body-medium-regular mb-32"
+        className="input-and-preview__text"
       >
         {translatedCql || t("advancedSearchPreviewEmptyText")}
       </p>
       <section>
         <button
           type="button"
-          className="link-tag mr-16 cursor-pointer capitalize-first"
+          className="input-and-preview__action cursor-pointer"
           onClick={() => reset()}
           data-cy="advanced-search-reset"
         >
@@ -63,7 +63,7 @@ const PreviewSection: React.FC<PreviewSectionProps> = ({
         {translatedCql && (
           <button
             type="button"
-            className={clsx("link-tag mr-16 capitalize-first", {
+            className={clsx("input-and-preview__action", {
               "cursor-pointer": !copiedToClipboard
             })}
             onClick={() => {

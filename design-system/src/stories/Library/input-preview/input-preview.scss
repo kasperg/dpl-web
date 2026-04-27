@@ -1,0 +1,22 @@
+.input-and-preview__heading {
+  @include typography($typo__body-medium);
+  margin-bottom: $s-lg;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.input-and-preview__text {
+  @include typography($typo__body-placeholder);
+  margin-bottom: $s-xl;
+}
+
+.input-and-preview__action {
+  @include link-tag;
+  margin-right: $s-md;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
