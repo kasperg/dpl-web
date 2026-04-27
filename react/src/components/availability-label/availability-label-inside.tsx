@@ -40,26 +40,26 @@ const AvailabilityLabelInside: React.FunctionComponent<Props> = ({
       {manifestText && (
         <>
           <p
-            className="availability-label__text text-label-semibold ml-24"
+            className="availability-label__type"
             data-cy="availability-label-type"
           >
             {manifestText}
           </p>
-          <div className="availability-label__divider ml-4" />
+          <div className="availability-label__divider" />
         </>
       )}
       <p
-        className={`availability-label__text text-label-normal ${
-          manifestText ? "ml-4" : "ml-24"
-        } mr-8`}
+        className={`availability-label__availability ${
+          !manifestText ? "availability-label__availability--first" : ""
+        }`}
         data-cy="availability-label-status"
       >
         {isLoading ? <TextLineSkeleton width={40} /> : availabilityText}
       </p>
       {quantity && (
         <>
-          <div className="availability-label--divider ml-4" />
-          <p className="text-label-normal mx-8">{quantity} stk</p>
+          <div className="availability-label__divider" />
+          <p className="availability-label__quantity">{quantity} stk</p>
         </>
       )}
     </>

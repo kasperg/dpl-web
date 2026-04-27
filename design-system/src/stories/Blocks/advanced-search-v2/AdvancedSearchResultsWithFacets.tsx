@@ -513,14 +513,14 @@ const AdvancedSearchSummary: React.FC = () => {
                     <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                     <CheckIcon className="availability-label__check" />
                     <p
-                      className="availability-label__text text-label-semibold ml-24"
+                      className="availability-label__type"
                       data-cy="availability-label-type"
                     >
                       artikel
                     </p>
-                    <div className="availability-label__divider ml-4" />
+                    <div className="availability-label__divider" />
                     <p
-                      className="availability-label__text text-label-normal ml-4 mr-8"
+                      className="availability-label__availability"
                       data-cy="availability-label-status"
                     >
                       Tilgængelig
@@ -593,14 +593,14 @@ const AdvancedSearchSummary: React.FC = () => {
                     <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                     <CheckIcon className="availability-label__check" />
                     <p
-                      className="availability-label__text text-label-semibold ml-24"
+                      className="availability-label__type"
                       data-cy="availability-label-type"
                     >
                       artikel
                     </p>
-                    <div className="availability-label__divider ml-4" />
+                    <div className="availability-label__divider" />
                     <p
-                      className="availability-label__text text-label-normal ml-4 mr-8"
+                      className="availability-label__availability"
                       data-cy="availability-label-status"
                     >
                       Tilgængelig
