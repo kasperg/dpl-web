@@ -11,7 +11,7 @@ const InstantLoanBranches: React.FunctionComponent<
     <ul className="instant-loan-branches">
       {branches.map((branch) => (
         <li>
-          <div className="instant-loan-branch cursor-pointer px-24">
+          <div className="instant-loan-branch">
             <p className="text-header-h5">{branch}</p>
             <AvailabilityLabel
               manifestationType="Bog"

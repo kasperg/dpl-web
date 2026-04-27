@@ -86,7 +86,7 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
         <p className="text-body-small-regular">
           <Links href="/" linkText={linkText} />
         </p>
-        <div className="modal-pause__button mt-48">
+        <div className="modal-pause__button">
           <Button
             buttonType="none"
             size="large"

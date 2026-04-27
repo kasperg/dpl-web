@@ -43,7 +43,7 @@ const DeleteReservationContent: FC<
           {t("deleteReservationModalNotRegrettableText")}
         </p>
       </div>
-      <div className="modal-pause__button mt-48">
+      <div className="modal-pause__button">
         <Button
           dataCy="delete-reservation-button"
           label={buttonLabel}

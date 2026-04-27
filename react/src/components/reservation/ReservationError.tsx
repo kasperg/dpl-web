@@ -48,9 +48,11 @@ const ReservationError: React.FC<ReservationErrorProps> = ({
       }}
     >
       <section className="reservation-modal reservation-modal--confirm">
-        <h2 className="text-header-h3 pb-48">{reservationErrorInfo.title}</h2>
+        <h2 className="reservation-modal__title">
+          {reservationErrorInfo.title}
+        </h2>
         {reservationErrorInfo.description && (
-          <p className="text-body-medium-regular pb-48">
+          <p className="reservation-modal__text">
             {reservationErrorInfo.description}
           </p>
         )}

@@ -19,11 +19,11 @@ const InstantLoanSummary: React.FunctionComponent<InstantLoanSummaryProps> = ({
       <div className="pagefold-triangle--small" />
       <Cover ids={[pid]} size="small" animate />
       <div>
-        <h2 className="text-header-h4 mt-22 mb-4">
+        <h2 className="instant-loan-summary__title">
           {t("instantLoanTitleText")}
         </h2>
         <p className="text-small-caption">{t("instantLoanSubTitleText")}</p>
-        <div className="instant-loan-underline mt-35">
+        <div className="instant-loan-underline">
           <p className="link-tag text-small-caption">
             {t("instantLoanUnderlineDescriptionText")}
           </p>

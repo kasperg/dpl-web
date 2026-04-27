@@ -78,7 +78,7 @@ const StatusSection: FC = () => {
               <h3 className="text-small-caption">
                 {t("patronPageStatusSectionLoanHeaderText")}
               </h3>
-              <div className="dpl-progress-bar text-small-caption color-secondary-gray">
+              <div className="dpl-progress-bar">
                 <div className="dpl-progress-bar__header">
                   <label
                     className="text-label text-body-medium-medium"
@@ -100,7 +100,7 @@ const StatusSection: FC = () => {
                     </div>
                   )}
                 </div>
-                <div className="dpl-progress-bar__progress-bar bg-global-secondary">
+                <div className="dpl-progress-bar__progress-bar">
                   {maxConcurrentEbookLoansPerBorrower !== undefined && (
                     <div
                       className="bg-identity-primary"
@@ -119,7 +119,7 @@ const StatusSection: FC = () => {
                   )}
                 </div>
               </div>
-              <div className="dpl-progress-bar text-small-caption color-secondary-gray">
+              <div className="dpl-progress-bar">
                 <div className="dpl-progress-bar__header">
                   <label
                     className="text-label"
@@ -141,7 +141,7 @@ const StatusSection: FC = () => {
                     </div>
                   )}
                 </div>
-                <div className="dpl-progress-bar__progress-bar bg-global-secondary">
+                <div className="dpl-progress-bar__progress-bar">
                   {maxConcurrentAudioLoansPerBorrower !== undefined && (
                     <div
                       role="figure"

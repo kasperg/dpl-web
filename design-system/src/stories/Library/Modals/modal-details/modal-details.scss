@@ -68,6 +68,7 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: normal;
+  @include typography($typo__h2);
 }
 
 .modal-details__buttons {

@@ -31,7 +31,7 @@ const MaterialButtonDisabled: FC<MaterialButtonDisabledProps> = ({
         dataCy={dataCy}
       />
       {reason && (
-        <p className="text-small-caption mt-16" role="alert">
+        <p className="material-header__cta-text" role="alert">
           {reason}
         </p>
       )}

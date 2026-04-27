@@ -15,7 +15,7 @@ export interface FacetLineProps {
 
 const FacetLine: FC<FacetLineProps> = ({ items }) => {
   return (
-    <ul className="facet-line mt-48">
+    <ul className="facet-line">
       {items.map(({ type, title, terms }, index) => {
         if (type === "term") {
           return (

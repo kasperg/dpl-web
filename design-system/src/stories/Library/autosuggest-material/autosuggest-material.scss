@@ -94,6 +94,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    @include typography($typo__body-medium);
   }
 
   &__author {
@@ -102,5 +103,6 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    @include typography($typo__body-small);
   }
 }

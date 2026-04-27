@@ -15,7 +15,7 @@ export const ModalHeader = (props: ModalHeaderProps) => {
       <div className="modal-header__avatar">
         <Avatar />
       </div>
-      <div className="modal-header__name text-header-h4">{headerName}</div>
+      <div className="modal-header__name">{headerName}</div>
       <Links
         href={headerLinkHref}
         linkText={headerLinkText}

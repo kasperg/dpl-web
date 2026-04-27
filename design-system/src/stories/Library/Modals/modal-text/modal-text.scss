@@ -11,10 +11,16 @@ $MODAL_TEXT_CONTAINER_WIDTH: 550px;
   padding-bottom: $s-5xl;
   max-width: $MODAL_TEXT_CONTAINER_WIDTH;
   width: 100%;
+  color: $color__text-secondary-gray;
 
   @include media-query__small {
     margin: 0 45px;
   }
+}
+
+.modal-text__subtitle {
+  margin-top: 48px;
+  @include typography($typo__body-large);
 }
 
 .modal-text__content {

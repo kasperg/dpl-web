@@ -11,6 +11,7 @@ export const InputWithDropdown: React.FC<InputWithDropdownProps> = ({
   return (
     <div className="input-with-dropdown">
       <input
+        // eslint-disable-next-line local-rules/single-bem-block
         className="input-with-dropdown__input focus-styling__input"
         type="text"
         placeholder={inputPlaceholder}

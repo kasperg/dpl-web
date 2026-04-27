@@ -83,11 +83,11 @@ const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
               <div className="autosuggest__info">
                 <div
                   lang={manifestationLanguageCode}
-                  className="text-body-medium-medium autosuggest__title"
+                  className="autosuggest__title"
                 >
                   {titles.main[0]}
                 </div>
-                <div className="text-body-small-regular autosuggest__author">
+                <div className="autosuggest__author">
                   {creatorsToString(authors, t)}
                 </div>
               </div>

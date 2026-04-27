@@ -21,9 +21,10 @@ const InstantLoanSummary: React.FunctionComponent<InstantLoanSummaryProps> = ({
       tint="120"
     />
     <div>
-      <h2 className="text-header-h4 mt-22 mb-4">{title}</h2>
+      <h2 className="instant-loan-summary__title">{title}</h2>
       <p className="text-small-caption">{subTitle}</p>
-      <div className="instant-loan-underline mt-35">
+      <div className="instant-loan-underline">
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <p className="link-tag text-small-caption">{underlineDescription}</p>
         <ExpandMoreIcon className="instant-loan-arrow" />
       </div>

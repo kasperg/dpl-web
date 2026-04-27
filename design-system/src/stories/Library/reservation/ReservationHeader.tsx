@@ -21,7 +21,7 @@ const ReservationHeader = ({
       />
       <div className="reservation-modal-description">
         <div className="reservation-modal-tag">{label}</div>
-        <h2 className="text-header-h2 mt-22 mb-8">{title}</h2>
+        <h2 className="reservation-modal-description__title">{title}</h2>
         <p className="text-body-medium-regular">{author}</p>
       </div>
     </header>

@@ -13,6 +13,20 @@
   margin: 0 auto;
 }
 
+.reservation-modal__title {
+  @include typography($typo__h3);
+  padding-bottom: 48px;
+}
+
+.reservation-modal__text {
+  @include typography($typo__body-placeholder);
+  padding-bottom: 48px;
+}
+
+.reservation-modal__text--short {
+  padding-bottom: $s-lg;
+}
+
 .reservation-modal-header {
   display: flex;
   flex-direction: column;
@@ -27,6 +41,12 @@
   @include media-query__small {
     margin-left: 42px;
   }
+}
+
+.reservation-modal-description__title {
+  @include typography($typo__h2);
+  margin-top: 22px;
+  margin-bottom: $s-sm;
 }
 
 .reservation-modal-tag {

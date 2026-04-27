@@ -19,6 +19,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    @include typography($typo__h4);
   }
 
   &__link {

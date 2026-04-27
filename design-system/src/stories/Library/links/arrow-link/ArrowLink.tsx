@@ -13,7 +13,7 @@ const ArrowLink: React.FC<ArrowLinkProps> = ({ label, className }) => {
       // eslint-disable-next-line local-rules/single-bem-block
       className={clsx("arrow arrow__hover--left-small arrow-link", className)}
     >
-      <div className="text-links arrow-link__text">{label}</div>
+      <div className="arrow-link__text">{label}</div>
       <ArrowSmallLeft />
     </a>
   );

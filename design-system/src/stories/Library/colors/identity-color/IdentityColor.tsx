@@ -150,7 +150,7 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
           By changing the HSL values it will automatically calculate the color
           tones.
         </p>
-        <p className="text-body-medium-regular mt-24">
+        <p className="internal-colors-code__description--spaced">
           In &quot;Controls&quot; within the addon panel it is possible to
           change the color with the color-picker and directly see the color
           tones being generated. This feature is only to visualize the color

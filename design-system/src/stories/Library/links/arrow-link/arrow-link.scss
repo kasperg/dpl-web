@@ -3,5 +3,6 @@
   text-decoration: none;
   &__text {
     margin-bottom: -5px;
+    @include typography($typo__links);
   }
 }

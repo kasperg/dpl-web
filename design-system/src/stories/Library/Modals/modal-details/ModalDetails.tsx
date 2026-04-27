@@ -68,7 +68,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
             <StatusLabel label={type} status="outline" />
             {showWarning && <StatusLabel label="overskredet" status="danger" />}
           </div>
-          <h2 className="modal-details__title text-header-h2">{title}</h2>
+          <h2 className="modal-details__title">{title}</h2>
           <p className="text-body-medium-regular">{author}</p>
         </div>
       </div>

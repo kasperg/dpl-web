@@ -46,7 +46,7 @@ const EditionSwitchModal = ({
       <section className="reservation-modal reservation-modal--edition-switch">
         <header className="reservation-modal-header">
           <div className="reservation-modal-description">
-            <h2 className="text-header-h2 mt-22 mb-8">
+            <h2 className="reservation-modal-description__title">
               {t("editionSwitchModalTitleText")}
             </h2>
             <p className="text-body-medium-regular">

@@ -28,7 +28,7 @@ const MaterialHeaderText: React.FC<MaterialHeaderTextProps> = ({
       <h1
         id={materialTitleId}
         lang={languageCode}
-        className="text-header-h1 mb-16"
+        className="material-header__title"
       >
         {title}
       </h1>

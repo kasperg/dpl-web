@@ -19,10 +19,17 @@
   }
 }
 
+.instant-loan-summary__title {
+  @include typography($typo__h4);
+  margin-top: 22px;
+  margin-bottom: $s-xs;
+}
+
 .instant-loan-underline {
   display: flex;
   align-items: center;
   gap: $s-xs;
+  margin-top: 35px;
 }
 
 .instant-loan-branches {
@@ -36,4 +43,7 @@
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   align-items: center;
+  cursor: pointer;
+  padding-left: $s-lg;
+  padding-right: $s-lg;
 }

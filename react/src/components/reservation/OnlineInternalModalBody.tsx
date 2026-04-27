@@ -144,7 +144,7 @@ const OnlineInternalModalBody = ({
             <div className="reservation-modal-tag">
               {getMaterialType(selectedManifestations)}
             </div>
-            <h2 className="text-header-h2 mt-22 mb-8">
+            <h2 className="reservation-modal-description__title">
               {manifestation.titles.main}
             </h2>
             {authorLine && (
@@ -183,7 +183,7 @@ const OnlineInternalModalBody = ({
                   />
                 )}
               </div>
-              <p className="mt-16 text-small-caption">
+              <p className="material-header__cta-text">
                 {t("onlineInternalModalEnsureNotificationText")}
               </p>
             </>

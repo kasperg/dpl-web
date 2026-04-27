@@ -33,22 +33,17 @@ const AutosuggestCategory: FC<AutosuggestCategoryProps> = ({
         const index = incorrectIndex + textAndMaterialDataLength;
         return (
           <li
-            className={clsx(
-              "autosuggest__text-item text-body-medium-regular px-24",
-              {
-                "autosuggest__text-item--highlight": highlightedIndex === index
-              }
-            )}
+            className={clsx("autosuggest__text-item", {
+              "autosuggest__text-item--highlight": highlightedIndex === index
+            })}
             key={`${item.term}-${index}`}
             // TODO: Explicitly define prop types for better clarity
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...getItemProps({ item, index })}
             data-cy={dataCy}
           >
-            <p className="autosuggest__text text-body-medium-regular">
-              {`${item.term} ${t("inText")}`}
-            </p>
-            <div className="boxed-text text-tags noselect ml-8">
+            <p className="autosuggest__text">{`${item.term} ${t("inText")}`}</p>
+            <div className="boxed-text autosuggest__category-tag">
               {getAutosuggestCategoryList(t)[incorrectIndex].render}
             </div>
           </li>

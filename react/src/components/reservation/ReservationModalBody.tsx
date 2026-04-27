@@ -288,7 +288,7 @@ export const ReservationModalBody = ({
             <Cover ids={[manifestation.pid]} size="medium" animate />
             <div className="reservation-modal-description">
               <div className="reservation-modal-tag">{materialType}</div>
-              <h2 className="text-header-h2 mt-22 mb-8">
+              <h2 className="reservation-modal-description__title">
                 {getManifestationTitle(manifestation)}
                 {selectedPeriodical && ` ${selectedPeriodical.displayText}`}
               </h2>

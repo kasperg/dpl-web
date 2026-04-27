@@ -63,7 +63,7 @@ const FacetLineFilters: React.FunctionComponent<FacetLineFiltersProps> = ({
       <h2 className="hide-visually">
         {t("intelligentFiltersAccessibleHeadlineText")}
       </h2>
-      <ul className="facet-line mt-48">
+      <ul className="facet-line">
         {facets &&
           facets.map(({ name, values }, index) => {
             if (values.length > 1) {

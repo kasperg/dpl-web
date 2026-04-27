@@ -84,10 +84,7 @@ const MenuLoggedInContent: FC<MenuLoggedInContentProps> = ({ pageSize }) => {
               <img src={profileIcon} alt="" />
             </div>
           </div>
-          <div
-            className="modal-header__name text-header-h4"
-            data-cy="menu-patron-name"
-          >
+          <div className="modal-header__name" data-cy="menu-patron-name">
             {userData?.patron?.name}
           </div>
           <Link

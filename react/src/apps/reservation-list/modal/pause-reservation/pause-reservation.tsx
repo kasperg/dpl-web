@@ -126,7 +126,7 @@ const PauseReservation: FC<PauseReservationProps> = ({ id, user }) => {
             {t("pauseReservationModalLinkText")}
           </Link>
         </p>
-        <div className="modal-pause__button mt-48">
+        <div className="modal-pause__button">
           <button
             type="submit"
             form={saveFormId}

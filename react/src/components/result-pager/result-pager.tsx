@@ -18,7 +18,7 @@ function ResultPager({
   const t = useText();
   return (
     <div className={`result-pager ${classNames}`}>
-      <p className="text-small-caption result-pager__title">
+      <p className="result-pager__title">
         {t("resultPagerStatusText", {
           placeholders: { "@itemsShown": itemsShown, "@hitcount": hitcount }
         })}
