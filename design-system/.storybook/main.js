@@ -33,6 +33,12 @@ module.exports = {
   },
 
   webpackFinal: async (config) => {
+    // Remove the ESLint webpack plugin added by create-react-app preset.
+    // It cannot resolve eslint-plugin-local-rules from its own node_modules.
+    // Linting is handled separately via yarn js:lint.
+    config.plugins = config.plugins.filter(
+      (plugin) => plugin.constructor.name !== "ESLintWebpackPlugin"
+    );
     config.plugins.push(
       new StylelintPlugin({
         files: "src/**/*.scss",

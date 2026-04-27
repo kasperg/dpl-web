@@ -3,9 +3,22 @@
     "stylelint-config-recommended-scss",
     "stylelint-prettier/recommended"
   ],
+  "plugins": ["stylelint-selector-bem-pattern"],
   "rules": {
+    "plugin/selector-bem-pattern": [{
+      "preset": "bem",
+      "implicitComponents": "src/stories/**/*.scss"
+    }, {
+      "severity": "warning"
+    }],
+    "declaration-no-important": [true, { "severity": "warning" }],
+    "selector-max-compound-selectors": [3, { "severity": "warning" }],
+    "scss/at-extend-no-missing-placeholder": [true, { "severity": "warning" }],
     "max-nesting-depth": 3,
-    "selector-class-pattern": "^[a-z][a-z0-9_-]*$",
+    "selector-class-pattern": ["^(?!.*__.*__)[a-z][a-z0-9_-]*$", {
+      "message": "Double BEM element nesting (block__element__element) is not allowed. Use a flat element name (e.g. block__content-header).",
+      "severity": "warning"
+    }],
     "selector-max-id": null,
     "selector-no-qualifying-type": [
       true,
