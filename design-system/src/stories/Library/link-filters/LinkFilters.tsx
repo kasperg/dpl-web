@@ -22,7 +22,7 @@ export const LinkFilters: React.FC<LinkFiltersProps> = ({ filters }) => {
               classNames="link-tag link-filters__tag"
             />
           ) : (
-            <span className="link-filters__title text-links">{item.title}</span>
+            <span className="link-filters__title">{item.title}</span>
           )}
 
           <span className="link-filters__counter">{item.counter}</span>

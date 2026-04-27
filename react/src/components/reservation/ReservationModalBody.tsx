@@ -344,7 +344,7 @@ export const ReservationModalBody = ({
               />
               {!materialIsFiction(work) && otherManifestationPreferred && (
                 <PromoBar
-                  classNames="px-35"
+                  classNames=""
                   sticky
                   type="info"
                   text={t("materialIsAvailableInAnotherEditionText", {

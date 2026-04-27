@@ -29,7 +29,6 @@ const ButtonTag = React.forwardRef<HTMLButtonElement, ButtonTagProps>(
       "tag tag--outline",
       selected && "tag--fill",
       size && `tag--${size}`,
-      "cursor-pointer",
       className
     );
 

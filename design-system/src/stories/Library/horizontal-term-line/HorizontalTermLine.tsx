@@ -35,7 +35,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
   const showMoreButton = linkList.length > numberOfItemsToShow;
 
   return (
-    <div className="text-small-caption horizontal-term-line">
+    <div className="horizontal-term-line">
       <Heading level={headingLevel} className="text-label-bold">
         {`${title}`}{" "}
         {subTitle && <span className="text-small-caption">{subTitle} </span>}

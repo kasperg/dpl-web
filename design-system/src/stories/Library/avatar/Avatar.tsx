@@ -2,7 +2,7 @@ import { ReactComponent as ProfileIcon } from "../../../public/icons/collection/
 
 export const Avatar = () => {
   return (
-    <div className="avatar bg-global-secondary">
+    <div className="avatar">
       <ProfileIcon />
     </div>
   );

@@ -17,7 +17,7 @@ const PromoBar: React.FunctionComponent<PromoBarProps> = ({
 }) => {
   return (
     <section
-      className={clsx("promo-bar px-35", {
+      className={clsx("promo-bar", {
         "promo-bar--sticky": sticky,
         "promo-bar--dark": theme === "dark",
       })}

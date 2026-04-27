@@ -80,7 +80,7 @@ const MenuLoggedInContent: FC<MenuLoggedInContentProps> = ({ pageSize }) => {
       <div className="modal-login__container">
         <div className="modal-header">
           <div className="modal-header__avatar">
-            <div className="avatar bg-global-secondary">
+            <div className="avatar">
               <img src={profileIcon} alt="" />
             </div>
           </div>

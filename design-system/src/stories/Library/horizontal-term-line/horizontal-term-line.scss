@@ -1,4 +1,5 @@
 .horizontal-term-line {
+  @include typography($typo__small-caption);
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
