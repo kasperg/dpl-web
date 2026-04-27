@@ -22,6 +22,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
   const checkboxElement = (checkboxLabel: string) => {
     return (
       <div
+        // eslint-disable-next-line local-rules/single-bem-block
         className={clsx(
           "dpl-input js-form-item form-item js-form-type-checkbox form-item-title-example js-form-item-title-example checkbox-override",
           { classNames },
@@ -36,6 +37,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
         <label
           id="edit-title-example--description"
           htmlFor="edit-title-example"
+          // eslint-disable-next-line local-rules/single-bem-block
           className="input-label checkbox__text text-small-caption color-secondary-gray"
         >
           {checkboxLabel}
@@ -58,6 +60,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
         data-drupal-selector="edit-multiple-checkboxes-title"
         aria-describedby="edit-multiple-checkboxes-title--wrapper--description"
         id="edit-multiple-checkboxes-title--wrapper"
+        // eslint-disable-next-line local-rules/single-bem-block
         className="checkboxes--wrapper fieldgroup form-composite webform-composite-visible-title js-webform-type-checkboxes webform-type-checkboxes js-form-item form-item js-form-wrapper form-wrapper dpl-fieldset"
       >
         <legend>

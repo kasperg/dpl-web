@@ -65,6 +65,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         <div>
           {label && (
             <span
+              // eslint-disable-next-line local-rules/single-bem-block
               className={clsx(
                 "checkbox__text text-small-caption color-secondary-gray",
                 hiddenLabel && "checkbox__text--hide-visually",
@@ -74,13 +75,17 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             </span>
           )}
           {validation && (
-            <div className="checkbox__text text-small-caption checkbox__text--validation">
+            <div
+              // eslint-disable-next-line local-rules/single-bem-block
+              className="checkbox__text text-small-caption checkbox__text--validation"
+            >
               {validation}
             </div>
           )}
           {labelLinkText && (
             <a
               href={labelLinkHref}
+              // eslint-disable-next-line local-rules/single-bem-block
               className="checkbox__text text-small-caption color-secondary-gray"
             >
               {labelLinkText}
