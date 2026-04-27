@@ -30,6 +30,7 @@ export const ListReservationsAndLoans = (
   return (
     <div className="list-reservation-container">
       <div
+        // eslint-disable-next-line local-rules/single-bem-block
         className={clsx("list-reservation arrow arrow__hover--right-small", [
           { "list-reservation--stacked": isStacked },
         ])}
@@ -48,7 +49,7 @@ export const ListReservationsAndLoans = (
                   {cover.title}
                 </span>
               </button>
-              <p className="text-small-caption color-secondary-gray">
+              <p className="list-reservation__description">
                 {cover.description}
               </p>
             </div>
@@ -56,8 +57,8 @@ export const ListReservationsAndLoans = (
               type="button"
               aria-label="note about material"
               className={clsx(
-                "list-reservation__note list-reservation__note--desktop color-secondary-gray",
-                cover.noteAsWarning && "color-signal-alert",
+                "list-reservation__note list-reservation__note--desktop",
+                cover.noteAsWarning && "list-reservation__note--warning",
               )}
             >
               {cover.noteLabel}
@@ -89,8 +90,8 @@ export const ListReservationsAndLoans = (
               <a
                 href={cover.noteUrl}
                 className={clsx(
-                  "list-reservation__note list-reservation__note--mobile color-secondary-gray",
-                  cover.noteAsWarning && "color-signal-alert",
+                  "list-reservation__note list-reservation__note--mobile",
+                  cover.noteAsWarning && "list-reservation__note--warning",
                 )}
               >
                 {cover.noteLabel}

@@ -58,6 +58,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__note {
   @include typography($typo__small-caption);
+  color: $color__text-secondary-gray;
   // To make it easy to click
   min-height: 20px;
   cursor: pointer;
@@ -69,6 +70,10 @@ $list-reservation-space-desktop: 24px;
   white-space: break-spaces;
   text-decoration: underline;
   padding-left: 0;
+
+  &--warning {
+    color: $color__signal-alert;
+  }
 }
 
 .list-reservation__note--desktop {
@@ -101,6 +106,11 @@ $list-reservation-space-desktop: 24px;
   @include media-query__small {
     margin-left: $list-reservation-space-desktop;
   }
+}
+
+.list-reservation__description {
+  @include typography($typo__small-caption);
+  color: $color__text-secondary-gray;
 }
 
 .list-reservation__about {
