@@ -25,7 +25,7 @@ const ReviewHearts: React.FC<ReviewHeartsProps> = ({ amountOfHearts }) => {
     }
   });
   return (
-    <div className="mb-4" role="figure" aria-label={ariaLabel}>
+    <div className="review__rating" role="figure" aria-label={ariaLabel}>
       {filledHeartsArray.map((_, index) => {
         return (
           <img

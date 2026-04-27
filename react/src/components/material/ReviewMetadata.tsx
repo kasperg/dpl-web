@@ -45,14 +45,14 @@ const ReviewMetadata: React.FC<ReviewMetadataProps> = ({
 
   if (url) {
     return (
-      <LinkNoStyle url={url} className="link-tag text-small-caption mb-8">
+      <LinkNoStyle url={url} className="link-tag review__link">
         {metaDataText(author, publication, date, isLibrarian)}
       </LinkNoStyle>
     );
   }
 
   return (
-    <div className="review__meta mb-8">
+    <div className="review__meta">
       {metaDataText(author, publication, date, isLibrarian)}
     </div>
   );

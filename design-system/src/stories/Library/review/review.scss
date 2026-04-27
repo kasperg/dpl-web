@@ -3,6 +3,7 @@
 }
 
 .review {
+  @include typography($typo__small-caption);
   margin-bottom: $s-xl;
   &:last-of-type {
     margin-bottom: $s-2xl;
@@ -10,6 +11,11 @@
 
   &__meta {
     color: $color__text-secondary-gray;
+    margin-bottom: $s-sm;
+  }
+
+  &__rating {
+    margin-bottom: $s-xs;
   }
 
   &__heart {
@@ -25,12 +31,17 @@
 
   &__headline {
     color: $color__text-secondary-gray;
-    @include typography($typo__small-caption);
     font-weight: 700;
+    margin-bottom: $s-sm;
   }
 
   &__body {
     max-width: 545px;
     color: $color__text-secondary-gray;
+    margin-bottom: $s-sm;
+  }
+
+  &__link {
+    margin-bottom: $s-sm;
   }
 }
