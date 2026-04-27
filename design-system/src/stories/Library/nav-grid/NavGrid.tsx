@@ -33,6 +33,7 @@ const NavGrid: FC<CardProps> = ({ items, title, showSubtitles }) => {
       </ul>
 
       {hasMany && (
+        // eslint-disable-next-line local-rules/single-bem-block
         <button className="nav-grid__controller btn-primary btn-outline btn-medium">
           Vis alle
         </button>

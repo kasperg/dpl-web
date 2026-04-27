@@ -27,6 +27,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
   return (
     <a
       href={href}
+      // eslint-disable-next-line local-rules/single-bem-block
       className="list-dashboard shadow-medium-hover arrow__hover--right-small"
     >
       <Number label={number.label} status={number.status} />

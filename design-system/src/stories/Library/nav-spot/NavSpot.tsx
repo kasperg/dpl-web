@@ -19,6 +19,7 @@ const NavSpot: FC<NavSpotProps> = ({
 }) => {
   return (
     <article
+      // eslint-disable-next-line local-rules/single-bem-block
       className="nav-spot arrow__hover--right-large"
       data-variant={variant}
     >

@@ -36,6 +36,7 @@ export const CopyLink = ({
       type="button"
     >
       <span
+        // eslint-disable-next-line local-rules/single-bem-block
         className={clsx("link-tag text-small-caption", {
           "copy-link--success": isCopied,
         })}

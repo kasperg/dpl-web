@@ -11,6 +11,7 @@ const MenuItemList: React.FC<MenuItemListProps> = ({ menuItems }) => {
         <li key={index} className="header__menu-navigation-item">
           <a
             href={item.href}
+            // eslint-disable-next-line local-rules/single-bem-block
             className="header__menu-navigation-link text-body-medium-regular hide-linkstyle"
           >
             {item.title}

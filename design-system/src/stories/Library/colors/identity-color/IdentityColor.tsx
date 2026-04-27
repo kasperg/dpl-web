@@ -107,6 +107,7 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
           <div className="internal-colors-wrapper">
             {color.colorItems.map((colorItem) => (
               <div>
+                {/* eslint-disable-next-line local-rules/single-bem-block */}
                 <div
                   className={`internal-colors-box ${
                     colorItem.classNameBg || colorItem.className

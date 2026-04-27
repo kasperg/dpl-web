@@ -31,6 +31,7 @@ const Template: StoryFn<typeof AutosuggestText> = (
   args: AutosuggestTextProps,
 ) => (
   <div className="header__menu-search">
+    {/* eslint-disable-next-line local-rules/single-bem-block */}
     <ul className="autosuggest pb-16">
       <AutosuggestText {...args} />
     </ul>

@@ -33,6 +33,7 @@ export const Recommendation: React.FC<RecommendationProps> = ({
       </div>
       <a
         href={href}
+        // eslint-disable-next-line local-rules/single-bem-block
         className="recommendation__texts arrow__hover--right-small"
       >
         <h3 className="recommendation__title">{title}</h3>

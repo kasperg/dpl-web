@@ -96,11 +96,13 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
         ))}
       </div>
       <div className="modal-details__buttons modal-details__buttons--bottom">
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <button type="button" className="link-tag mx-16">
           {cancelText}
         </button>
         <button
           type="button"
+          // eslint-disable-next-line local-rules/single-bem-block
           className="btn-primary btn-filled btn-small arrow__hover--right-small "
         >
           {saveText}

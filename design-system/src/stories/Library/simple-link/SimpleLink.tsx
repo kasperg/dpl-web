@@ -11,6 +11,7 @@ const SimpleLink = ({ linkText, href, target = "_self" }: SimpleLinkProps) => {
     <a
       href={href}
       target={target}
+      // eslint-disable-next-line local-rules/single-bem-block
       className="simple-link arrow__hover--right-small"
     >
       {linkText}

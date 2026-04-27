@@ -48,6 +48,7 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
   return (
     <a
       href={href}
+      // eslint-disable-next-line local-rules/single-bem-block
       className={clsx(
         "content-list-item-grid content-list-item arrow__hover--right-small",
         status && "content-list-item--status-parent",

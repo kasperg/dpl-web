@@ -27,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
+      // eslint-disable-next-line local-rules/single-bem-block
       className={clsx(
         "btn-primary",
         getVariant(variant),

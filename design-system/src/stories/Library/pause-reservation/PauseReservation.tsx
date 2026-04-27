@@ -34,6 +34,7 @@ export const PauseReservation = ({
           </span>
         )}
         <div className="dpl-pause-reservation-component__flex__button">
+          {/* eslint-disable-next-line local-rules/single-bem-block */}
           <button type="button" className="btn-primary btn-filled btn-small">
             Settings
           </button>

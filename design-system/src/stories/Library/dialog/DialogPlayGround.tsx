@@ -9,6 +9,7 @@ const DialogPlayGround = () => {
 
   return (
     <>
+      {/* eslint-disable-next-line local-rules/single-bem-block */}
       <button
         className="btn-primary btn-outline btn-medium"
         onClick={() => {
@@ -17,6 +18,7 @@ const DialogPlayGround = () => {
       >
         Open Dialog 1
       </button>
+      {/* eslint-disable-next-line local-rules/single-bem-block */}
       <button
         className="btn-primary btn-outline btn-medium"
         onClick={() => {

@@ -16,6 +16,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
 
   return (
     <>
+      {/* eslint-disable-next-line local-rules/single-bem-block */}
       <h2 className="footer-accordion__header footer__title">
         <button
           className="footer-accordion__header-button"

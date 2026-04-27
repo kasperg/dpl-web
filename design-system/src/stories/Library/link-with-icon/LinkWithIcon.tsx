@@ -36,6 +36,7 @@ export const LinkWithIcon = ({ href, linkText, linkType }: LinksProps) => {
     <a
       href={href}
       target={target}
+      // eslint-disable-next-line local-rules/single-bem-block
       className={clsx("link-with-icon arrow__hover--right-small")}
     >
       <div className={clsx("link-with-icon__icon", linkIconClass)}>

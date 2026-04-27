@@ -36,11 +36,13 @@ const VideoEmbed: FC<VideoEmbedProps> = ({
           allowFullScreen
         />
         <div
+          // eslint-disable-next-line local-rules/single-bem-block
           className={`consent-placeholder cookie-placeholder ${
             acceptCookies ? "cookie-placeholder__hide" : ""
           }`}
           data-category="cookie_cat_marketing"
         >
+          {/* eslint-disable-next-line local-rules/single-bem-block */}
           <div className="pagefold-triangle--medium pagefold-inherit-parent" />
           <div className="cookie-placeholder__wrapper">
             <div className="cookie-placeholder__description">
