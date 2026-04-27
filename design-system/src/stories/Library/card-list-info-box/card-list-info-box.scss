@@ -40,9 +40,11 @@
 }
 
 .card-list-info-box__title {
+  @include typography($typo__h4);
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: calc(120% + 2px);
+  margin-bottom: $s-sm;
 }
 
 .card-list-info-box__content {

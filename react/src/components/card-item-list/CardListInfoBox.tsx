@@ -21,7 +21,7 @@ const CardListInfoBox = ({
       <div className="card-list-info-box__icon cover cover--size-small cover--aspect-small" />
       <div className="card-list-info-box__content">
         <div className="card-list-info-box__text">
-          <h3 className="card-list-info-box__title text-header-h4 mb-8">
+          <h3 className="card-list-info-box__title">
             {title}
           </h3>
           <div
