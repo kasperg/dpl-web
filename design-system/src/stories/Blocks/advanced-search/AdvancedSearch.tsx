@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDropdown";
 import { Multiselect } from "../../Library/multiselect/Multiselect";

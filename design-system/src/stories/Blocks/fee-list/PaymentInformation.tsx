@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 const PaymentInformation = () => (
   <div>
     <div data-cy="fee-list-body">

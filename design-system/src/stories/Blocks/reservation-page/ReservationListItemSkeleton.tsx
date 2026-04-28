@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 const ReservationListItemSkeleton = () => {
   return (
     <div className="list-reservation my-32">

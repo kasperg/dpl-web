@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import clsx from "clsx";
 import { Counter } from "../../Library/counter/Counter";
 import { ReactComponent as ArrowSmallRight } from "../../Library/Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";

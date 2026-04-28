@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import { useState } from "react";
 import AvailabilityLabel from "../../Library/availability-label/AvailabilityLabel";
 import { Button } from "../../Library/Buttons/button/Button";

@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import ReservationListItemSkeleton from "./ReservationListItemSkeleton";
 
 const ReservationPageSkeleton: React.FC = () => {

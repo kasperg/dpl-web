@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 const MaterialPageSkeleton: React.FC = () => {
   return (
     <section className="material-page ssc">

@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import Disclosure from "../../Library/disclosure/Disclosure";
 import { generateId } from "../../Library/horizontal-term-line/HorizontalTermLine";
 import ListDescription, {

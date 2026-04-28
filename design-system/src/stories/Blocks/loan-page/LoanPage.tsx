@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import { Button } from "../../Library/Buttons/button/Button";
 import ResultPager from "../../Library/card-list-page/ResultPager";
 import ReservationListEmptyState from "../reservation-page/ReservationListEmptyState";

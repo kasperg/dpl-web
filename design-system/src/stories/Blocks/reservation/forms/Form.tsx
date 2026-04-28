@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import * as React from "react";
 import { FC } from "react";
 import { Button } from "../../../Library/Buttons/button/Button";

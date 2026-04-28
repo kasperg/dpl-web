@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import ResultPager from "../../Library/card-list-page/ResultPager";
 import { PauseReservation } from "../../Library/pause-reservation/PauseReservation";
 import ReservationListEmptyState from "./ReservationListEmptyState";

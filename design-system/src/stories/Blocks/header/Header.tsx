@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Logo from "../../Library/logo/Logo";

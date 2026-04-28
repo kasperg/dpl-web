@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import PatronInfo from "../../Library/patron-info/PatronInfo";
 import Input from "../../Library/Forms/input/Input";

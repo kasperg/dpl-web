@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 export interface ReservationListEmptyStateProps {
   text: string;
   classsNames?: string;

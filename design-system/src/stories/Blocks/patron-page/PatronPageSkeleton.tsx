@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import PatronInfoSkeleton from "../../Library/patron-info/PatronInfoSkeleton";
 import ContactInfoSection from "./ContactInfoSection";
 

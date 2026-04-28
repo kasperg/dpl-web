@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import { CardListItemSkeleton } from "../../Library/card-list-item/CardListItemSkeleton";

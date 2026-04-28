@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import { Links } from "../../Library/links/Links";
 
 const RegistrationPageSection = () => {
