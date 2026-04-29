@@ -1,6 +1,7 @@
 import React, { FC, ReactElement, ReactNode } from "react";
 import clsx from "clsx";
 import { DisclosureSummaryProps } from "./DisclosureSummary";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/disclosure.css";
 
 export interface DisclosureProps {
   children?: ReactNode;

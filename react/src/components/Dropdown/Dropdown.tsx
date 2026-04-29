@@ -2,6 +2,7 @@ import clsx from "clsx";
 import React from "react";
 import DropdownIcon from "./DropdownIcon";
 import { FormSelectValue } from "../reservation/forms/types";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/dropdown.css";
 
 export type Option<TValue extends FormSelectValue = string> = {
   label: string;

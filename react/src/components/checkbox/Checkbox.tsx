@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React, { FC, ReactNode } from "react";
 import IconCheckbox from "../icon-checkbox/icon-checkbox";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/checkbox.css";
 
 interface CheckBoxProps {
   id: string;

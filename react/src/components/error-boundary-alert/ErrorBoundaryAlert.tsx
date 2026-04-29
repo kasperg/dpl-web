@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { useText } from "../../core/utils/text";
 import { useConfig } from "../../core/utils/config";
 import ErrorBoundaryAlertBody from "./ErrorBoundaryAlertBody";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/error-message.css";
 
 interface ErrorBoundaryAlertProps {
   resetErrorBoundary: () => void;

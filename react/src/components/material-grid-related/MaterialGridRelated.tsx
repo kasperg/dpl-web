@@ -23,6 +23,8 @@ import {
 import { MaterialGridFilterType } from "./MaterialGridRelated.types";
 import { MaterialGridRelatedInlineFilters } from "./MaterialGridRelatedInlineFilters";
 import { MaterialGridRelatedSelect } from "./MaterialGridRelatedSelect";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/material-grid-related.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/input-with-dropdown.css";
 
 type MaterialGridRelatedOption = {
   label: string;

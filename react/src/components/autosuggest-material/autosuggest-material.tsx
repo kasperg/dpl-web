@@ -12,6 +12,7 @@ import {
 import { WorkMediumFragment } from "../../core/dbc-gateway/generated/graphql";
 import { getManifestationLanguageCode } from "../../apps/material/helper";
 import { Manifestation } from "../../core/utils/types/entities";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/autosuggest.css";
 
 export interface AutosuggestMaterialProps {
   materialData: Suggestions | [];

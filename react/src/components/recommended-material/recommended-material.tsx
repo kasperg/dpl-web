@@ -24,6 +24,7 @@ import { ManifestationMaterialType } from "../../core/utils/types/material-type"
 import { useUrls } from "../../core/utils/url";
 import { useEventStatistics } from "../../core/statistics/useStatistics";
 import { statistics } from "../../core/statistics/statistics";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/recommended-material.css";
 
 export type RecommendedMaterialProps = {
   wid: WorkId;

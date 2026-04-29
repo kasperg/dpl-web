@@ -5,6 +5,7 @@ import { WorkId } from "../../core/utils/types/ids";
 import { ManifestationMaterialType } from "../../core/utils/types/material-type";
 import MaterialListItem from "../card-item-list/MaterialListItem";
 import RecommendedMaterial from "../../apps/recommended-material/RecommendedMaterial";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/material-grid.css";
 
 export type MaterialGridItemProps = {
   wid: WorkId;

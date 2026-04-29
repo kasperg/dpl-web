@@ -4,6 +4,7 @@ import Modal, { useModalButtonHandler } from "../../core/utils/modal";
 import { useText } from "../../core/utils/text";
 import { Button } from "../Buttons/Button";
 import { getModalIds } from "../../core/utils/helpers/modal-helpers";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-cta.css";
 
 export interface AcceptModalProps {
   accept: () => void;

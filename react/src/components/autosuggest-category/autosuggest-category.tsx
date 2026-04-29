@@ -6,6 +6,9 @@ import { SuggestionsFromQueryStringQuery } from "../../core/dbc-gateway/generate
 import { useText } from "../../core/utils/text";
 import { Suggestion } from "../../core/utils/types/autosuggest";
 import { getAutosuggestCategoryList } from "../../apps/search-header/helpers";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/autosuggest.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/boxed-text.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 export interface AutosuggestCategoryProps {
   categoryData: SuggestionsFromQueryStringQuery["localSuggest"]["result"];

@@ -1,5 +1,6 @@
 import React from "react";
 import { useText } from "../../core/utils/text";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/result-pager.css";
 
 export interface ResultPagerProps {
   setPageHandler: () => void;

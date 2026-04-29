@@ -22,6 +22,7 @@ import { materialIsFiction } from "../../core/utils/helpers/general";
 import SeriesList from "../card-item-list/card-list-item/series-list";
 import MaterialContents from "./MaterialContents/MaterialContents";
 import ButtonShare from "../button-share/button-share";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/material-description.css";
 
 export interface MaterialDescriptionProps {
   pid: Pid;

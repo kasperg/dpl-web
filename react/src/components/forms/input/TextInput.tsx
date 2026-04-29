@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React, { FC } from "react";
 import Label from "../label/Label";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/input.css";
 
 export interface TextInputProps {
   label?: string;

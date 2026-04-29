@@ -121,6 +121,7 @@
     "happy-dom": "^20.9.0",
     "istanbul-lib-coverage": "^3.2.2",
     "markdownlint-cli2": "^0.22.0",
+    "mini-css-extract-plugin": "^2.10.2",
     "mutationobserver-shim": "^0.3.7",
     "nyc": "^18.0.0",
     "orval": "^7.21.0",

@@ -28,6 +28,10 @@ import {
   getWorkTitle
 } from "../../apps/material/helper";
 import { isPeriodical, shouldShowMaterialAvailabilityText } from "./helper";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/cover.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/material-header.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/material-periodical-select.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 import { first } from "lodash";
 import { hasCorrectMaterialType } from "./material-buttons/helper";
 import { ManifestationMaterialType } from "../../core/utils/types/material-type";

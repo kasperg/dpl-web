@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import clsx from "clsx";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/content-list.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/content-list-item.css";
 
 type ContentListProps = {
   children: ReactNode;

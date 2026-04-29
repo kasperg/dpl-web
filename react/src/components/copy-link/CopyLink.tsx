@@ -4,6 +4,8 @@ import CheckmarkIcon from "../icon-checkmark/icon-checkmark";
 import clsx from "clsx";
 import { useText } from "../../core/utils/text";
 import useCopyToClipboard from "../../core/utils/useCopyToClipboard";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/copy-link.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 export interface CopyLinkProps {
   label?: string;

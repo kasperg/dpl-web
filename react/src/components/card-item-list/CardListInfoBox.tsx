@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "../atoms/links/Link";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/card-list-info-box.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/card-list-item.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/cover.css";
 
 export type CardListInfoBoxProps = {
   title?: string;

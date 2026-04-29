@@ -4,6 +4,7 @@ import withFocusTrap from "../../../core/utils/withFocusTrap";
 import Message, { MessageProps } from "./Message";
 import { Button } from "../../Buttons/Button";
 import { useModalButtonHandler } from "../../../core/utils/modal";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-cta.css";
 
 interface RequiredModalId {
   modalId: string;

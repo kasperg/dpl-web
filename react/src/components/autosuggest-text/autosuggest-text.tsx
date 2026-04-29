@@ -3,6 +3,7 @@ import { UseComboboxPropGetters } from "downshift";
 import React from "react";
 import { Suggestion, Suggestions } from "../../core/utils/types/autosuggest";
 import AutosuggestTextItem from "./autosuggest-text-item";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/autosuggest.css";
 
 export interface AutosuggestTextProps {
   textData: Suggestions;

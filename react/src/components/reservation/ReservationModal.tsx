@@ -6,6 +6,9 @@ import { useText } from "../../core/utils/text";
 import { Manifestation, Work } from "../../core/utils/types/entities";
 import { PeriodicalEdition } from "../material/periodical/helper";
 import { ReservationModalBody } from "./ReservationModalBody";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-header.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-cta.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 export type ReservationModalProps = {
   selectedManifestations: Manifestation[];

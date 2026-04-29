@@ -4,6 +4,8 @@ import DisclosureControllable from "../Disclosures/DisclosureControllable";
 import InstantLoanSummary from "./InstantLoanSummary";
 import { HoldingsLogisticsV1 } from "../../core/fbs/model";
 import InstantLoanBranch from "./InstantLoanBranch";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/instant-loan.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 type InstantLoanProps = {
   manifestation: Manifestation;

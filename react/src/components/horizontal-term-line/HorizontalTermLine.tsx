@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import Link from "../atoms/links/Link";
 import ButtonExpand from "../button-expand/ButtonExpand";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/horizontal-term-line.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 export interface HorizontalTermLineProps {
   title: string;

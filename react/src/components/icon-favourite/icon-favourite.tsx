@@ -1,4 +1,5 @@
 import React from "react";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/icon-favourite.css";
 
 export type IconFavouriteProps = {
   fill?: boolean;
