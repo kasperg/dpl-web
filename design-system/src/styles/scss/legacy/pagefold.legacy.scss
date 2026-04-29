@@ -17,36 +17,15 @@ $pagefold-map: (
     margin: #{$size}px;
   }
 
-  %pagefold-parent--#{$size},
+  // Placeholders (%pagefold-parent--, %pagefold-triangle--) are now
+  // in tools/placeholder.scss for per-component SCSS compilation.
+  // Concrete classes extend them.
   .pagefold-parent--#{$size} {
-    min-width: #{$triangle-width}px;
-    min-height: #{$triangle-width}px;
-    position: relative;
-    display: inherit;
-    clip-path: polygon(
-      #{$triangle-width}px 0,
-      0 #{$triangle-width}px,
-      0 100%,
-      100% 100%,
-      100% 0
-    );
-    -webkit-clip-path: polygon(
-      #{$triangle-width}px 0,
-      0 #{$triangle-width}px,
-      0 100%,
-      100% 100%,
-      100% 0
-    );
+    @extend %pagefold-parent--#{$size};
   }
 
-  %pagefold-triangle--#{$size},
   .pagefold-triangle--#{$size} {
-    width: #{$triangle-width}px;
-    height: #{$triangle-width}px;
-    background-color: $color__identity-primary;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %pagefold-triangle--#{$size};
   }
 
   .pagefold-triangle {

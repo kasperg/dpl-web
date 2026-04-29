@@ -1,5 +1,5 @@
 import { ReactComponent as ReservationsIcon } from "../../../public/icons/collection/Reservations.svg";
-
+import "./pause-reservation.scss";
 export type PauseReservationProps = {
   isChecked?: boolean;
   isPausedtext: string;

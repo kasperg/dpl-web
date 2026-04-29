@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import clsx from "clsx";
-
+import "./nav-spots.scss";
 type NavSpotsProps = {
   items: ReactNode[];
 };

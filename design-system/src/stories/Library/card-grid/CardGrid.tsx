@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import clsx from "clsx";
-
+import "./card-grid.scss";
 type CardProps = {
   title?: string;
   linkText?: string;
