@@ -4,6 +4,7 @@ import contentListData from "../../Library/content-list/ContentListData";
 import { InputLabel } from "../../Library/input-label/InputLabel";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 import SearchFullText from "../../Library/search-full-text/SearchFullText";
+import "./content-list-page.scss";
 
 const filters = [
   {

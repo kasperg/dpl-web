@@ -1,32 +1,5 @@
-@mixin media-container--grid {
-  .media-container {
-    .media-container__placeholder-text {
-      @include typography($typo__card-placeholder--grid);
-    }
-  }
-}
-
-@mixin media-container--card {
-  .media-container {
-    .media-container__placeholder-text {
-      @include typography($typo__card-placeholder);
-    }
-  }
-}
-
-@mixin media-container--small {
-  .media-container {
-    &--placeholder {
-      @include identity-placeholder($placeholder-paddings--small);
-    }
-
-    .media-container__placeholder-text {
-      font-size: 14px;
-      line-height: 16px;
-      padding: $s-md;
-    }
-  }
-}
+// media-container--grid, --card, --small mixins moved to tools/mixins.misc.scss
+// for per-component SCSS compilation.
 
 .media-container {
   height: 100%;

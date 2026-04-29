@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import { ReactComponent as Arrow } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 import MediaContainer from "../media-container/MediaContainer";
+import "./nav-spot.scss";
 
 type NavSpotProps = {
   variant?: string;

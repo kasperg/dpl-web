@@ -2,6 +2,7 @@ import { useState, FC } from "react";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
+import "./list-materials.scss";
 
 export type ListMaterialsProps = {
   title: string;

@@ -1,5 +1,6 @@
 import Cover from "../cover/Cover";
 import { ReactComponent as SvgIcon } from "../Icons/icon-favourite/icon-favourite.svg";
+import "./recommenders.scss";
 
 export type RecommenderData = {
   title: string;

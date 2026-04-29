@@ -6,6 +6,7 @@ import ReservationListItem from "../reservation-page/ReservationListItem";
 import LoanPageSkeleton from "./LoanPageSkeleton";
 import { ReactComponent as ListIcon } from "../../../public/icons/collection/List.svg";
 import { ReactComponent as VariousIcon } from "../../../public/icons/collection/Various.svg";
+import "./loan-page-skeleton.scss";
 
 export interface LoanPageProps {
   headline: string;

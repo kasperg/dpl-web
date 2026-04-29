@@ -1,6 +1,7 @@
 import { ReactComponent as EnglishIcon } from "../../../public/icons/flags/england.svg";
 import { ReactComponent as DanishIcon } from "../../../public/icons/flags/denmark.svg";
 import { Links } from "../links/Links";
+import "./icon-text-link.scss";
 
 export interface IconTextLinkProps {
   link: string;

@@ -9,6 +9,7 @@ import ContentListItemStatus, {
 import { ReactComponent as IconPin } from "../../../../public/icons/collection/icon-pin.svg";
 import { ReactComponent as IconEvent } from "../../../../public/icons/collection/icon-event.svg";
 import { ReactComponent as IconTime } from "../../../../public/icons/collection/icon-time.svg";
+import "./content-list-item.scss";
 
 export type ContentListItemProps = {
   eventSeriesId?: string;

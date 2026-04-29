@@ -3,6 +3,7 @@ import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
 import facetBrowserDummyData from "./facet-browser-dummy-data";
 import { TagButton } from "../../tag/tag-button/TagButton";
+import "./facet-browser.scss";
 
 export type FacetBrowserProps = {
   title: string;

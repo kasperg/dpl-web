@@ -1,6 +1,7 @@
 /* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
+import "./multi-select.scss";
 
 const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
   return (

@@ -1,6 +1,7 @@
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 import Modal from "../Modal";
+import "./modal-text.scss";
 
 export type ModalTextProps = {
   showModal: boolean;

@@ -2,6 +2,7 @@ import React from "react";
 import { Dropdown } from "../dropdown/Dropdown";
 import { MaterialGrid } from "../material-grid/MaterialGrid";
 import MaterialGridData from "../material-grid/MaterialGridData";
+import "./material-grid-related.scss";
 
 const MaterialGridRelated: React.FC = () => {
   return (

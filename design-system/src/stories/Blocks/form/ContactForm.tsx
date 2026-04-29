@@ -5,6 +5,7 @@ import Input from "../../Library/Forms/input/Input";
 import Label from "../../Library/Forms/label/Label";
 import { Links } from "../../Library/links/Links";
 import SubmitButton from "../../Library/Forms/submit-button/SubmitButton";
+import "./form.scss";
 
 export interface ContactFormProps {
   title: string;

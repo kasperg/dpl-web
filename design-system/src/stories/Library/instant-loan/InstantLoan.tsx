@@ -2,6 +2,7 @@ import React from "react";
 import DisclosureControllable from "../disclosure-controllable/DisclosureControllable";
 import InstantLoanBranches from "./InstantLoanBranches";
 import InstantLoanSummary from "./InstantLoanSummary";
+import "./instant-loan.scss";
 
 type InstantLoanProps = Partial<{
   title: string;

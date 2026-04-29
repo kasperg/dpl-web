@@ -1,4 +1,6 @@
 import { FC } from "react";
+import "./row-button.scss";
+import "./row-buttons.scss";
 
 type RowButtonProps = {
   label: string;

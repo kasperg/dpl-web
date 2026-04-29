@@ -2,6 +2,7 @@ import Disclosure from "../../disclosure/Disclosure";
 import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
 import Modal from "../Modal";
 import { Dropdown } from "../../dropdown/Dropdown";
+import "./modal-find-on-shelf.scss";
 
 export type ModalFindOnShelfProps = {
   workTitle: string;

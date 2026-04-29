@@ -1,4 +1,5 @@
 import React from "react";
+import "./combobox.scss";
 
 const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
   return (

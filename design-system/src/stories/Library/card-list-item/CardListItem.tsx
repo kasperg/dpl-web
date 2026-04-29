@@ -7,6 +7,8 @@ import HorizontalTermLine, {
   HorizontalTermLineProps,
 } from "../horizontal-term-line/HorizontalTermLine";
 import { getCoverTint } from "../cover/helper";
+import "./card-list-item.scss";
+import "./card-list-item-skeleton.scss";
 
 export type CardListItemProps = {
   heartFill?: boolean;

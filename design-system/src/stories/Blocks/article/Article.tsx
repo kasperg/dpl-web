@@ -3,6 +3,7 @@ import ArticleHeader, {
   ArticleHeaderProps,
 } from "../../Library/article-header/ArticleHeader";
 import { ArticleParagraphs } from "../../Library/paragraphs/Paragraphs";
+import "./article.scss";
 
 type ArticleProps = ArticleHeaderProps;
 

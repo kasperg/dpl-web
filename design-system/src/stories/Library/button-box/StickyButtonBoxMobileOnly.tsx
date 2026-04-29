@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./button-box.scss";
 
 export interface StickyButtonBoxMobileOnlyProps {
   label: string;

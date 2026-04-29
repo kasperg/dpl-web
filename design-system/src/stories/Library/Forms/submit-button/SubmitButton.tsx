@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { FC } from "react";
+import "./submit-button.scss";
 
 export interface SubmitButtonProps {
   buttonText: string;

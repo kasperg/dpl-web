@@ -3,6 +3,8 @@ import { ReactComponent as ArrowLeft } from "../../../public/icons/collection/Ar
 import { ReactComponent as ArrowRight } from "../../../public/icons/collection/ArrowRight.svg";
 import { GroupedOpeningHours } from "./OpeningHoursExampleData";
 import OpeningHoursWeekList from "./OpeningHoursWeekList";
+import "./opening-hours.scss";
+import "./opening-hours-skeleton.scss";
 
 type OpeningHoursProps = {
   title: string;

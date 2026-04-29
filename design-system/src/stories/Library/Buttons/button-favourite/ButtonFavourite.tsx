@@ -1,4 +1,5 @@
 import { IconFavourite } from "../../Icons/icon-favourite/IconFavourite";
+import "./button-favourite.scss";
 
 interface ButtonFavouriteProps {
   fill?: boolean;

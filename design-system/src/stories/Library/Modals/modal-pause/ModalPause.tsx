@@ -7,6 +7,7 @@ import flatpickr from "flatpickr";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 import Modal from "../Modal";
+import "./modal-pause.scss";
 
 export type ModalPauseProps = {
   showModal: boolean;

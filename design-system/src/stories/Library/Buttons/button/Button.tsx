@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { ButtonIcon } from "./ButtonIcon";
 import { getSize, getVariant } from "./helper";
 import { ButtonSize, ButtonType, ButtonVariant } from "./types";
+import "./buttons.scss";
 
 export type ButtonProps = {
   label: string;

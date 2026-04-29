@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ButtonExpand from "../Buttons/button/button-expand/ButtonExpand";
 import Heading, { HeadingLevelType } from "../heading/Heading";
+import "./horizontal-term-line.scss";
 
 export interface HorizontalTermLineList {
   url: string;

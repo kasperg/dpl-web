@@ -10,6 +10,7 @@ import FooterInfo, {
 import FooterSeparator from "../../Library/footer-separator/FooterSeparator";
 import FooterWidgets from "../../Library/footer-widgets/FooterWidgets";
 import { FooterColumnType } from "../../Library/footer-colums/FooterColumn";
+import "./footer.scss";
 
 export type FooterType = {
   footerContent: FooterColumnType[];

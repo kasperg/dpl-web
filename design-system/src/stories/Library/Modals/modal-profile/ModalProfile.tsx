@@ -6,6 +6,7 @@ import {
   ListDashboardProps,
 } from "../../Lists/list-dashboard/ListDashboard";
 import Modal from "../Modal";
+import "./modal-profile.scss";
 
 export type ModalProfileProps = {
   showModal: boolean;

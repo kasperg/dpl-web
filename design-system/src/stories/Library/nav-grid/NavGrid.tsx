@@ -1,5 +1,6 @@
 import { FC, ReactNode, useEffect } from "react";
 import clsx from "clsx";
+import "./nav-grid.scss";
 
 type CardProps = {
   title?: string;

@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import "./links.scss";
 
 export type LinksProps = {
   href: string;

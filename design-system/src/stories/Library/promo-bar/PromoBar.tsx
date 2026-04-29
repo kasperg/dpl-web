@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { PromoBarIcon, PromoBarIconType } from "./PromoBarIcon";
+import "./promo-bar.scss";
 
 type PromoBarProps = {
   text: string;

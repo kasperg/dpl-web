@@ -2,6 +2,7 @@ import React from "react";
 import { ContentListItem } from "../content-list-item/ContentListItem";
 import ContentListItemStacked from "../content-list-item/ContentListItemStacked";
 import contentListData from "../content-list/ContentListData";
+import "./event-list-stacked.scss";
 
 interface PromoteEventsListProps {
   title: string;

@@ -3,6 +3,7 @@ import PageFoldButton from "../Buttons/page-fold-button/PageFoldButton";
 import Pagefold from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
 import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
+import "./availability-label.scss";
 
 const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   manifestationType,

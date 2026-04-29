@@ -1,5 +1,6 @@
 /* eslint-disable local-rules/single-bem-block */
 import React from "react";
+import "./search-toggle.scss";
 
 const SearchToggle: React.FC<{ checked?: boolean }> = ({ checked }) => {
   return (

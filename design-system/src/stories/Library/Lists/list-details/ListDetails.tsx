@@ -1,5 +1,6 @@
 import { Dropdown, DropdownProps } from "../../dropdown/Dropdown";
 import { Links } from "../../links/Links";
+import "./list-details.scss";
 
 export type ListDetailsProps = {
   title: string;

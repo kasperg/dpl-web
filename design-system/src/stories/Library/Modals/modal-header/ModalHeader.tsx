@@ -1,5 +1,6 @@
 import { Avatar } from "../../avatar/Avatar";
 import { Links } from "../../links/Links";
+import "./modal-header.scss";
 
 export type ModalHeaderProps = {
   headerName: string;

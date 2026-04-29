@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { ReactComponent as ArrowSmallLeft } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-left.svg";
+import "./arrow-link.scss";
 
 type ArrowLinkProps = {
   label: string;

@@ -1,4 +1,5 @@
 import React from "react";
+import "./search-sort-select.scss";
 
 const SearchSortSelect: React.FC = () => {
   return (

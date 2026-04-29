@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React, { useState, useRef } from "react";
+import "./checkbox.scss";
 
 export type CheckboxProps = {
   isChecked: boolean;

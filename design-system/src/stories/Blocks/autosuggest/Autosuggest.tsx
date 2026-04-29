@@ -7,6 +7,7 @@ import {
   AutosuggestText,
   AutosuggestTextProps,
 } from "../../Library/autosuggest-text/AutosuggestText";
+import "./autosuggest.scss";
 
 export type AutosuggestProps = AutosuggestTextProps & AutosuggestMaterialProps;
 

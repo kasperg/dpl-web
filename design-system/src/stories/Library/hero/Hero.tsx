@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 
 import Tag from "../tag/Tag";
+import "./hero.scss";
 import MediaContainer from "../media-container/MediaContainer";
 
 export type HeroProps = {

@@ -8,6 +8,7 @@ import {
   MaterialCard,
   MaterialCardProps,
 } from "../../Library/material-card/MaterialCard";
+import "./material-banner.scss";
 
 export type MaterialBannerProps = {
   title: string;

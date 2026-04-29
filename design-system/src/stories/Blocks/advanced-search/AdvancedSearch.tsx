@@ -12,6 +12,7 @@ import Input from "../../Library/Forms/input/Input";
 import { Checkbox } from "../../Library/Forms/checkbox/Checkbox";
 import Textarea from "../../Library/Forms/textarea/Textarea";
 import { Links } from "../../Library/links/Links";
+import "./advanced-search.scss";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;

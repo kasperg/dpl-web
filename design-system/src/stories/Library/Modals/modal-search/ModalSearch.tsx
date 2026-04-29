@@ -1,5 +1,6 @@
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
+import "./modal-search.scss";
 
 export type ModalSearchProps = {
   showModal: boolean;

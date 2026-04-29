@@ -1,4 +1,5 @@
 import { ReactComponent as SvgIcon } from "./icon-favourite.svg";
+import "./icon-favourite.scss";
 
 export type IconFavouriteProps = {
   fill?: boolean;

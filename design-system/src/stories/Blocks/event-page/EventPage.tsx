@@ -7,6 +7,7 @@ import {
   Event as Hero,
   EventArgs as HeroArgs,
 } from "../../Library/hero/Hero.stories";
+import "./event-page.scss";
 
 type EventPageProps = EventDescriptionProps;
 

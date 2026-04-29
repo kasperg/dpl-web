@@ -1,4 +1,5 @@
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
+import "./simple-link.scss";
 
 export type SimpleLinkProps = {
   linkText: string;

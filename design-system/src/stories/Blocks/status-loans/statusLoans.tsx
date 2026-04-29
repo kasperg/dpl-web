@@ -3,6 +3,7 @@ import {
   ProgressBar,
   ProgressBarProps,
 } from "../../Library/progress-bar/progressBar";
+import "./status-loans.scss";
 
 export type LinkProps = {
   link: string;

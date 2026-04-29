@@ -8,6 +8,7 @@ import { WarningStatus } from "../../warning-status/WarningStatus";
 import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
+import "./modal-details.scss";
 
 const listDetails: Array<ListDetailsProps> = [
   {

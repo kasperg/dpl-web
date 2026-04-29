@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 import Modal from "../Modal";
+import "./modal-cta.scss";
 
 export type ModalCTAProps = {
   title: string;

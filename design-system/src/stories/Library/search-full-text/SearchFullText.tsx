@@ -1,4 +1,5 @@
 import SearchIcon from "../../../public/icons/basic/icon-search.svg";
+import "./search-full-text.scss";
 
 const SearchFullText = () => {
   return (

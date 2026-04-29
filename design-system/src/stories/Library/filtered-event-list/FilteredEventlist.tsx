@@ -3,6 +3,7 @@ import {
   ContentListItem,
   ContentListItemProps,
 } from "../content-list-item/ContentListItem";
+import "./filtered-event-list.scss";
 
 interface PromoteEventsListProps {
   title: string;

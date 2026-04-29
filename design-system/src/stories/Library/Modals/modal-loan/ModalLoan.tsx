@@ -10,6 +10,7 @@ import { WarningStatus } from "../../warning-status/WarningStatus";
 import Modal from "../Modal";
 import ResultPager from "../../card-list-page/ResultPager";
 import GroupModalItemSkeleton from "../GroupModalItemSkeleton";
+import "./modal-loan.scss";
 
 type LoanMaterials = Array<{
   materialType?: string;

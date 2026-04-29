@@ -8,6 +8,7 @@ import { Instance } from "flatpickr/dist/types/instance";
 import { MutableRefObject, useCallback, useRef } from "react";
 import { BaseOptions } from "flatpickr/dist/types/options";
 import { ReactComponent as ExpandMoreIcon } from "../../../../public/icons/collection/ExpandMore.svg";
+import "./date-picker.scss";
 
 export type DatePickerProps = {
   locale?: "en" | "da";

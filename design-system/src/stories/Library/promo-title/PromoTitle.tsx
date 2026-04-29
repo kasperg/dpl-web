@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import "./promo-title.scss";
 
 type PromoTitleProps = {
   text: string;

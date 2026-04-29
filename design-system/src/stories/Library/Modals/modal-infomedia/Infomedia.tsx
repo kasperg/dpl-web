@@ -1,5 +1,6 @@
 import Modal from "../Modal";
 import { ReactComponent as InfomediaIcon } from "../../../../public/icons/logo/infomedia-logo.svg";
+import "./infomedia.scss";
 
 export type InfomediaProps = {
   showModal: boolean;

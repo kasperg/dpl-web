@@ -1,5 +1,6 @@
 import { Dropdown } from "../dropdown/Dropdown";
 import { ReactComponent as MinusIcon } from "../../../public/icons/collection/MinusButton.svg";
+import "./input-with-dropdown.scss";
 
 export interface InputWithDropdownProps {
   inputPlaceholder: string;

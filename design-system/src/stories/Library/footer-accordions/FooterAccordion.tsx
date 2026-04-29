@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { clsx } from "clsx";
 import { FooterColumnType } from "../footer-colums/FooterColumn";
+import "./footer-accordions.scss";
 
 type FooterAccordionProps = FooterColumnType & {
   open?: boolean;

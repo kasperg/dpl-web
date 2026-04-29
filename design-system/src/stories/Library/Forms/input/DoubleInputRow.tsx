@@ -1,4 +1,5 @@
 import Input from "./Input";
+import "./input.scss";
 
 export type DoubleInputRowProps = {
   leftLabel: string;

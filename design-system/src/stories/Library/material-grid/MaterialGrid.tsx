@@ -4,6 +4,7 @@ import {
   RecommendedMaterial,
   RecommendedMaterialProps,
 } from "../recommended-material/RecommendedMaterial";
+import "./material-grid.scss";
 
 type AllowedDisplayAmount = 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32;
 

@@ -16,7 +16,14 @@ $block-max-width__large: 1124px;
 $block-max-width__x-large: 1240px;
 
 $article-max-width: 780px;
+$_max-width-rich-text: $article-max-width;
 $page-max-width: 1440px;
+
+// Material sizing used across cover, recommended-material, recommendation.
+$MATERIAL_MEDIUM_MOBILE: 137px;
+$MATERIAL_LARGE_DESKTOP: 216px;
+$_recommended-material-max-width: 378px;
+$_recommended-material-max-height: 432px;
 
 // Edge spacing for containers, ensures edge spacing for mobile or tablet.
 $edge-spacing-mobile: $s-md;

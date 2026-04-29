@@ -1,4 +1,5 @@
 import { Links } from "../links/Links";
+import "./link-filters.scss";
 
 export type LinkFilter = {
   title: string;

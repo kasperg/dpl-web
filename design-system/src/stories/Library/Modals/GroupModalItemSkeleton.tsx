@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Checkbox } from "../Forms/checkbox/Checkbox";
+import "./modal.scss";
+import "./group-modal-item-skeleton.scss";
 
 export type GroupModalItemSkeletonProps = {
   withLeftOutset?: boolean;

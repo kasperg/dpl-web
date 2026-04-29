@@ -3,6 +3,7 @@ import HorizontalTermLine, {
 } from "../horizontal-term-line/HorizontalTermLine";
 import MaterialContents from "../material-contents/MaterialContents";
 import { Content } from "../material-contents/types";
+import "./material-description.scss";
 
 const horizontalTermLines = [
   {

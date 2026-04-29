@@ -3,6 +3,7 @@ import { Counter, CounterProps } from "../../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import Cover from "../../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
+import "./list-reservation.scss";
 
 export type ListReservationsAndLoansProps = {
   cover: {

@@ -5,6 +5,7 @@ import OpeningHoursSidebarSummary from "./OpeningHoursSidebarSummary";
 import OpeningHoursSidebarDetails, {
   OpeningHoursItemType,
 } from "./OpeningHoursSidebarDetails";
+import "./opening-hours-sidebar.scss";
 
 type OpeningHoursSidebarType = {
   title: string;

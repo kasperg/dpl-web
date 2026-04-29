@@ -5,6 +5,7 @@ import Paragraph from "../paragraph/Paragraph";
 import { Recommendation } from "../recommendation/Recommendation";
 import { RichText, RichTextEvent } from "../rich-text/RichText";
 import VideoEmbed from "../video-embed/VideoEmbed";
+import "./paragraphs.scss";
 
 export const EventParagraphs = () => {
   return (

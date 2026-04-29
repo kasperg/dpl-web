@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import "./library-select.scss";
 
 export type InputProps = {
   label: string;

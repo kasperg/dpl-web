@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../Buttons/button/Button";
 import { ReactComponent as MenuIcon } from "../../../public/icons/collection/Menu.svg";
 import { ReactComponent as VariousIcon } from "../../../public/icons/collection/Various.svg";
+import "./list-buttons.scss";
 
 export type ListButtonProps = {
   buttonLabel: string;

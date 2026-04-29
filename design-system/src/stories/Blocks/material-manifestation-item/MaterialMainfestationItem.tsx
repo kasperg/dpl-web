@@ -10,6 +10,7 @@ import { CopyLink } from "../../Library/copy-link/CopyLink";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import MaterialContents from "../../Library/material-contents/MaterialContents";
 import { Content } from "../../Library/material-contents/types";
+import "./material-manifestation-item.scss";
 
 export type MaterialMainfestationItemProps = {
   title: string;

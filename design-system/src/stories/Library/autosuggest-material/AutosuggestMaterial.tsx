@@ -1,4 +1,5 @@
 import Cover from "../cover/Cover";
+import "./autosuggest-material.scss";
 
 export type AutosuggestMaterialProps = {
   materialSuggestions: {

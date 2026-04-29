@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { ReactComponent as LinkIcon } from "../../../public/icons/collection/link.svg";
 import { ReactComponent as CheckIcon } from "../../../public/icons/basic/icon-check_small.svg";
+import "./copy-link.scss";
 
 export type CopyLinkProps = {
   label?: string;

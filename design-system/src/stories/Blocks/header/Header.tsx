@@ -12,6 +12,7 @@ import { ReactComponent as HeartIcon } from "../../../public/icons/basic/icon-he
 import { ReactComponent as WatchStaticIcon } from "../../../public/icons/basic/icon-watch-static.svg";
 import Pagefold from "../../Library/pagefold/Pagefold";
 import HeaderSidebarNav from "../../Library/header-sidebar-nav/header-sidebar-nav";
+import "./header.scss";
 
 export type HeaderProps = {
   signedIn: boolean;

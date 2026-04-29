@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 import Heading, { HeadingLevelType } from "../heading/Heading";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
+import "./disclosure.scss";
 
 export type DisclosureProps = {
   headline: string;

@@ -10,6 +10,8 @@ import MaterialHeader from "../../Library/material-header/MaterialHeader";
 import { Review } from "../../Library/review/Review";
 import { MaterialMainfestationItem } from "../material-manifestation-item/MaterialMainfestationItem";
 import { Content } from "../../Library/material-contents/types";
+import "./material-page.scss";
+import "./material-page-skeleton.scss";
 
 export interface MaterialPageProps {
   title: string;

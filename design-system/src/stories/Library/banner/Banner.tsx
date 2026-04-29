@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { FC, ReactNode } from "react";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
+import "./banner.scss";
 
 type BannerType = {
   link: string;

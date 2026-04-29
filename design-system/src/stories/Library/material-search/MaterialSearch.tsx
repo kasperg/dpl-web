@@ -4,6 +4,7 @@ import MaterialSearchInputs from "./MaterialSearchInputs";
 import MaterialSearchList from "./MaterialSearchList";
 import MaterialSearchPreview from "./MaterialSearchPreview";
 import ErrorState from "./Errors/ErrorState";
+import "./material-search.scss";
 
 interface MaterialSearchProps {
   errorState: ErrorState;

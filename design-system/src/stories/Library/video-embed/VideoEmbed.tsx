@@ -1,5 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import { Button } from "../Buttons/button/Button";
+import "./video-embed.scss";
+import "./cookie-placeholder.scss";
 
 type VideoEmbedProps = {
   info: string;

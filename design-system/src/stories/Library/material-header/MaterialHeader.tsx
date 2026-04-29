@@ -5,6 +5,8 @@ import { generateId } from "../horizontal-term-line/HorizontalTermLine";
 import Cover from "../cover/Cover";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodicalSelect from "./MaterialPeriodicalSelect";
+import "./material-header.scss";
+import "./material-periodical-select.scss";
 
 const listOfAvailabilityLabels = [
   {

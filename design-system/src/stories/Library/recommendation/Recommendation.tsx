@@ -5,6 +5,8 @@ import {
   RecommendedMaterialProps,
 } from "../recommended-material/RecommendedMaterial";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
+import "./recommendation.scss";
+import "./recommendation-skeleton.scss";
 
 export type RecommendationProps = {
   title: string;

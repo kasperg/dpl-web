@@ -6,6 +6,7 @@ import { ReactComponent as FilterIcon } from "../../../public/icons/collection/F
 import { ReactComponent as CloseIcon } from "../../../public/icons/collection/CloseSmall.svg";
 import { ReactComponent as ArrowSmallRight } from "../../Library/Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { IconFavourite } from "../../Library/Icons/icon-favourite/IconFavourite";
+import "./search.scss";
 
 const Search: React.FC = () => {
   return (
