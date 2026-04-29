@@ -1,4 +1,5 @@
 {% if items %}
+  {{ attach_library('novel/filtered-event-list') }}
   {{ attach_library('novel/show-more') }}
 
   <div {{ attributes.addClass('filtered-event-list') }} data-show-more-list-wrapper>

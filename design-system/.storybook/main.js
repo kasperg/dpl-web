@@ -23,9 +23,9 @@ function patchSassLoaders(rules) {
                 additionalData: (content) => {
                   const useMatch = content.match(/^(@use\s[^\n]+\n)+/);
                   if (useMatch) {
-                    return useMatch[0] + '@import "tools";\n' + content.slice(useMatch[0].length);
+                    return useMatch[0] + '@import "tools-compile";\n' + content.slice(useMatch[0].length);
                   }
-                  return '@import "tools";\n' + content;
+                  return '@import "tools-compile";\n' + content;
                 },
                 sassOptions: {
                   includePaths: [
@@ -40,9 +40,9 @@ function patchSassLoaders(rules) {
               // @use rules must come before @import. Insert tools after any @use.
               const useMatch = content.match(/^(@use\s[^\n]+\n)+/);
               if (useMatch) {
-                return useMatch[0] + '@import "tools";\n' + content.slice(useMatch[0].length);
+                return useMatch[0] + '@import "tools-compile";\n' + content.slice(useMatch[0].length);
               }
-              return '@import "tools";\n' + content;
+              return '@import "tools-compile";\n' + content;
             };
             loader.options.sassOptions = loader.options.sassOptions || {};
             loader.options.sassOptions.includePaths = [
