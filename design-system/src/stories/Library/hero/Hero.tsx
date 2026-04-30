@@ -93,7 +93,7 @@ const Hero: React.FunctionComponent<HeroProps> = ({
           <div className="hero__cta">
             {cta ? (
               // eslint-disable-next-line local-rules/single-bem-block
-              <a href="/" className="btn-primary btn-filled btn-large">
+              <a href="/" className="button button--filled button--large">
                 {cta}
               </a>
             ) : (

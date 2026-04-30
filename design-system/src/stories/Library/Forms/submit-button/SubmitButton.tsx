@@ -10,9 +10,9 @@ export interface SubmitButtonProps {
 const SubmitButton: FC<SubmitButtonProps> = ({ buttonText, classNames }) => {
   const classes = clsx(
     [
-      "btn-primary",
-      "btn-filled",
-      "btn-small",
+      "button",
+      "button--filled",
+      "button--small",
       "arrow__hover--right-small",
       "dpl-button",
     ],

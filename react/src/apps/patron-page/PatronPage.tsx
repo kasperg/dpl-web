@@ -145,7 +145,7 @@ const PatronPage: FC = () => {
 
         <button
           data-cy="save-user-patron"
-          className="mt-48 btn-primary btn-filled btn-small arrow__hover--right-small "
+          className="mt-48 button button--filled button--small arrow__hover--right-small "
           type="submit"
           disabled={disableSubmitButton || !isPinChangeValid}
         >

@@ -26,7 +26,7 @@ const MenuNotLoggedInContent: FC = () => {
       <div className="modal-login modal-login--anonymous">
         <Link
           href={menuLoginUrl}
-          className="btn-primary btn-filled btn-large arrow__hover--right-small"
+          className="button button--filled button--large arrow__hover--right-small"
         >
           {t("menuLoginText")}
         </Link>

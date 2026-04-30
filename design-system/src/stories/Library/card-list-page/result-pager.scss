@@ -12,7 +12,7 @@
   margin-top: 0px;
 }
 // Override button css (Center + Width)
-.result-pager > .btn-primary {
+.result-pager > .button {
   margin: 0 auto;
   width: 100%;
 
@@ -21,7 +21,7 @@
   }
 }
 
-.result-pager--margin-bottom > .btn-primary {
+.result-pager--margin-bottom > .button {
   @include media-query__small {
     margin-bottom: 90px;
   }

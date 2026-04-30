@@ -21,9 +21,9 @@
   }
 
   &__button {
-    @extend %btn-primary;
-    @extend %btn-outline;
-    @extend %btn-medium;
+    @extend %button;
+    @extend %button--outline;
+    @extend %button--medium;
 
     gap: $s-sm;
     background-color: $color__global-primary;

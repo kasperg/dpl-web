@@ -196,7 +196,7 @@ const UserInfo: FC<UserInfoProps> = ({ cpr, registerSuccessCallback }) => {
             <div className="create-patron-page__buttons">
               <button
                 type="submit"
-                className="btn-primary btn-filled btn-small"
+                className="button button--filled button--small"
                 data-cy="complete-user-registration-button"
                 disabled={!isPinValid}
               >

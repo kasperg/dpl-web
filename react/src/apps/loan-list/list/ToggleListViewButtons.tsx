@@ -81,8 +81,8 @@ const ToggleListViewButtons: FC<ToggleListViewButtonsProps> = ({
             openRenewLoansModal();
           }}
           disabled={disableRenewLoansButton}
-          className={`btn-primary btn-filled btn-small arrow__hover--right-small ${
-            disableRenewLoansButton ? "btn-outline" : ""
+          className={`button button--filled button--small arrow__hover--right-small ${
+            disableRenewLoansButton ? "button--outline" : ""
           }`}
           id="test-renew-button"
           aria-describedby="renew-multiple-modal"

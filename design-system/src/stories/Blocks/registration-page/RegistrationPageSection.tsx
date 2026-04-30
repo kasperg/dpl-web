@@ -31,7 +31,7 @@ const RegistrationPageSection = () => {
       <Links
         href="/"
         linkText="Register an adult here"
-        classNames="paragraphs__item--user_registration_section__link btn-primary btn-filled btn-large"
+        classNames="paragraphs__item--user_registration_section__link button button--filled button--large"
       />
     </div>
   );

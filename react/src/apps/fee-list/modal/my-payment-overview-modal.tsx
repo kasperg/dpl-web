@@ -38,12 +38,12 @@ const MyPaymentOverviewModal: FC = () => {
         <div className="modal-cta__buttons">
           {feeListPaymentSiteUrl && (
             <Link
-              className="btn-primary btn-filled btn-large arrow__hover--right-small"
+              className="button button--filled button--large arrow__hover--right-small"
               href={feeListPaymentSiteUrl}
               isNewTab
             >
               {t("feePaymentModalGotoText")}{" "}
-              <img src={ExternalLinkIcon} className="btn-icon invert" alt="" />
+              <img src={ExternalLinkIcon} className="button__icon invert" alt="" />
             </Link>
           )}
           <div className="modal-cta__link">

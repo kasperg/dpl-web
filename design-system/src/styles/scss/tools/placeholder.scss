@@ -337,12 +337,11 @@ $_pagefold-map: (
   "xlarge": 56,
 );
 
-// Button placeholders — used by buttons.scss and button-share.scss.
+// Button placeholders — used by button.scss and button-share.scss.
 $_color__btn-border-active: $color__global-black;
 $_color__btn-border-disabled: $color__global-tertiary-2;
-$_color__btn-filled-hover: $color__text-secondary-gray;
 
-%btn-primary {
+%button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,7 +370,7 @@ $_color__btn-filled-hover: $color__text-secondary-gray;
   }
 }
 
-%btn-outline {
+%button--outline {
   background-color: transparent;
   color: $color__text-primary-black;
 
@@ -382,7 +381,7 @@ $_color__btn-filled-hover: $color__text-secondary-gray;
   }
 }
 
-%btn-medium {
+%button--medium {
   height: 48px;
   padding: 0 48px;
 }

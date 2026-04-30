@@ -229,14 +229,14 @@ const SearchForm: React.FC = () => {
         <button
           data-cy="button"
           type="button"
-          className="btn-primary btn-filled btn-large  arrow__hover--right-small "
+          className="button button--filled button--large  arrow__hover--right-small "
         >
           Søg
         </button>
         <button
           data-cy="button"
           type="button"
-          className="btn-primary btn-outline btn-large  arrow__hover--right-small search__reset-button"
+          className="button button--outline button--large  arrow__hover--right-small search__reset-button"
         >
           Nulstil
         </button>

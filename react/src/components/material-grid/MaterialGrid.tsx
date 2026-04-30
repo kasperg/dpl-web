@@ -100,7 +100,7 @@ const MaterialGrid: React.FC<MaterialGridProps> = ({
       </ul>
       {moreMaterialsThanInitialMaximum && !showAllMaterials && buttonText && (
         <button
-          className="material-grid__show-more btn-primary btn-outline btn-medium"
+          className="material-grid__show-more button button--outline button--medium"
           data-show-more
           aria-expanded={showAllMaterials ? "true" : "false"}
           type="button"

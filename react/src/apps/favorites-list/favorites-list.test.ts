@@ -91,7 +91,7 @@ describe("Favorites list", () => {
       .find(".card-list-item")
       .should("have.length", 2);
     // Show more materials
-    cy.get(".result-pager").find(".btn-primary").click();
+    cy.get(".result-pager").find(".button").click();
     // Content list should now contain 3 materials
     cy.get(".content-list-page")
       .find(".card-list-item")

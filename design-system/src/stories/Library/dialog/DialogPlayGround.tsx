@@ -11,7 +11,7 @@ const DialogPlayGround = () => {
     <>
       <button
         // eslint-disable-next-line local-rules/single-bem-block
-        className="btn-primary btn-outline btn-medium"
+        className="button button--outline button--medium"
         onClick={() => {
           openDialogWithContent(<DialogContent />);
         }}
@@ -20,7 +20,7 @@ const DialogPlayGround = () => {
       </button>
       <button
         // eslint-disable-next-line local-rules/single-bem-block
-        className="btn-primary btn-outline btn-medium"
+        className="button button--outline button--medium"
         onClick={() => {
           openDialogWithContent(<OpeningHoursForm />);
         }}

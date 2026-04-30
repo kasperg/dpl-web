@@ -17,7 +17,7 @@ const FacetLineSelectedTerms: FC<FacetLineSelectedProps> = ({ items }) => {
         </li>
       ))}
       <li className="facet-line-more-filters">
-        <button className="btn--link-styling">
+        <button className="button--link-styling">
           <img src="icons/basic/icon-filter.svg" alt="Filter icon" />
           <span className="link-tag">Flere filtre</span>
         </button>

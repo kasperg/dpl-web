@@ -334,7 +334,7 @@ describe("Reservation list", () => {
       .should("have.text", "Pause your reservations");
     // ID 11 2.a.ii. Toggle switch: which show whether the users reservation is paused
     cy.get(".pause-reservation")
-      .find(".btn-primary")
+      .find(".button")
       .should("exist");
 
     cy.wait(["@physical_reservations", "@digital_reservations"]);

@@ -15,7 +15,7 @@ const StickyButtonBoxMobileOnly: FC<StickyButtonBoxMobileOnlyProps> = ({
         data-cy="button"
         type="button"
         // eslint-disable-next-line local-rules/single-bem-block
-        className="btn-primary btn-filled btn-small  arrow__hover--right-small "
+        className="button button--filled button--small  arrow__hover--right-small "
       >
         {label}
       </button>

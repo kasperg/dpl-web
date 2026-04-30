@@ -38,7 +38,7 @@ const CardListInfoBox = ({
           <div className="card-list-info-box__button-wrapper">
             <Link
               href={buttonUrl}
-              className="btn-primary btn-outline btn-xsmall"
+              className="button button--outline button--xsmall"
             >
               {buttonLabel}
             </Link>

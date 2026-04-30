@@ -43,7 +43,7 @@ const ReservationDetailsRedirect: FC<
         url={workUrl}
         variant="filled"
         id="view-material-button"
-        iconClassNames="btn-icon invert"
+        iconClassNames="button__icon invert"
       >
         {t("viewMaterialText")}
       </LinkButton>

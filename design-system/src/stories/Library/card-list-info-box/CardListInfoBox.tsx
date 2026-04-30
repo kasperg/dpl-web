@@ -28,7 +28,7 @@ const CardListInfoBox = ({ title, html, buttonText }: CardListInfoBoxProps) => {
             <a
               href="/advanced-search"
               // eslint-disable-next-line local-rules/single-bem-block
-              className="btn-primary btn-outline btn-xsmall"
+              className="button button--outline button--xsmall"
             >
               {buttonText}
             </a>

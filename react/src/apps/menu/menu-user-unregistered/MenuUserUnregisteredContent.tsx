@@ -11,7 +11,7 @@ const MenuUserUnregisteredContent = () => {
   return (
     <div className="modal-login modal-login--anonymous">
       <Link
-        className="btn-primary btn-filled btn-large arrow__hover--right-small"
+        className="button button--filled button--large arrow__hover--right-small"
         href={logoutUrl}
       >
         {t("menuLogOutText")}

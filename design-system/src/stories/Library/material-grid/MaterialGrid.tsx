@@ -69,7 +69,7 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
       {moreMaterialsThanInitialMaximum && !showAllMaterials && buttonText && (
         <button
           // eslint-disable-next-line local-rules/single-bem-block
-          className="material-grid__show-more btn-primary btn-outline btn-medium"
+          className="material-grid__show-more button button--outline button--medium"
           data-show-more
           aria-expanded={showAllMaterials ? "true" : "false"}
           aria-controls="material-grid__items"

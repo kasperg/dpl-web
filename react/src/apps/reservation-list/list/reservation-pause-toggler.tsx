@@ -63,7 +63,7 @@ const ReservationPauseToggler: FC<ReservationPauseTogglerProps> = ({
                 openPauseReservationModal();
               }
             }}
-            className="btn-primary btn-filled btn-small"
+            className="button button--filled button--small"
           >
             {t("reservationListPauseReservationButtonText")}
           </button>

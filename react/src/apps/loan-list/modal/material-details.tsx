@@ -130,7 +130,7 @@ const MaterialDetails: FC<MaterialDetailsProps & MaterialProps> = ({
             <div className="modal-details__buttons modal-details__buttons--hide-on-mobile">
               <Link
                 href={workUrl}
-                className="btn-primary btn-filled btn-small arrow__hover--right-small"
+                className="button button--filled button--small arrow__hover--right-small"
               >
                 {t("viewMaterialText")}
               </Link>
@@ -192,7 +192,7 @@ const MaterialDetails: FC<MaterialDetailsProps & MaterialProps> = ({
             <div className="modal-details__buttons">
               <Link
                 href={workUrl}
-                className="btn-primary btn-filled btn-small arrow__hover--right-small modal-details__buttons__full-width"
+                className="button button--filled button--small arrow__hover--right-small modal-details__buttons__full-width"
               >
                 {t("viewMaterialText")}
               </Link>

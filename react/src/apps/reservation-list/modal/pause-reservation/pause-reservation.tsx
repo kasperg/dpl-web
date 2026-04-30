@@ -130,7 +130,7 @@ const PauseReservation: FC<PauseReservationProps> = ({ id, user }) => {
           <button
             type="submit"
             form={saveFormId}
-            className="btn-primary btn-filled btn-small"
+            className="button button--filled button--small"
             disabled={isLoading}
           >
             {t("pauseReservationModalSaveButtonLabelText")}
@@ -139,7 +139,7 @@ const PauseReservation: FC<PauseReservationProps> = ({ id, user }) => {
             <button
               type="button"
               onClick={resetPauseDates}
-              className="btn-primary btn-small mt-16"
+              className="button button--small mt-16"
             >
               {t("pauseReservationModalCancelButtonLabelText")}
             </button>

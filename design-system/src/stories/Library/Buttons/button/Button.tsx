@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { ButtonIcon } from "./ButtonIcon";
 import { getSize, getVariant } from "./helper";
 import { ButtonSize, ButtonType, ButtonVariant } from "./types";
-import "./buttons.scss";
+import "./button.scss";
 
 export type ButtonProps = {
   label: string;
@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
       type="button"
       // eslint-disable-next-line local-rules/single-bem-block
       className={clsx(
-        "btn-primary",
+        "button",
         getVariant(variant),
         getSize(size),
         "arrow__hover--right-small",

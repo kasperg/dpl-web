@@ -52,7 +52,7 @@ const FacetLineSelected = () => {
           <ButtonTag
             onClick={() => open(FacetBrowserModalId)}
             dataCy="facet-line-open-browser"
-            className="btn--link-styling"
+            className="button--link-styling"
           >
             <img src={IconFilter} alt="" className="mr-8" />
             <span className="link-tag">{t("addMoreFiltersText")}</span>

@@ -28,7 +28,7 @@ function ResultPager({
       {itemsShown !== hitcount && !isLoading && (
         <button
           type="button"
-          className="btn-primary btn-outline btn-medium arrow__hover--right-small uppercase"
+          className="button button--outline button--medium arrow__hover--right-small uppercase"
           onClick={setPageHandler}
         >
           {t("showMoreText")}

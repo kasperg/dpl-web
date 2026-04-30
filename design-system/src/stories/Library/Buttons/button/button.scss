@@ -1,0 +1,100 @@
+$_color__btn-border-disabled: $color__global-tertiary-2;
+$_color__btn-filled-hover: $color__text-secondary-gray;
+
+.button {
+  @extend %button;
+
+  &__icon {
+    margin-left: $s-md;
+    color: inherit;
+  }
+
+  &__collapsible {
+    margin-left: $s-md;
+    display: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .button__collapsible {
+      display: block;
+    }
+  }
+
+  &[disabled] {
+    .arrow__body {
+      stroke: $_color__btn-border-disabled;
+    }
+
+    .arrow__head {
+      fill: $_color__btn-border-disabled;
+    }
+  }
+
+  &--xlarge {
+    height: 48px;
+    padding: $s-sm 86px;
+  }
+
+  &--large {
+    height: 48px;
+    padding: 0 86px;
+  }
+
+  &--medium {
+    @extend %button--medium;
+  }
+
+  &--small {
+    height: 40px;
+    padding: 0 $s-xl;
+  }
+
+  &--xsmall {
+    height: $s-xl;
+    padding: 0 $s-lg;
+  }
+
+  &--filled:not([disabled]) {
+    background-color: $color__global-black;
+    color: $color__text-primary-white;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $_color__btn-filled-hover;
+      border-color: $_color__btn-filled-hover;
+    }
+  }
+
+  &--outline {
+    @extend %button--outline;
+  }
+
+  &--link-styling {
+    border: none;
+    padding: 4px;
+
+    span {
+      @include typography($typo__tags);
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.tag.button--link-styling {
+  border: none;
+  padding: 4px;
+
+  span {
+    @include typography($typo__tags);
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}

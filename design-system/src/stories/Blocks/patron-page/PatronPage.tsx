@@ -114,7 +114,7 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
         </section>
 
         <button
-          className="mt-48 btn-primary btn-filled btn-small"
+          className="mt-48 button button--filled button--small"
           type="submit"
         >
           Save

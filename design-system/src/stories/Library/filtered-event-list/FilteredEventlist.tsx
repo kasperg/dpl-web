@@ -40,7 +40,7 @@ const PromoteEventsList: React.FC<PromoteEventsListProps> = ({
       </ul>
       <button
         // eslint-disable-next-line local-rules/single-bem-block
-        className="filtered-event-list__button btn-primary btn-outline btn-medium"
+        className="filtered-event-list__button button button--outline button--medium"
         type="button"
         data-show-more-button
         data-show-more-text={buttonText}

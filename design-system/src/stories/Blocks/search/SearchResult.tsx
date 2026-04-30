@@ -753,7 +753,7 @@ const Search: React.FC = () => {
                       <button
                         data-cy="button"
                         type="button"
-                        className="btn-primary btn-filled btn-medium  arrow__hover--right-small search-facets__dialog__actions__button"
+                        className="button button--filled button--medium  arrow__hover--right-small search-facets__dialog__actions__button"
                       >
                         Vis resultater
                       </button>
@@ -1013,7 +1013,7 @@ const Search: React.FC = () => {
               </p>
               <button
                 type="button"
-                className="btn-primary btn-outline btn-medium arrow__hover--right-small uppercase"
+                className="button button--outline button--medium arrow__hover--right-small uppercase"
               >
                 vis flere
               </button>
