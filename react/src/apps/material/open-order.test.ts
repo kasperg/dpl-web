@@ -10,13 +10,13 @@ const navigateToMaterial = () => {
     .and("contain", "Reserve bog")
     .click();
   cy.getBySel("material-description").scrollIntoView();
-  cy.getBySel("reservation-modal-submit-button", true)
+  cy.getBySel("reservation-modal__submit-button", true)
     .should("be.visible")
     .and("contain", "Approve reservation");
   // We need to wait here because no other fixes work.
   // eslint-disable-next-line
   cy.wait(500);
-  cy.getBySel("reservation-modal-submit-button").click();
+  cy.getBySel("reservation-modal__submit-button").click();
   // We need to wait here because no other fixes work.
   // eslint-disable-next-line
   cy.wait(500);

@@ -8,9 +8,9 @@ const ReservationFormItem = ({
   title,
   text,
 }: ReservationFormItemProps) => (
-  <div className="reservation-modal-list-item">
+  <div className="reservation-modal__list-item">
     <img src={`icons/collection/${icon}.svg`} alt="" />
-    <div className="reservation-modal-list-item-text">
+    <div className="reservation-modal__list-item-text">
       <h3 className="text-header-h5">{title}</h3>
       <p className="text-small-caption">{text}</p>
     </div>

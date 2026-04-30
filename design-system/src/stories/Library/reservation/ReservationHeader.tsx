@@ -12,16 +12,16 @@ const ReservationHeader = ({
   title,
 }: ReservationHeaderProps) => {
   return (
-    <header className="reservation-modal-header">
+    <header className="reservation-modal__header">
       <Cover
         src="images/book_cover_3.jpg"
         size="medium"
         animate={false}
         tint="120"
       />
-      <div className="reservation-modal-description">
-        <div className="reservation-modal-tag">{label}</div>
-        <h2 className="reservation-modal-description__title">{title}</h2>
+      <div className="reservation-modal__description">
+        <div className="reservation-modal__tag">{label}</div>
+        <h2 className="reservation-modal__description-title">{title}</h2>
         <p className="text-body-medium-regular">{author}</p>
       </div>
     </header>

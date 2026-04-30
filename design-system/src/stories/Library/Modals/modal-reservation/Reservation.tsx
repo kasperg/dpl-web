@@ -3,7 +3,8 @@ import ReservationForm from "../../reservation/ReservationForm";
 import ReservationHeader from "../../reservation/ReservationHeader";
 import ReservationSucces from "../../reservation/ReservationSucces";
 import Modal from "../Modal";
-import "./reservation.scss";
+import "./reservation-modal.scss";
+import "./reservation-form.scss";
 
 interface ReservationProps {
   title: string;

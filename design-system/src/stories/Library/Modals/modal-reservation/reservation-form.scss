@@ -1,0 +1,16 @@
+.reservation-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    @include media-query__medium {
+      width: 45%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+}

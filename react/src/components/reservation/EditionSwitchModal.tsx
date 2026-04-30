@@ -44,9 +44,9 @@ const EditionSwitchModal = ({
       dataCy={dataCy || "edition-switch-modal"}
     >
       <section className="reservation-modal reservation-modal--edition-switch">
-        <header className="reservation-modal-header">
-          <div className="reservation-modal-description">
-            <h2 className="reservation-modal-description__title">
+        <header className="reservation-modal__header">
+          <div className="reservation-modal__description">
+            <h2 className="reservation-modal__description-title">
               {t("editionSwitchModalTitleText")}
             </h2>
             <p className="text-body-medium-regular">
@@ -56,7 +56,7 @@ const EditionSwitchModal = ({
         </header>
         <div>
           <div className="edition-switch-list">
-            <div className="reservation-modal-submit">
+            <div className="reservation-modal__submit">
               <Button
                 dataCy="edition-switch-first-available-button"
                 label={editionButtonText}

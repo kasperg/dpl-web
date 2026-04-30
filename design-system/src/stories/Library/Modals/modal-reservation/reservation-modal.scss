@@ -1,0 +1,94 @@
+.reservation-modal {
+  background-color: $color__global-primary;
+  width: 100%;
+
+  &--confirm {
+    display: grid;
+    place-content: center;
+  }
+
+  &__confirm-button {
+    width: 193px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include typography($typo__h3);
+    padding-bottom: 48px;
+  }
+
+  &__text {
+    @include typography($typo__body-placeholder);
+    padding-bottom: 48px;
+
+    &--short {
+      padding-bottom: $s-lg;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $s-md;
+    @include media-query__small {
+      flex-direction: row;
+    }
+  }
+
+  &__description {
+    margin-top: $s-lg;
+    @include media-query__small {
+      margin-left: 42px;
+    }
+  }
+
+  &__description-title {
+    @include typography($typo__h2);
+    margin-top: 22px;
+    margin-bottom: $s-sm;
+  }
+
+  &__tag {
+    @include typography($typo__tags);
+    padding: $s-xs $s-md;
+    border: 1px solid $color__global-tertiary-1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $s-md;
+    margin-bottom: $s-lg;
+
+    @include media-query__small {
+      justify-content: end;
+      flex-direction: row;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: $s-sm;
+  }
+
+  &__list-item {
+    background-color: $color__global-white;
+    display: flex;
+    align-items: center;
+    min-height: 96px;
+    gap: $s-xl;
+    padding-left: $s-xl;
+    padding-right: $s-xl;
+  }
+
+  &__list-item-text {
+    flex: 1;
+    & > * {
+      margin: 0;
+    }
+  }
+}
