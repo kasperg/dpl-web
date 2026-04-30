@@ -9,7 +9,7 @@
     "js:format": "eslint 'src/**/*.{js,ts,tsx}' --fix",
     "css:lint": "stylelint 'src/**/*.scss'",
     "css:format": "stylelint 'src/**/*.scss' --fix",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js && node scripts/generate-block-css-map.js",
     "markdown:lint": "markdownlint-cli2",
     "markdown:format": "markdownlint-cli2-fix",
     "dev": "storybook dev --port 6006 --host 0.0.0.0 --no-open --ci",

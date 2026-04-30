@@ -1,4 +1,5 @@
 import noOnlyTests from "eslint-plugin-no-only-tests";
+import localRules from "eslint-plugin-local-rules";
 import globals from "globals";
 import tsParser from "@typescript-eslint/parser";
 import path from "node:path";
@@ -45,7 +46,8 @@ export default [
   ),
   {
     plugins: {
-      "no-only-tests": noOnlyTests
+      "no-only-tests": noOnlyTests,
+      "local-rules": localRules
     },
 
     languageOptions: {
@@ -91,6 +93,7 @@ export default [
     },
 
     rules: {
+      "local-rules/require-design-system-css": "warn",
       "no-console": "error",
       "no-alert": "error",
       "no-script-url": "error",
