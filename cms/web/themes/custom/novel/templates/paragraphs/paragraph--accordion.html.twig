@@ -1,6 +1,7 @@
-<details {{ attributes.addClass('disclosure', 'disclosure--paragraph-width', 'text-body-large') }}>
-<summary class="disclosure__headline text-body-large">
-    <h2 class="text-body-large disclosure__text">
+{{ attach_library('novel/disclosure') }}
+<details {{ attributes.addClass('disclosure', 'disclosure--paragraph-width') }}>
+<summary class="disclosure__headline">
+    <h2 class="disclosure__text">
       {{ content.field_accordion_title }}
     </h2>
       <img class="disclosure__expand" src="{{ absoluteBaseUrl ~ '/' ~ baseIconPath ~ '/collection/ExpandMore.svg' }}" alt="Icon Description" />

@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import { ReactComponent as LinkIcon } from "../../../public/icons/collection/link.svg";
@@ -5,6 +6,7 @@ import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Ch
 import { ReactComponent as FilterIcon } from "../../../public/icons/collection/Filter.svg";
 import { ReactComponent as ArrowSmallRight } from "../../Library/Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { IconFavourite } from "../../Library/Icons/icon-favourite/IconFavourite";
+import "./search-filter.scss";
 
 const AdvancedSearchSummary: React.FC = () => {
   return (
@@ -410,16 +412,16 @@ const AdvancedSearchSummary: React.FC = () => {
                 <FilterIcon />
                 <span>Flere filtre</span>
               </button>
-              <div className="search__sort-select">
+              <div className="search__sort">
                 <label
-                  className="search__sort-select__label"
+                  className="search__sort-label"
                   htmlFor="advanced-sort-select"
                 >
                   Sorter efter
                 </label>
-                <div className="search__sort-select__select-wrapper">
+                <div className="search__sort-wrapper">
                   <select
-                    className="search__sort-select__select"
+                    className="search__sort-input"
                     id="advanced-sort-select"
                   >
                     <option value="relevance">Bedste match</option>
@@ -513,14 +515,14 @@ const AdvancedSearchSummary: React.FC = () => {
                     <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                     <CheckIcon className="availability-label__check" />
                     <p
-                      className="availability-label__text text-label-semibold ml-24"
+                      className="availability-label__type"
                       data-cy="availability-label-type"
                     >
                       artikel
                     </p>
-                    <div className="availability-label__divider ml-4" />
+                    <div className="availability-label__divider" />
                     <p
-                      className="availability-label__text text-label-normal ml-4 mr-8"
+                      className="availability-label__availability"
                       data-cy="availability-label-status"
                     >
                       Tilgængelig
@@ -593,14 +595,14 @@ const AdvancedSearchSummary: React.FC = () => {
                     <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                     <CheckIcon className="availability-label__check" />
                     <p
-                      className="availability-label__text text-label-semibold ml-24"
+                      className="availability-label__type"
                       data-cy="availability-label-type"
                     >
                       artikel
                     </p>
-                    <div className="availability-label__divider ml-4" />
+                    <div className="availability-label__divider" />
                     <p
-                      className="availability-label__text text-label-normal ml-4 mr-8"
+                      className="availability-label__availability"
                       data-cy="availability-label-status"
                     >
                       Tilgængelig

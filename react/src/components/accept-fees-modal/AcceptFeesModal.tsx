@@ -4,6 +4,7 @@ import Modal, { useModalButtonHandler } from "../../core/utils/modal";
 import { useText } from "../../core/utils/text";
 import { Button } from "../Buttons/Button";
 import { getModalIds } from "../../core/utils/helpers/modal-helpers";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-cta.css";
 
 export interface AcceptModalProps {
   accept: () => void;
@@ -27,11 +28,11 @@ const AcceptModal: FC<AcceptModalProps> = ({ accept }) => {
     >
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{t("acceptModalHeaderText")}</h2>
-        <div className="mt-48 color-secondary-gray">
+        <div className="modal-cta__description">
           <p className="text-body-medium-regular">{t("acceptModalBodyText")}</p>
           <p className="text-links mt-24">{t("acceptModalAreYouSureText")}</p>
         </div>
-        <div className="modal-cta__buttons mt-48">
+        <div className="modal-cta__buttons">
           <Button
             label={t("acceptModalCancelButtonText")}
             buttonType="none"

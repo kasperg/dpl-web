@@ -2,6 +2,7 @@ import Disclosure from "../../disclosure/Disclosure";
 import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
 import Modal from "../Modal";
 import { Dropdown } from "../../dropdown/Dropdown";
+import "./modal-find-on-shelf.scss";
 
 export type ModalFindOnShelfProps = {
   workTitle: string;
@@ -28,7 +29,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
       shownModal={showModal}
       classNames="modal-details modal-find-on-shelf"
     >
-      <h2 className="text-header-h2 modal-find-on-shelf__headline">
+      <h2 className="modal-find-on-shelf__headline">
         {workTitle} / {author}
       </h2>
       {isPeriodical && (
@@ -59,7 +60,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
           />
         </div>
       )}
-      <div className="text-small-caption modal-find-on-shelf__caption">
+      <div className="modal-find-on-shelf__caption">
         8 biblioteker har materialet
       </div>
       {branchesArray.map((branchKey) => {

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { ReactComponent as Arrow } from "../Arrows/icon-arrow-ui/icon-arrow-ui-nav.svg";
+import "./nav-teaser.scss";
 
 type NavTeaserProps = {
   title: string;

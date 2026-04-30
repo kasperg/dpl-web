@@ -4,6 +4,8 @@ import DisclosureControllable from "../Disclosures/DisclosureControllable";
 import InstantLoanSummary from "./InstantLoanSummary";
 import { HoldingsLogisticsV1 } from "../../core/fbs/model";
 import InstantLoanBranch from "./InstantLoanBranch";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/instant-loan.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 type InstantLoanProps = {
   manifestation: Manifestation;
@@ -20,16 +22,16 @@ const InstantLoan: React.FunctionComponent<InstantLoanProps> = ({
   return (
     <DisclosureControllable
       id="instant-loan"
-      detailsClassName="disclosure text-body-large pagefold-parent--small"
+      detailsClassName="disclosure pagefold-parent--small"
       summary={
         <InstantLoanSummary
           pid={pid}
-          className="instant-loan-summary cursor-pointer p-24"
+          className="instant-loan__summary cursor-pointer p-24"
         />
       }
       cyData="instant-loan"
     >
-      <ul className="instant-loan-branches" data-cy="instant-loan-branches">
+      <ul className="instant-loan__branches" data-cy="instant-loan__branches">
         {instantLoanBranchHoldings.map((branch) => {
           return (
             <li key={branch.branch.branchId}>

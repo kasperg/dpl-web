@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FC } from "react";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/availability-label.css";
 
 export interface PagefoldProps {
   text: string;

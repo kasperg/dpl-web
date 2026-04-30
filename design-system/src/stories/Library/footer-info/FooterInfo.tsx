@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./footer-info.scss";
 
 export type FooterSocialMediaType = {
   href: string;

@@ -3,6 +3,7 @@ import HorizontalTermLine, {
   HorizontalTermLineProps,
   generateId,
 } from "../horizontal-term-line/HorizontalTermLine";
+import "./event-description.scss";
 
 export type TicketCategory = {
   label: string;

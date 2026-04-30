@@ -1,7 +1,9 @@
+/* eslint-disable local-rules/single-bem-block */
 import {
   ProgressBar,
   ProgressBarProps,
 } from "../../Library/progress-bar/progressBar";
+import "./status-loans.scss";
 
 export type LinkProps = {
   link: string;
@@ -45,7 +47,7 @@ export const StatusLoans = (props: StatusLoansProps) => {
       </div>
       <div className="dpl-status mt-32">
         {statusBarsData.map(({ statusBars, title }) => (
-          <div className="dpl-status-loans__container">
+          <div className="status-loans__container">
             <h3 className="text-small-caption">{title}</h3>
             {statusBars.map(
               ({ title: statusBarTitle, amount, fullAmount, outOf }) => (

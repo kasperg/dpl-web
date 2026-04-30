@@ -3,6 +3,7 @@ import {
   ContentListItem,
   ContentListItemProps,
 } from "../content-list-item/ContentListItem";
+import "./filtered-event-list.scss";
 
 interface PromoteEventsListProps {
   title: string;
@@ -38,7 +39,8 @@ const PromoteEventsList: React.FC<PromoteEventsListProps> = ({
         ))}
       </ul>
       <button
-        className="filtered-event-list__button btn-primary btn-outline btn-medium"
+        // eslint-disable-next-line local-rules/single-bem-block
+        className="filtered-event-list__button button button--outline button--medium"
         type="button"
         data-show-more-button
         data-show-more-text={buttonText}

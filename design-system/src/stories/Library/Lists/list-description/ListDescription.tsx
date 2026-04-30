@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Fragment } from "react";
 import { generateId } from "../../horizontal-term-line/HorizontalTermLine";
+import "./list-description.scss";
 
 export type ListData = {
   [k: string]: {

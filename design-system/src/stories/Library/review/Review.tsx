@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as HeartFilledIcon } from "../../../public/icons/basic/icon-heart-filled.svg";
 import { ReactComponent as HeartEmptyIcon } from "../../../public/icons/basic/icon-heart-grey.svg";
+import "./review.scss";
 
 export type ReviewProps = {
   numberOfReviews: number;
@@ -28,10 +29,10 @@ export const Review: React.FC<ReviewProps> = ({
     <ul className="reviews">
       {reviewsArray.map((reviewNumber) => {
         return (
-          <li className="review text-small-caption" key={reviewNumber}>
-            <div className="review__meta mb-8">{meta}</div>
+          <li className="review" key={reviewNumber}>
+            <div className="review__meta">{meta}</div>
             <div
-              className="mb-4"
+              className="review__rating"
               role="figure"
               aria-label={`Rating of this item is ${hearts} out of 6`}
             >
@@ -44,10 +45,11 @@ export const Review: React.FC<ReviewProps> = ({
                 return <HeartEmptyIcon key={value} className="review__heart" />;
               })}
             </div>
-            <h3 className="review__headline mb-8">{headline}</h3>
-            {body && <p className="review__body mb-8">{body}</p>}
+            <h3 className="review__headline">{headline}</h3>
+            {body && <p className="review__body">{body}</p>}
             {linkText && (
-              <a href={linkLink} className="link-tag text-small-caption mb-8">
+              // eslint-disable-next-line local-rules/single-bem-block
+              <a href={linkLink} className="link-tag review__link">
                 {linkText}
               </a>
             )}

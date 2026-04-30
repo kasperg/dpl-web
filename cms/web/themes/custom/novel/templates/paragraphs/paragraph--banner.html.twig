@@ -1,4 +1,4 @@
-
+{{ attach_library('novel/banner') }}
 {% if content.field_banner_image|length > 0 %}
   {% set image_entity = content.field_banner_image[0]['#media'] %}
   {% set image_field = image_entity.field_media_image.0 %}

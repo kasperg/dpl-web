@@ -47,7 +47,7 @@ const ReviewExternal: React.FC<ReviewExternalProps> = ({
 
   return (
     <li
-      className="review text-small-caption"
+      className="review"
       id={id}
       data-scroll-target={id}
       data-cy={dataCy}
@@ -67,7 +67,7 @@ const ReviewExternal: React.FC<ReviewExternalProps> = ({
               <span>{index > 0 ? ", " : ""}</span>
               <Link
                 href={new URL(url)}
-                className="link-tag text-small-caption mb-8"
+                className="link-tag review__link"
               >
                 {origin}
               </Link>

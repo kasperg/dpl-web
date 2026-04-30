@@ -104,7 +104,7 @@ const PatronPage: FC = () => {
   };
 
   return (
-    <form className="dpl-patron-page" onSubmit={(e) => handleSubmit(e)}>
+    <form className="patron-page" onSubmit={(e) => handleSubmit(e)}>
       <h1 className="text-header-h1 my-32">{t("patronPageHeaderText")}</h1>
       <NotificationComponent />
       {patron && (
@@ -145,7 +145,7 @@ const PatronPage: FC = () => {
 
         <button
           data-cy="save-user-patron"
-          className="mt-48 btn-primary btn-filled btn-small arrow__hover--right-small "
+          className="mt-48 button button--filled button--small arrow__hover--right-small "
           type="submit"
           disabled={disableSubmitButton || !isPinChangeValid}
         >

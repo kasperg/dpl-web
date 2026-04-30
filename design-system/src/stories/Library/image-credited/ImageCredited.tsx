@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { FC } from "react";
+import "./image-credited.scss";
 
 type ImageCreditedProps = {
   src: string;

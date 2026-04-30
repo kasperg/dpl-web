@@ -8,10 +8,10 @@ const InstantLoanBranches: React.FunctionComponent<
   InstantLoanBranchesProps
 > = ({ branches }) => {
   return (
-    <ul className="instant-loan-branches">
+    <ul className="instant-loan__branches">
       {branches.map((branch) => (
         <li>
-          <div className="instant-loan-branch cursor-pointer px-24">
+          <div className="instant-loan__branch">
             <p className="text-header-h5">{branch}</p>
             <AvailabilityLabel
               manifestationType="Bog"

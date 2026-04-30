@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FC } from "react";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/status-label.css";
 
 export interface InfoLabelProps {
   dataCy?: string;

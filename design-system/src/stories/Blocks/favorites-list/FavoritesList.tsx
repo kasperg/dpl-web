@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import { CardListItemSkeleton } from "../../Library/card-list-item/CardListItemSkeleton";
@@ -40,7 +41,7 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   );
 
   const EmptyList = () => (
-    <div className="dpl-list-empty mt-24">Your favorites list is empty</div>
+    <div className="list-empty mt-24">Your favorites list is empty</div>
   );
 
   let content;

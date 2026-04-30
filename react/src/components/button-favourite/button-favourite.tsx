@@ -12,6 +12,7 @@ import { Pid, WorkId } from "../../core/utils/types/ids";
 import { isAnonymous } from "../../core/utils/helpers/user";
 import { useEventStatistics } from "../../core/statistics/useStatistics";
 import { statistics } from "../../core/statistics/statistics";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/button-favourite.css";
 
 export type ButtonFavouriteId = WorkId | Pid;
 export interface ButtonFavouriteProps {

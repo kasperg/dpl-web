@@ -12,6 +12,7 @@ import {
 import { WorkMediumFragment } from "../../core/dbc-gateway/generated/graphql";
 import { getManifestationLanguageCode } from "../../apps/material/helper";
 import { Manifestation } from "../../core/utils/types/entities";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/autosuggest.css";
 
 export interface AutosuggestMaterialProps {
   materialData: Suggestions | [];
@@ -83,11 +84,11 @@ const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
               <div className="autosuggest__info">
                 <div
                   lang={manifestationLanguageCode}
-                  className="text-body-medium-medium autosuggest__title"
+                  className="autosuggest__title"
                 >
                   {titles.main[0]}
                 </div>
-                <div className="text-body-small-regular autosuggest__author">
+                <div className="autosuggest__author">
                   {creatorsToString(authors, t)}
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { Links, LinksProps } from "../../links/Links";
+import "./list-empty.scss";
 
 interface ListEmptyProps {
   text: string;
@@ -8,12 +9,12 @@ interface ListEmptyProps {
 
 const ListEmpty = ({ text, links, className }: ListEmptyProps) => {
   return (
-    <div className={`dpl-list-empty ${className ?? ""}`}>
+    <div className={`list-empty ${className ?? ""}`}>
       <p>{text}</p>
       {links && (
-        <div className="dpl-list-empty__links">
+        <div className="list-empty__links">
           {links.map((item, index) => (
-            <div key={index} className="dpl-list-empty__link-item">
+            <div key={index} className="list-empty__link-item">
               <Links
                 linkText={item.linkText}
                 href={item.href}

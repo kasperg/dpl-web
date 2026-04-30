@@ -36,7 +36,7 @@ const AutosuggestTextItem: React.FC<AutosuggestTextItemProps> = ({
       data-cy={dataCy}
       lang={langCode}
     >
-      <p className="autosuggest__text text-body-medium-regular">
+      <p className="autosuggest__text">
         {item.type === SuggestionTypeEnum.Creator
           ? `${item.term} (${t("stringSuggestionAuthorText")})`
           : null}

@@ -1,0 +1,8 @@
+// Foundation styles — global reset, utility classes, and shared styles.
+// Loaded on every page. Component-specific CSS is loaded per-component.
+@import "./src/styles/scss/tools";
+@import "./src/styles/scss/reset";
+@import "./src/styles/scss/skeleton";
+@import "./src/styles/scss/legacy";
+@import "./src/styles/scss/shared";
+@import "./src/styles/scss/internal";

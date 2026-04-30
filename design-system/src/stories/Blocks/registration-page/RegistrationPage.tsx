@@ -1,6 +1,8 @@
+/* eslint-disable local-rules/single-bem-block */
 import IconTextLink from "../../Library/icon-text-link/IconTextLink";
 import { Links } from "../../Library/links/Links";
 import RegistrationPageSection from "./RegistrationPageSection";
+import "./registration-page.scss";
 
 export interface RegistrationPageProps {
   headline: string;

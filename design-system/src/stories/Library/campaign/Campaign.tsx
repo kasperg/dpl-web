@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import "./campaign.scss";
 
 export type CampaignProps = {
   reverse?: boolean;

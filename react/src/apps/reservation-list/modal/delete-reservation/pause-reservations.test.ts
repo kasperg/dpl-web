@@ -140,11 +140,11 @@ describe("Pause reservation modal test", () => {
     cy.get(".modal.modal-cta").should("not.exist");
 
     cy.get(".reservation-list-page")
-      .find(".dpl-pause-reservation-component__flex__badge")
+      .find(".pause-reservation__flex__badge")
       .should("exist");
 
-    cy.get(".dpl-pause-reservation-component")
-      .find(".dpl-pause-reservation-component__flex__text")
+    cy.get(".pause-reservation")
+      .find(".pause-reservation__flex__text")
       .should("have.text", "Your reservations are paused");
   });
 });

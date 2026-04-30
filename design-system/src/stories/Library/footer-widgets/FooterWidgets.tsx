@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Dropdown, DropdownItem } from "../dropdown/Dropdown";
 import Logo from "../logo/Logo";
+import "./footer-widgets.scss";
 
 type FooterWidgetsType = {
   footerLanguages: DropdownItem[];

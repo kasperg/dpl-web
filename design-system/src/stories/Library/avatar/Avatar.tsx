@@ -1,8 +1,9 @@
 import { ReactComponent as ProfileIcon } from "../../../public/icons/collection/Profile.svg";
+import "./avatar.scss";
 
 export const Avatar = () => {
   return (
-    <div className="avatar bg-global-secondary">
+    <div className="avatar">
       <ProfileIcon />
     </div>
   );

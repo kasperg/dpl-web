@@ -1,5 +1,6 @@
 import React, { useId } from "react";
 import clsx from "clsx";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/search-toggle.css";
 
 interface SearchToggleProps {
   id: string;

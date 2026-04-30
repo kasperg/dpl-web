@@ -1,3 +1,6 @@
+// Card variant placeholders (%card-variant--*) and @mixin _cardStyle
+// moved to tools/placeholder.scss for per-component SCSS compilation.
+
 .card__media {
   box-sizing: border-box;
   background-color: var(--tint-color-120);
@@ -40,19 +43,6 @@
   @include typography($typo__h3);
 }
 
-%card-variant--default {
-  width: 327px;
-
-  @include media-query__name($breakpoint__large-card) {
-    width: 551px;
-  }
-
-  .card__media {
-    // Odd aspect ratio, taken from the design.
-    aspect-ratio: 551/312;
-  }
-}
-
 .card {
   @extend %card-variant--default;
 
@@ -79,40 +69,14 @@
   background-size: contain;
 }
 
-@mixin cardStyle($style_name) {
-  .card__override-images[data-card-style="#{$style_name}"] {
-    // Overwrite inline styling.
-    &[style] {
-      display: block !important;
-    }
-
-    // Hide the initial image.
-    ~ img {
-      display: none;
-    }
-  }
-}
-
-%card-variant--large,
 .card[data-variant="large"] {
-  @extend %card-variant--default;
-
-  @include cardStyle("large");
+  @extend %card-variant--large;
 }
 
-%card-variant--x-large,
 .card[data-variant="x-large"] {
-  @include media-container--card;
-  @include cardStyle("x-large");
-
-  width: 200px;
-
-  @include media-query__name($breakpoint__large-card) {
-    width: 440px;
-  }
+  @extend %card-variant--x-large;
 
   &.card--has-no-media {
-    // We only want the page fold on 1:1 view-modes.
     @extend %identity-pagefold;
   }
 
@@ -121,58 +85,12 @@
       @extend %identity-placeholder;
     }
   }
-
-  // stylelint-disable-next-line no-descending-specificity -- Stylelint wants us to re-order the file, but it actually would make it less readable.
-  .card__media {
-    aspect-ratio: 1/1;
-  }
 }
 
-%card-variant--small,
 .card[data-variant="small"] {
-  @include cardStyle("small");
-
-  width: 206px;
-
-  // stylelint-disable-next-line no-descending-specificity -- Stylelint wants us to re-order the file, but it actually would make it less readable.
-  .card__media {
-    aspect-ratio: 1/1;
-  }
-
-  // stylelint-disable-next-line no-descending-specificity -- Stylelint wants us to re-order the file, but it actually would make it less readable.
-  .card__media,
-  .card__tags {
-    margin-bottom: $s-xs;
-  }
-
-  // On desktop sizes this small, there is no space for placeholder text, and
-  // extra tags, but we can still show it for screenreaders.
-  @include media-query__name($breakpoint__large-card) {
-    @include media-container--small;
-
-    .card__tag {
-      @include typography($typo__byline-tags--small);
-    }
-
-    .card__title {
-      @include typography($typo__h4);
-    }
-  }
+  @extend %card-variant--small;
 }
 
-%card-variant--medium,
 .card[data-variant="medium"] {
-  @include cardStyle("medium");
-
-  width: 200px;
-
-  @include media-query__name($breakpoint__large-card) {
-    width: 321px;
-  }
-
-  // stylelint-disable-next-line no-descending-specificity -- Stylelint wants us to re-order the file, but it actually would make it less readable.
-  .card__media {
-    // Odd aspect ratio, taken from the design.
-    aspect-ratio: 321/426;
-  }
+  @extend %card-variant--medium;
 }

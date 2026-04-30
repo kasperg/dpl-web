@@ -3,17 +3,13 @@ import { PageFoldType } from "../../pagefold/types";
 import { ButtonSize, ButtonVariant } from "./types";
 
 export const getSize = (size: ButtonSize): string => {
-  if (size === "xlarge") return "btn-xlarge";
-  if (size === "large") return "btn-large";
-  if (size === "medium") return "btn-medium";
-  if (size === "small") return "btn-small";
-  if (size === "xsmall") return "btn-xsmall";
-  return "";
+  if (size === "none") return "";
+  return `button--${size}`;
 };
 
 export const getVariant = (variant: ButtonVariant): string => {
-  if (variant === "filled") return "btn-filled";
-  if (variant === "outline") return "btn-outline";
+  if (variant === "filled") return "button--filled";
+  if (variant === "outline") return "button--outline";
   return "";
 };
 

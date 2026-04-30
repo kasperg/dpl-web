@@ -1,6 +1,10 @@
 import { FC } from "react";
 import { Dropdown } from "../dropdown/Dropdown";
 import { TagButton } from "../tag/tag-button/TagButton";
+import "./card-list-page-skeleton.scss";
+import "./result-pager.scss";
+import "./search-result-zero.scss";
+import "./facet-line.scss";
 
 export type FacetLineItem<TType extends "facet" | "term"> = {
   title: string;
@@ -15,7 +19,7 @@ export interface FacetLineProps {
 
 const FacetLine: FC<FacetLineProps> = ({ items }) => {
   return (
-    <ul className="facet-line mt-48">
+    <ul className="facet-line">
       {items.map(({ type, title, terms }, index) => {
         if (type === "term") {
           return (

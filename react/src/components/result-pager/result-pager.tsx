@@ -1,5 +1,6 @@
 import React from "react";
 import { useText } from "../../core/utils/text";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/result-pager.css";
 
 export interface ResultPagerProps {
   setPageHandler: () => void;
@@ -18,7 +19,7 @@ function ResultPager({
   const t = useText();
   return (
     <div className={`result-pager ${classNames}`}>
-      <p className="text-small-caption result-pager__title">
+      <p className="result-pager__title">
         {t("resultPagerStatusText", {
           placeholders: { "@itemsShown": itemsShown, "@hitcount": hitcount }
         })}
@@ -27,7 +28,7 @@ function ResultPager({
       {itemsShown !== hitcount && !isLoading && (
         <button
           type="button"
-          className="btn-primary btn-outline btn-medium arrow__hover--right-small uppercase"
+          className="button button--outline button--medium arrow__hover--right-small uppercase"
           onClick={setPageHandler}
         >
           {t("showMoreText")}

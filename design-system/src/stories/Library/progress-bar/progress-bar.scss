@@ -1,8 +1,12 @@
-.dpl-progress-bar {
+.progress-bar {
+  @include typography($typo__small-caption);
+  color: $color__text-secondary-gray;
+
   &__progress-bar {
     display: flex;
     width: 100%;
     height: $s-md;
+    background-color: $color__global-secondary;
   }
 
   &__header {

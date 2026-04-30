@@ -63,9 +63,9 @@ const PincodePatronSection: FC<PincodeSectionProps> = ({
 
   return (
     <section data-cy="pincode-section" className="create-patron-page__row">
-      <div className="create-patron-page__row dpl-input__double-row">
+      <div className="create-patron-page__row input__double-row">
         <TextInput
-          className="dpl-input dpl-input--double"
+          className="input input--double"
           id="pincode-input"
           type="password"
           pattern="[0-9]*"
@@ -78,7 +78,7 @@ const PincodePatronSection: FC<PincodeSectionProps> = ({
           description={t("pincodeSectionDescriptionText")}
         />
         <TextInput
-          className="dpl-input dpl-input--double"
+          className="input input--double"
           id="pincode-confirm-input"
           pattern="[0-9]*"
           required={required}

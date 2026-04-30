@@ -1,4 +1,5 @@
 import { ReactComponent as WarningIcon } from "../../../public/icons/basic/icon-warning.svg";
+import "./error-message.scss";
 
 export type ErrorMessageProps = {
   message: string;

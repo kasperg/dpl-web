@@ -1,6 +1,7 @@
 import { Button } from "../Buttons/button/Button";
 import { Links } from "../links/Links";
 import { ReactComponent as WarningIcon } from "../../../public/icons/basic/icon-warning.svg";
+import "./warning-bar.scss";
 
 export type WarningStatusProps = {
   title?: string;
@@ -17,13 +18,13 @@ export const WarningStatus = (props: WarningStatusProps) => {
   const { title, description, url, button, owes } = props;
 
   return (
-    <div className="warning-bar bg-global-secondary">
+    <div className="warning-bar">
       <div className="warning-bar__left">
         <WarningIcon className="warning-bar__icon" />
         <div>
-          {title && <p className="text-body-medium-medium">{title}</p>}
+          {title && <p className="warning-bar__title">{title}</p>}
           {description && (
-            <p className="text-body-medium-regular color-primary-black">
+            <p className="warning-bar__description">
               {description}{" "}
               {url && (
                 <Links
@@ -37,9 +38,7 @@ export const WarningStatus = (props: WarningStatusProps) => {
         </div>
       </div>
       <div className="warning-bar__right">
-        {owes && (
-          <p className="text-body-medium-medium warning-bar__owes">{owes},-</p>
-        )}
+        {owes && <p className="warning-bar__owes">{owes},-</p>}
         {button && (
           <Button
             buttonType="default"

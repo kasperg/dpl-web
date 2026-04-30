@@ -28,6 +28,11 @@
     display: grid;
     grid-template-columns: min-content;
   }
+
+  &__description--spaced {
+    @include typography($typo__body-placeholder);
+    margin-top: $s-lg;
+  }
 }
 
 // Spacing

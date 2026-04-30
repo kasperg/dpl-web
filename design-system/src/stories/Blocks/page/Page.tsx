@@ -8,6 +8,7 @@ import {
   Page as Hero,
   PageArgs as HeroArgs,
 } from "../../Library/hero/Hero.stories";
+import "./page.scss";
 
 type PageProps = {
   tags?: string[];

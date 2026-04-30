@@ -1,0 +1,51 @@
+name: Design / Visual Regression
+
+on:
+  push:
+    branches: [develop]
+    paths:
+      - 'design-system/**'
+      - '.github/workflows/design-system-visual-regression.yml'
+  pull_request:
+    paths:
+      - 'design-system/**'
+      - '.github/workflows/design-system-visual-regression.yml'
+
+concurrency:
+  group: ${{ github.repository_id }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  visual-regression:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: design-system
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: 'design-system/.nvmrc'
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: node node_modules/playwright-core/cli.js install --with-deps chromium
+
+      - name: Build Storybook
+        run: yarn build-storybook
+
+      - name: Capture screenshots
+        run: |
+          npx http-server storybook-static --port 6006 --silent &
+          npx wait-on http://localhost:6006
+          yarn test:visual:update
+
+      - uses: reg-viz/reg-actions@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          image-directory-path: design-system/__visual_snapshots__
+          artifact-name: visual-regression-design-system
+          matching-threshold: 0.05
+          threshold-rate: 0

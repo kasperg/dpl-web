@@ -7,6 +7,7 @@ import {
   LinkFilters,
   LinkFilter,
 } from "../../Library/link-filters/LinkFilters";
+import "./status-userprofile.scss";
 
 export type StatusUserprofileProps = {
   loansTitle: LinkFilter[];

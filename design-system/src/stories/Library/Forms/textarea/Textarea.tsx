@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import { FC } from "react";
 import Label from "../label/Label";
+import "./textarea.scss";
 
 export interface TextareaProps {
   id: string;
@@ -24,7 +25,7 @@ const Textarea: FC<TextareaProps> = ({
   labelClassName,
 }) => {
   return (
-    <div className="dpl-input">
+    <div className="input">
       <Label id={id} className={labelClassName}>
         {label}
       </Label>

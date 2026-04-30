@@ -334,7 +334,7 @@ class CqlSearchWidget extends WidgetBase {
         [], ['context' => 'dpl_fbi']
       );
       $warningMarkup = Markup::create(
-        "<div class=\"dpl-form-warning $warningClass\">{$warningMessage->render()}</div>"
+        "<div class=\"form-warning $warningClass\">{$warningMessage->render()}</div>"
       );
       $response->addCommand(new InvokeCommand($linkSelector, 'addClass', ['error']));
       $response->addCommand(new AfterCommand($linkSelector, $warningMarkup));

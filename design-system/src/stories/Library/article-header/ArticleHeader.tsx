@@ -4,6 +4,7 @@ import Tag from "../tag/Tag";
 import HorizontalTermLine, {
   HorizontalTermLineProps,
 } from "../horizontal-term-line/HorizontalTermLine";
+import "./article-header.scss";
 
 export type ArticleHeaderProps = {
   title: string;

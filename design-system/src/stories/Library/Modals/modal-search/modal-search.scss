@@ -16,12 +16,23 @@ $MODAL_SEARCH_CONTAINER_WIDTH: 550px;
   }
 }
 
+.modal-search__description {
+  margin-top: 48px;
+  color: $color__text-secondary-gray;
+}
+
+.modal-search__input {
+  margin-top: $s-lg;
+}
+
 .modal-search__buttons {
+  margin-top: 48px;
   display: grid;
   justify-content: center;
 }
 
 .modal-search__input-element {
+  @include typography($typo__body-large);
   width: 100%;
   height: 40px;
   border: 0;

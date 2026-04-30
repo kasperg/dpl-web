@@ -315,3 +315,18 @@ $_header-button-size--large: 70px;
     display: flex;
   }
 }
+
+// Menu navigation items (consolidated from header-menu-list.scss)
+.header__menu-navigation-item:hover {
+  border-top: 1px solid transparent; // to prevent jumping
+  border-bottom: 1px solid $color__global-black;
+}
+
+.header__menu-navigation-link {
+  @include typography($typo__desktop-menu-item);
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: $color__text-primary-black;
+}

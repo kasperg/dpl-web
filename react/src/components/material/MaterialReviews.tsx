@@ -6,6 +6,7 @@ import ReviewExternal from "./ReviewExternal";
 import ReviewInfomedia from "./ReviewInfomedia";
 import ReviewLibrarian from "./ReviewLibrarian";
 import ReviewSkeleton from "./ReviewSkeleton";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/review.css";
 
 export interface MaterialReviewsProps {
   pids: Pid[];

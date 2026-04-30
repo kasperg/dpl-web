@@ -3,6 +3,7 @@ import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
 import facetBrowserDummyData from "./facet-browser-dummy-data";
 import { TagButton } from "../../tag/tag-button/TagButton";
+import "./facet-browser.scss";
 
 export type FacetBrowserProps = {
   title: string;
@@ -28,6 +29,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
       <header className="facet-browser__header">
         <h2 className="text-header-h3">{title}</h2>
         {clearAll && (
+          // eslint-disable-next-line local-rules/single-bem-block
           <button className="link-tag cursor-pointer facet-browser__clear-btn">
             {clearAll}
           </button>
@@ -46,6 +48,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
               <TagButton key={tag}>{tag}</TagButton>
             ))}
           </div>
+          {/* eslint-disable-next-line local-rules/single-bem-block */}
           <button className="link-tag cursor-pointer facet-browser__more-btn">
             {showMore}
           </button>

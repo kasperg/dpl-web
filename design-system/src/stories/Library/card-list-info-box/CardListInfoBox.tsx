@@ -6,15 +6,16 @@ type CardListInfoBoxProps = {
 
 const CardListInfoBox = ({ title, html, buttonText }: CardListInfoBoxProps) => {
   return (
+    // eslint-disable-next-line local-rules/single-bem-block
     <div className="card-list-info-box pagefold-parent--medium">
+      {/* eslint-disable-next-line local-rules/single-bem-block */}
       <div className="pagefold-triangle--medium pagefold-inherit-parent" />
 
+      {/* eslint-disable-next-line local-rules/single-bem-block */}
       <div className="card-list-info-box__icon cover cover--size-small cover--aspect-small" />
       <div className="card-list-info-box__content">
         <div className="card-list-info-box__text">
-          <h3 className="card-list-info-box__title text-header-h4 mb-8">
-            {title}
-          </h3>
+          <h3 className="card-list-info-box__title">{title}</h3>
           <div
             className="text-body-small-regular"
             // eslint-disable-next-line react/no-danger
@@ -26,7 +27,8 @@ const CardListInfoBox = ({ title, html, buttonText }: CardListInfoBoxProps) => {
           <div className="card-list-info-box__button-wrapper">
             <a
               href="/advanced-search"
-              className="btn-primary btn-outline btn-xsmall"
+              // eslint-disable-next-line local-rules/single-bem-block
+              className="button button--outline button--xsmall"
             >
               {buttonText}
             </a>

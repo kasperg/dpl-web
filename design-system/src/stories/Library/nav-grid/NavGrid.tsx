@@ -1,5 +1,6 @@
 import { FC, ReactNode, useEffect } from "react";
 import clsx from "clsx";
+import "./nav-grid.scss";
 
 type CardProps = {
   title?: string;
@@ -33,7 +34,8 @@ const NavGrid: FC<CardProps> = ({ items, title, showSubtitles }) => {
       </ul>
 
       {hasMany && (
-        <button className="nav-grid__controller btn-primary btn-outline btn-medium">
+        // eslint-disable-next-line local-rules/single-bem-block
+        <button className="nav-grid__controller button button--outline button--medium">
           Vis alle
         </button>
       )}

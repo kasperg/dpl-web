@@ -1,6 +1,6 @@
 import { FC, ReactNode, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import "./slider.scss";
 type SliderProps = {
   title?: string;
   items: ReactNode[];

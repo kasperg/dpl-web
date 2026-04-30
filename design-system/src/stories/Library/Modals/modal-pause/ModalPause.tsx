@@ -7,6 +7,7 @@ import flatpickr from "flatpickr";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 import Modal from "../Modal";
+import "./modal-pause.scss";
 
 export type ModalPauseProps = {
   showModal: boolean;
@@ -86,7 +87,7 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
         <p className="text-body-small-regular">
           <Links href="/" linkText={linkText} />
         </p>
-        <div className="modal-pause__button mt-48">
+        <div className="modal-pause__button">
           <Button
             buttonType="none"
             size="large"

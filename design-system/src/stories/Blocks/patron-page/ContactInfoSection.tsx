@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import Input from "../../Library/Forms/input/Input";
 import { Checkbox } from "../../Library/Forms/checkbox/Checkbox";

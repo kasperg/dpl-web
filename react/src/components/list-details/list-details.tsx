@@ -2,6 +2,8 @@
 // They are very similar, and this will simplify code maintenance.
 import React, { FC, ReactNode } from "react";
 import { useText } from "../../core/utils/text";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/list-details.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 export interface ListDetailsProps {
   icon: string;

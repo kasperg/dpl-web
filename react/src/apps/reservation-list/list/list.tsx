@@ -47,14 +47,14 @@ const List: FC<ListProps> = ({
 
   return (
     <div>
-      <div className="dpl-list-buttons m-32">
+      <div className="list-buttons m-32">
         <h2
           data-cy="reservation-list-header"
-          className="dpl-list-buttons__header"
+          className="list-buttons__header"
         >
           <>
             {header}
-            <div className="dpl-list-buttons__power">{reservations.length}</div>
+            <div className="list-buttons__power">{reservations.length}</div>
           </>
         </h2>
       </div>

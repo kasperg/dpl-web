@@ -1,5 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
+  "plugins": ["local-rules"],
   "extends": [
     "airbnb",
     "airbnb-typescript",
@@ -87,7 +88,25 @@
         "react/jsx-props-no-spreading": "off",
         "jsx-a11y/label-has-associated-control": "off",
         // We do not need return types on react components.
-        "@typescript-eslint/explicit-module-boundary-types": "off"
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        // Enforce single BEM block per element.
+        // Ignore third-party classes from skeleton-screen-css, Drupal form system, and Swiper.
+        "local-rules/single-bem-block": ["warn", {
+          "ignorePatterns": [
+            "^ssc",
+            "^m[btrl]s?$",
+            "^w-\\d+$",
+            "^(inline-)?flex(-column(-reverse)?|-row(-reverse)?)?$",
+            "^align-(center|start|end|stretch)$",
+            "^justify-(start|center|end|between|around)$",
+            "^js-form-",
+            "^js-webform-",
+            "^form-(item|type|wrapper|composite|checkboxes)",
+            "^webform-",
+            "^fieldgroup$",
+            "^swiper"
+          ]
+        }]
       }
     },
     {

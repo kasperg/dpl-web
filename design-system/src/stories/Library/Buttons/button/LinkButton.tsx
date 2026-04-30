@@ -26,8 +26,9 @@ export const LinkButton = ({
     <a
       target={target}
       href={href}
+      // eslint-disable-next-line local-rules/single-bem-block
       className={clsx(
-        "btn-primary",
+        "button",
         getVariant(variant),
         getSize(size),
         "arrow__hover--right-small",

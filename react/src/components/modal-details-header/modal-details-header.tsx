@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from "react";
 import { Pid } from "../../core/utils/types/ids";
 import { Cover } from "../cover/cover";
 import LinkNoStyle from "../atoms/links/LinkNoStyle";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-details.css";
 
 export interface ModalDetailsHeaderProps {
   authors: string | undefined | null;
@@ -56,7 +57,7 @@ const ModalDetailsHeader: FC<ModalDetailsHeaderProps> = ({
           )}
           {children}
         </div>
-        <h2 className="modal-details__title text-header-h2">{title}</h2>
+        <h2 className="modal-details__title">{title}</h2>
         <p className="text-body-medium-regular" data-cy="modal-authors">
           {authors}
           {year && <> ({year})</>}

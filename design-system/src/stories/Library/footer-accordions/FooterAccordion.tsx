@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { clsx } from "clsx";
-import { FooterColumnType } from "../footer-colums/FooterColumn";
+import { FooterColumnType } from "../footer-columns/FooterColumn";
+import "./footer-accordions.scss";
 
 type FooterAccordionProps = FooterColumnType & {
   open?: boolean;
@@ -16,6 +17,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
 
   return (
     <>
+      {/* eslint-disable-next-line local-rules/single-bem-block */}
       <h2 className="footer-accordion__header footer__title">
         <button
           className="footer-accordion__header-button"

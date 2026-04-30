@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ButtonExpand from "../Buttons/button/button-expand/ButtonExpand";
 import Heading, { HeadingLevelType } from "../heading/Heading";
+import "./horizontal-term-line.scss";
 
 export interface HorizontalTermLineList {
   url: string;
@@ -35,7 +36,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
   const showMoreButton = linkList.length > numberOfItemsToShow;
 
   return (
-    <div className="text-small-caption horizontal-term-line">
+    <div className="horizontal-term-line">
       <Heading level={headingLevel} className="text-label-bold">
         {`${title}`}{" "}
         {subTitle && <span className="text-small-caption">{subTitle} </span>}

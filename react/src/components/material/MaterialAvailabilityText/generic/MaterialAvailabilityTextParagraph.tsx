@@ -7,7 +7,7 @@ interface MaterialAvailabilityTextParagraphProps {
 const MaterialAvailabilityTextParagraph: React.FC<
   MaterialAvailabilityTextParagraphProps
 > = ({ children }) => {
-  return <p className="mt-16 text-small-caption">{children}</p>;
+  return <p className="material-header__cta-text">{children}</p>;
 };
 
 export default MaterialAvailabilityTextParagraph;

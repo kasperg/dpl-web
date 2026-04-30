@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { FC, ReactNode } from "react";
+import "./media-container.scss";
 
 type ImageCreditedProps = {
   media?: ReactNode;

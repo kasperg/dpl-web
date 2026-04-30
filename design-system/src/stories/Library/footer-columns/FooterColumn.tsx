@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./footer-columns.scss";
 
 export type FooterColumnType = {
   title: string;

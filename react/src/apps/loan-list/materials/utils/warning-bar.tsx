@@ -31,14 +31,14 @@ const WarningBar: FC<WarningBarProps> = ({
 
   return (
     <div
-      className={`warning-bar bg-global-secondary${` ${classNames}`}`}
+      className={`warning-bar${` ${classNames}`}`}
       data-cy="warning-bar"
     >
       <div className="warning-bar__left">
         <img className="warning-bar__icon" src={IconWarning} alt="" />
         <div>
           <p
-            className="text-body-medium-regular color-primary-black"
+            className="warning-bar__description"
             data-cy="warning-bar-text"
           >
             {overdueText}
@@ -57,7 +57,7 @@ const WarningBar: FC<WarningBarProps> = ({
         <div className="warning-bar__right">
           {rightText && (
             <p
-              className="text-body-medium-medium warning-bar__owes"
+              className="warning-bar__owes"
               data-cy="warning-bar-right-text"
             >
               {rightText}

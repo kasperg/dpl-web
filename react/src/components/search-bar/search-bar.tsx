@@ -5,6 +5,9 @@ import { UseComboboxPropGetters } from "downshift";
 import clsx from "clsx";
 import { useText } from "../../core/utils/text";
 import { redirectTo } from "../../core/utils/helpers/url";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/header-sidebar-nav.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/input.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/logo.css";
 
 export interface SearchBarProps {
   q: string;

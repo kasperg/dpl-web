@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import PatronInfo from "../../Library/patron-info/PatronInfo";
 import Input from "../../Library/Forms/input/Input";
@@ -37,7 +38,7 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
   ];
 
   return (
-    <form className="dpl-patron-page">
+    <form className="patron-page">
       <h1 className="text-header-h1 my-32">Patron profile page</h1>
       <h2 className="text-header-h4 mt-32 mb-16">Basic details</h2>
 
@@ -53,7 +54,7 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
         <ContactInfoSection />
 
         {/* Digital loans section */}
-        <section className="dpl-status-loans">
+        <section className="status-loans">
           <StatusLoans
             statusBarsData={statusBarsData}
             title="Digital loans (eReolen)"
@@ -92,7 +93,7 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
           <p className="text-body-small-regular mb-8">
             Change current pin by entering a new pin and saving
           </p>
-          <div className="dpl-pincode-container">
+          <div className="pincode-container">
             <div className="patron__input patron__input--desktop">
               <Input
                 label="New pin"
@@ -113,7 +114,7 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
         </section>
 
         <button
-          className="mt-48 btn-primary btn-filled btn-small"
+          className="mt-48 button button--filled button--small"
           type="submit"
         >
           Save

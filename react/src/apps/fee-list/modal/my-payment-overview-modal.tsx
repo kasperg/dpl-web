@@ -27,7 +27,7 @@ const MyPaymentOverviewModal: FC = () => {
     >
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{t("feePaymentModalHeaderText")}</h2>
-        <div className="mt-48 color-secondary-gray">
+        <div className="modal-cta__description">
           <p className="text-body-medium-regular">
             {t("feePaymentModalBodyText")}
           </p>
@@ -35,15 +35,15 @@ const MyPaymentOverviewModal: FC = () => {
             {t("feePaymentModalNoticeText")}
           </p>
         </div>
-        <div className="modal-cta__buttons mt-48">
+        <div className="modal-cta__buttons">
           {feeListPaymentSiteUrl && (
             <Link
-              className="btn-primary btn-filled btn-large arrow__hover--right-small"
+              className="button button--filled button--large arrow__hover--right-small"
               href={feeListPaymentSiteUrl}
               isNewTab
             >
               {t("feePaymentModalGotoText")}{" "}
-              <img src={ExternalLinkIcon} className="btn-icon invert" alt="" />
+              <img src={ExternalLinkIcon} className="button__icon invert" alt="" />
             </Link>
           )}
           <div className="modal-cta__link">

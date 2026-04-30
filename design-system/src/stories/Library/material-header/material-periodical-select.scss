@@ -1,6 +1,7 @@
 $icon-position: 10px;
 
 .material-periodical {
+  @include typography($typo__small-caption);
   display: flex;
   gap: $s-lg;
   margin-bottom: 48px;

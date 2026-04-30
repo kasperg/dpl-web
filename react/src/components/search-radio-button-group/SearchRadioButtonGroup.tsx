@@ -1,5 +1,6 @@
 import React from "react";
 import { RadioGroup, Radio, Label } from "@headlessui/react";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/radio.css";
 
 interface RadioOption {
   value: string;

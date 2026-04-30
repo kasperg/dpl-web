@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Links } from "../links/Links";
 import Pagefold from "../pagefold/Pagefold";
 import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
+import "./input-and-preview.scss";
 
 export interface InputPreviewProps {
   cqlPreviewText: string;
@@ -21,13 +22,11 @@ const InputPreview: React.FC<InputPreviewProps> = ({
         "input-and-preview__preview--mobile": isMobile,
       })}
     >
-      <div className="text-body-medium-medium mb-24 capitalize-first">
-        CQL søgestreng
-      </div>
-      <p className="text-body-medium-regular mb-32">{cqlPreviewText}</p>
+      <div className="input-and-preview__heading">CQL søgestreng</div>
+      <p className="input-and-preview__text">{cqlPreviewText}</p>
       <section>
-        <button className="link-tag mr-16 capitalize-first">Nulstil</button>
-        <button className="link-tag mr-16 capitalize-first">
+        <button className="input-and-preview__action">Nulstil</button>
+        <button className="input-and-preview__action">
           Kopier streng
           <CheckIcon className="inline-icon" />
         </button>

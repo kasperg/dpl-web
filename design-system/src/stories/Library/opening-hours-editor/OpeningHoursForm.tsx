@@ -1,4 +1,5 @@
 import React from "react";
+import "./opening-hours-editor.scss";
 
 const OpeningHoursForm = () => {
   const openingHoursCategories = [

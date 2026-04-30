@@ -290,14 +290,14 @@ describe("Loan list", () => {
 
     // 2.b.i: Toggle: two icons that changes the list view
     cy.get(".loan-list-page")
-      .find(".dpl-list-buttons__buttons")
+      .find(".list-buttons__buttons")
       .find("#test-list")
       .should("exist")
       // 2.b.i.1. List is chosen as default
-      .should("have.class", "dpl-icon-button--selected");
+      .should("have.class", "icon-button--selected");
 
     cy.get(".loan-list-page")
-      .find(".dpl-list-buttons__buttons")
+      .find(".list-buttons__buttons")
       .find("[data-cy='stack']")
       .should("exist");
 
@@ -620,7 +620,7 @@ describe("Loan list", () => {
       body: []
     });
     cy.visit("/iframe.html?path=/story/apps-loan-list--primary");
-    cy.get(".dpl-list-empty").should(
+    cy.get(".list-empty").should(
       "have.text",
       "You have 0 loans at the moment"
     );
@@ -647,7 +647,7 @@ describe("Loan list", () => {
     cy.visit("/iframe.html?path=/story/apps-loan-list--primary");
 
     // 2.b.iv.9. No physical loans, the text: "You have no physical loans at the moment"
-    cy.get(".dpl-list-empty").should(
+    cy.get(".list-empty").should(
       "have.text",
       "You have no physical loans at the moment"
     );
@@ -738,7 +738,7 @@ describe("Loan list", () => {
     });
     cy.visit("/iframe.html?path=/story/apps-loan-list--primary");
     // 2.d No digital loans, the text: "You have 0 loans at the moment"
-    cy.get(".dpl-list-empty").should(
+    cy.get(".list-empty").should(
       "have.text",
       "You have no digital loans at the moment"
     );

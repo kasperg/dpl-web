@@ -1,6 +1,7 @@
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 import Modal from "../Modal";
+import "./modal-text.scss";
 
 export type ModalTextProps = {
   showModal: boolean;
@@ -19,10 +20,10 @@ export const ModalText = (props: ModalTextProps) => {
   const { title, subtitle, textContent, linkText, btnLabel, showModal } = props;
   return (
     <Modal shownModal={showModal} classNames="modal-text modal-padding">
-      <div className="modal-text__container color-secondary-gray">
+      <div className="modal-text__container">
         <h3 className="text-header-h3">{title}</h3>
 
-        <p className="mt-48 text-body-large">{subtitle}</p>
+        <p className="modal-text__subtitle">{subtitle}</p>
 
         <div className="mt-48">
           {textContent.map((row) => (

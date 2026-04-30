@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import {
   AutosuggestMaterial,
   AutosuggestMaterialProps,
@@ -6,6 +7,7 @@ import {
   AutosuggestText,
   AutosuggestTextProps,
 } from "../../Library/autosuggest-text/AutosuggestText";
+import "./autosuggest.scss";
 
 export type AutosuggestProps = AutosuggestTextProps & AutosuggestMaterialProps;
 

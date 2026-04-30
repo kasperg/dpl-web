@@ -6,6 +6,7 @@ import flatpickr from "flatpickr";
 import { Instance } from "flatpickr/dist/types/instance";
 import { MutableRefObject, useCallback, useRef } from "react";
 import { BaseOptions } from "flatpickr/dist/types/options";
+import "./date-calendar.scss";
 
 const DateCalendar = () => {
   const picker = useRef() as MutableRefObject<Instance>;

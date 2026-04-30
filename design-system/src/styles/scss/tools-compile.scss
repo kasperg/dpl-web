@@ -1,0 +1,15 @@
+// Compile-only tools: Sass variables, mixins, and placeholders.
+// Does NOT emit any CSS (@font-face, :root, etc.).
+// Used by sass-loader additionalData for per-component compilation.
+@import "tools/variables.fonts.vars";
+@import "tools/variables.z-indexes";
+@import "tools/variables.spacings";
+@import "tools/variables.layout";
+@import "tools/variables.colors.vars";
+@import "tools/variables.breakpoints";
+@import "tools/variables.typography";
+@import "tools/variables.form";
+@import "tools/mixins.tools";
+@import "tools/mixins.media-query";
+@import "tools/mixins.misc";
+@import "tools/placeholder";

@@ -6,7 +6,7 @@ interface MaterialHeaderTextProps {
 const MaterialHeaderText = ({ title, author }: MaterialHeaderTextProps) => {
   return (
     <>
-      <h1 className="text-header-h1 mb-16">{title}</h1>
+      <h1 className="material-header__title">{title}</h1>
       <p className="text-body-large">
         <span>Af </span>
         {author}

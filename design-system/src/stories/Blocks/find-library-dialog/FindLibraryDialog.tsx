@@ -1,6 +1,7 @@
 import DawaInput from "../../Library/Forms/dawa-input/DawaInput";
 import { ReactComponent as LocationSvg } from "../../../public/icons/collection/Location.svg";
 import { ReactComponent as WarningSvg } from "../../../public/icons/basic/icon-warning.svg";
+import "./find-library-dialog.scss";
 
 function FindLibraryDialog() {
   return (

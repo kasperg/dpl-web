@@ -3,6 +3,7 @@ import {
   ContentListItemProps,
 } from "../content-list-item/ContentListItem";
 import ContentListItemStacked from "../content-list-item/ContentListItemStacked";
+import "./content-list.scss";
 
 type ContentListProps = {
   items: ContentListItemProps[];

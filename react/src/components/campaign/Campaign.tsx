@@ -2,6 +2,7 @@ import * as React from "react";
 import { FC } from "react";
 import { CampaignMatchPOST200Data } from "../../core/dpl-cms/model";
 import { useUrlStatistics } from "../../core/statistics/useStatistics";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/campaign.css";
 
 export interface CampaignProps {
   campaignData: CampaignMatchPOST200Data;

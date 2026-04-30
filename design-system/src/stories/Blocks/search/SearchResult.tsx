@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
@@ -5,6 +6,7 @@ import { ReactComponent as FilterIcon } from "../../../public/icons/collection/F
 import { ReactComponent as CloseIcon } from "../../../public/icons/collection/CloseSmall.svg";
 import { ReactComponent as ArrowSmallRight } from "../../Library/Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { IconFavourite } from "../../Library/Icons/icon-favourite/IconFavourite";
+import "./search.scss";
 
 const Search: React.FC = () => {
   return (
@@ -751,7 +753,7 @@ const Search: React.FC = () => {
                       <button
                         data-cy="button"
                         type="button"
-                        className="btn-primary btn-filled btn-medium  arrow__hover--right-small search-facets__dialog__actions__button"
+                        className="button button--filled button--medium  arrow__hover--right-small search-facets__dialog__actions__button"
                       >
                         Vis resultater
                       </button>
@@ -825,14 +827,14 @@ const Search: React.FC = () => {
                       <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                       <CheckIcon className="availability-label__check" />
                       <p
-                        className="availability-label__text text-label-semibold ml-24"
+                        className="availability-label__type"
                         data-cy="availability-label-type"
                       >
                         podcast
                       </p>
-                      <div className="availability-label__divider ml-4" />
+                      <div className="availability-label__divider" />
                       <p
-                        className="availability-label__text text-label-normal ml-4 mr-8"
+                        className="availability-label__availability"
                         data-cy="availability-label-status"
                       >
                         Tilgængelig
@@ -906,14 +908,14 @@ const Search: React.FC = () => {
                       <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                       <CheckIcon className="availability-label__check" />
                       <p
-                        className="availability-label__text text-label-semibold ml-24"
+                        className="availability-label__type"
                         data-cy="availability-label-type"
                       >
                         podcast
                       </p>
-                      <div className="availability-label__divider ml-4" />
+                      <div className="availability-label__divider" />
                       <p
-                        className="availability-label__text text-label-normal ml-4 mr-8"
+                        className="availability-label__availability"
                         data-cy="availability-label-status"
                       >
                         Tilgængelig
@@ -987,14 +989,14 @@ const Search: React.FC = () => {
                       <div className="pagefold-triangle--xsmall pagefold-triangle--success" />
                       <CheckIcon className="availability-label__check" />
                       <p
-                        className="availability-label__text text-label-semibold ml-24"
+                        className="availability-label__type"
                         data-cy="availability-label-type"
                       >
                         podcast
                       </p>
-                      <div className="availability-label__divider ml-4" />
+                      <div className="availability-label__divider" />
                       <p
-                        className="availability-label__text text-label-normal ml-4 mr-8"
+                        className="availability-label__availability"
                         data-cy="availability-label-status"
                       >
                         Tilgængelig
@@ -1011,7 +1013,7 @@ const Search: React.FC = () => {
               </p>
               <button
                 type="button"
-                className="btn-primary btn-outline btn-medium arrow__hover--right-small uppercase"
+                className="button button--outline button--medium arrow__hover--right-small uppercase"
               >
                 vis flere
               </button>

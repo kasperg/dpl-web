@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { ReactComponent as CrossIcon } from "../../../public/icons/basic/icon-cross.svg";
+import "./tag.scss";
 
 export type TagProps = {
   children: React.ReactNode;

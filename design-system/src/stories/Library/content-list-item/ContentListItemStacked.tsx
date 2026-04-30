@@ -29,6 +29,7 @@ const ContentListItemStacked: FC<ContentListItemStackedProps> = ({
   return (
     <a
       href={href}
+      // eslint-disable-next-line local-rules/single-bem-block
       className="content-list-item-stacked arrow__hover--right-small"
     >
       <h3 className="hide-visually">{title}</h3>

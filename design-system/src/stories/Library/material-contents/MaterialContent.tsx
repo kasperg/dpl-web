@@ -56,6 +56,7 @@ const MaterialContent: React.FC<MaterialContentProps> = ({ contentEntity }) => {
                 }`}
                 onClick={() => setIsExpanded(!isExpanded)}
               >
+                {/* eslint-disable-next-line local-rules/single-bem-block */}
                 <span className="link-tag material-content__show-more-text">
                   {isExpanded
                     ? `Show less`

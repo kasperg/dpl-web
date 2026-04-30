@@ -1,0 +1,60 @@
+name: CMS / Visual Regression
+
+on:
+  push:
+    branches: [develop]
+    paths:
+      - 'cms/**'
+      - '.github/workflows/cms-visual-regression.yml'
+  pull_request:
+    paths:
+      - 'cms/**'
+      - '.github/workflows/cms-visual-regression.yml'
+
+concurrency:
+  group: ${{ github.repository_id }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  visual-regression:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cms
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: arduino/setup-task@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup site
+        run: task ci:reset
+
+      - name: Capture screenshots
+        run: task ci:cypress:visual-regression:update
+
+      - name: Archive videos
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-regression-cms-videos
+          path: cms/cypress/videos
+
+      - name: Archive screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-regression-cms-screenshots
+          path: cms/cypress/screenshots
+
+      - uses: reg-viz/reg-actions@v3
+        if: always()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          image-directory-path: cms/cypress/snapshots/visual-regression.cy.ts
+          artifact-name: visual-regression-cms
+          matching-threshold: 0.05
+          threshold-rate: 0

@@ -202,7 +202,7 @@ const FindOnShelfModalBody: FC<FindOnShelfModalBodyProps> = ({
 
   return (
     <>
-      <h2 className="text-header-h2 modal-find-on-shelf__headline">
+      <h2 className="modal-find-on-shelf__headline">
         {workTitle}
         {author && ` / ${author}`}
       </h2>
@@ -218,7 +218,7 @@ const FindOnShelfModalBody: FC<FindOnShelfModalBodyProps> = ({
       )}
       {!isLoading && (
         <>
-          <div className="text-small-caption modal-find-on-shelf__caption">
+          <div className="modal-find-on-shelf__caption">
             {`${totalBranchesHaveMaterial(finalDataToShow)} ${t(
               "librariesHaveTheMaterialText"
             )}`}

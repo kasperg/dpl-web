@@ -33,7 +33,7 @@ const DeleteReservationContent: FC<
           count: reservationsCount
         })}
       </h2>
-      <div className="mt-48 color-secondary-gray">
+      <div className="modal-cta__description">
         <p className="text-body-medium-regular">
           {t("deleteReservationModalDeleteQuestionText", {
             count: reservationsCount
@@ -43,7 +43,7 @@ const DeleteReservationContent: FC<
           {t("deleteReservationModalNotRegrettableText")}
         </p>
       </div>
-      <div className="modal-pause__button mt-48">
+      <div className="modal-pause__button">
         <Button
           dataCy="delete-reservation-button"
           label={buttonLabel}

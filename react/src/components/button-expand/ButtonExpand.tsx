@@ -2,6 +2,7 @@ import clsx from "clsx";
 import React, { FC } from "react";
 import ExpandMoreIcon from "@danskernesdigitalebibliotek/dpl-design-system/build/icons/collection/ExpandMore.svg";
 import { useText } from "../../core/utils/text";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/button-expand.css";
 
 export type ButtonExpandProps = {
   showMore: boolean;

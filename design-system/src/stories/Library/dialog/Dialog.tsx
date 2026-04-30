@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React, { forwardRef } from "react";
 import { ReactComponent as CloseLarge } from "../../../public/icons/collection/CloseLarge.svg";
+import "./dialog.scss";
 
 export type DialogType = {
   children: React.ReactNode;

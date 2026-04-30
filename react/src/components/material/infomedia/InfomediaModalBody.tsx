@@ -21,25 +21,25 @@ const InfomediaModalBody: React.FunctionComponent<InfomediaModalBodyProps> = ({
 }) => {
   const t = useText();
   return (
-    <article className="infomedia-article">
-      <img className="infomedia-logo" src={InfomediaLogo} alt="" />
-      <h2 className="infomedia-headline">{headLine}</h2>
-      <p className="infomedia-hedline">{hedLine}</p>
-      <p className="infomedia-byline">{`${t("materialHeaderAuthorByText")} ${byLine}`}</p>
+    <article className="infomedia__article">
+      <img className="infomedia__logo" src={InfomediaLogo} alt="" />
+      <h2 className="infomedia__headline">{headLine}</h2>
+      <p className="infomedia__subheadline">{hedLine}</p>
+      <p className="infomedia__byline">{`${t("materialHeaderAuthorByText")} ${byLine}`}</p>
 
-      <div className="infomedia-meta">
+      <div className="infomedia__meta">
         <span>{`${paper}, ${dateLine}`}</span>
       </div>
 
       <div
-        className="infomedia-content"
+        className="infomedia__content"
         // Only trusted editors from infomedia have access to write infomedia articles
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: text }}
       />
 
       <footer className="infomedia-footer">
-        <p className="infomedia-copyright">{t("infomediaCopyrightText")}</p>
+        <p className="infomedia__copyright">{t("infomediaCopyrightText")}</p>
       </footer>
     </article>
   );

@@ -9,10 +9,11 @@ export const AutosuggestText = (props: AutosuggestTextProps) => {
     <>
       {textSuggestions.map((item) => {
         return (
-          <li className="autosuggest__text-item text-body-medium-regular px-24">
-            <p className="autosuggest__text text-body-medium-regular">{item}</p>
+          <li className="autosuggest__text-item">
+            <p className="autosuggest__text">{item}</p>
             {categoryText && (
-              <div className="boxed-text text-tags noselect ml-8">
+              // eslint-disable-next-line local-rules/single-bem-block
+              <div className="boxed-text autosuggest__category-tag">
                 {categoryText}
               </div>
             )}

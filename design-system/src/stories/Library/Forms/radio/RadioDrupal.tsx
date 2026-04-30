@@ -8,8 +8,8 @@ export const RadioDrupal: React.FC<CheckboxProps> = ({
   description,
 }) => {
   return (
-    <div className="dpl-form">
-      <fieldset className="dpl-fieldset">
+    <div className="form">
+      <fieldset className="fieldset">
         <legend>
           <span className="fieldset-legend">{legend}</span>
         </legend>
@@ -18,7 +18,8 @@ export const RadioDrupal: React.FC<CheckboxProps> = ({
             className="dpl-radio-fieldset__wrapper__col"
             id="edit-radios-test-one-col"
           >
-            <div className="dpl-input radio-override form-item form-type-radio">
+            {/* eslint-disable-next-line local-rules/single-bem-block */}
+            <div className="input radio-override form-item form-type-radio">
               {/* this id is only there because it emulates the Drupal id */}
               <input
                 type="radio"
@@ -36,7 +37,8 @@ export const RadioDrupal: React.FC<CheckboxProps> = ({
                 </div>
               </div>
             </div>
-            <div className="dpl-input radio-override form-item form-type-radio">
+            {/* eslint-disable-next-line local-rules/single-bem-block */}
+            <div className="input radio-override form-item form-type-radio">
               <input
                 type="radio"
                 id="edit-radios-test-one-col-woman"

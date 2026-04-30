@@ -15,7 +15,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
   collapsible,
   iconClassNames
 }) => {
-  const iconClassName = `btn-icon ${clsx({ "btn-collapsible": collapsible }, [
+  const iconClassName = `button__icon ${clsx({ "button__collapsible": collapsible }, [
     iconClassNames
   ])}`;
 

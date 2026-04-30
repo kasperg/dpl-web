@@ -1,4 +1,5 @@
 import { Links } from "../links/Links";
+import "./link-filters.scss";
 
 export type LinkFilter = {
   title: string;
@@ -22,7 +23,7 @@ export const LinkFilters: React.FC<LinkFiltersProps> = ({ filters }) => {
               classNames="link-tag link-filters__tag"
             />
           ) : (
-            <span className="link-filters__title text-links">{item.title}</span>
+            <span className="link-filters__title">{item.title}</span>
           )}
 
           <span className="link-filters__counter">{item.counter}</span>

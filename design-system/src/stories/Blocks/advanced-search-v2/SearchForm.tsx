@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 
 const SearchForm: React.FC = () => {
@@ -24,7 +25,7 @@ const SearchForm: React.FC = () => {
             </div>
             <div className="search-filter__combobox-wrapper">
               <input
-                className="combobox-input"
+                className="combobox__input"
                 placeholder="Søg efter bøger, film, musik og mere"
                 type="text"
               />
@@ -77,7 +78,7 @@ const SearchForm: React.FC = () => {
             </div>
             <div className="search-filter__combobox-wrapper">
               <input
-                className="combobox-input"
+                className="combobox__input"
                 placeholder="Søg efter bøger, film, musik og mere"
                 type="text"
               />
@@ -228,14 +229,14 @@ const SearchForm: React.FC = () => {
         <button
           data-cy="button"
           type="button"
-          className="btn-primary btn-filled btn-large  arrow__hover--right-small "
+          className="button button--filled button--large  arrow__hover--right-small "
         >
           Søg
         </button>
         <button
           data-cy="button"
           type="button"
-          className="btn-primary btn-outline btn-large  arrow__hover--right-small search__reset-button"
+          className="button button--outline button--large  arrow__hover--right-small search__reset-button"
         >
           Nulstil
         </button>

@@ -1,11 +1,15 @@
 import { FC } from "react";
+import "./boxed-text.scss";
 
 export interface BoxedTextProps {
   text: string;
 }
 
 export const BoxedText: FC<BoxedTextProps> = ({ text }) => {
-  return <div className="boxed-text text-tags noselect">{text}</div>;
+  return (
+    // eslint-disable-next-line local-rules/single-bem-block
+    <div className="boxed-text text-tags noselect">{text}</div>
+  );
 };
 
 export default BoxedText;

@@ -1,5 +1,6 @@
 import { FC, useEffect } from "react";
 import Tag from "../Tag";
+import "./tag-list.scss";
 
 type TagListProps = {
   tags: string[];
@@ -33,7 +34,7 @@ const TagList: FC<TagListProps> = ({ tags }) => {
             ))}
           </ul>
           <button
-            className="tag tag--fill cursor-pointer"
+            className="tag tag--fill"
             aria-expanded="false"
             data-show-more-button
             data-show-more-text="..."

@@ -162,6 +162,7 @@ export const Colors = () => {
 
       <div>
         <h1 className="text-header-h3">CSS-classes</h1>
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <p className="text-body-medium-regular mt-24">
           There are other css-classes for background colors, border colors and
           text colors available in the <code> scss / color-classes.scss </code>{" "}
@@ -171,22 +172,29 @@ export const Colors = () => {
           <code> scss / color-variables.scss </code> directly in the css files.
         </p>
 
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <p className="text-body-medium-regular mt-16">
           Example: <br />A <code>div</code> with{" "}
           <code>.bg-global-secondary</code>, and a<code>p</code>-element with{" "}
           <code>.color-primary-black</code>:
         </p>
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <div className="bg-global-secondary p-32 mt-16">
+          {/* eslint-disable-next-line local-rules/single-bem-block */}
           <p className="color-primary-black text-header-h2">Nyt på hylderne</p>
         </div>
 
         <div>
           <div className="internal-colors-wrapper">
             <div>
+              {/* eslint-disable-next-line local-rules/single-bem-block */}
               <p className="text-body-large mb-8">Background classes</p>
               {bgClasses.map((bgClass) => (
                 <div className="internal-spacing-css-inner">
-                  <div className="internal-spacing-css-inner-prefix p-8">
+                  <div
+                    // eslint-disable-next-line local-rules/single-bem-block
+                    className="internal-spacing-css-inner-prefix p-8"
+                  >
                     <pre>
                       <code>{`.${bgClass.classPrefix}`}</code>
                     </pre>
@@ -196,10 +204,14 @@ export const Colors = () => {
             </div>
 
             <div>
+              {/* eslint-disable-next-line local-rules/single-bem-block */}
               <p className="text-body-large mb-8">Border classes</p>
               {borderClasses.map((borderClass) => (
                 <div className="internal-spacing-css-inner">
-                  <div className="internal-spacing-css-inner-prefix p-8">
+                  <div
+                    // eslint-disable-next-line local-rules/single-bem-block
+                    className="internal-spacing-css-inner-prefix p-8"
+                  >
                     <pre>
                       <code>{`.${borderClass.classPrefix}`}</code>
                     </pre>
@@ -209,10 +221,14 @@ export const Colors = () => {
             </div>
 
             <div>
+              {/* eslint-disable-next-line local-rules/single-bem-block */}
               <p className="text-body-large mb-8">Color (text) classes</p>
               {textColorClasses.map((textColorClass) => (
                 <div className="internal-spacing-css-inner">
-                  <div className="internal-spacing-css-inner-prefix p-8">
+                  <div
+                    // eslint-disable-next-line local-rules/single-bem-block
+                    className="internal-spacing-css-inner-prefix p-8"
+                  >
                     <pre>
                       <code>{`.${textColorClass.classPrefix}`}</code>
                     </pre>

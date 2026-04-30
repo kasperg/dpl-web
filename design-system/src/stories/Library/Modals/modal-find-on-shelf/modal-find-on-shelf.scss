@@ -9,6 +9,7 @@
 
   &__headline {
     margin: 0 $s-md $s-2xl $s-md;
+    @include typography($typo__h2);
 
     @include media-query__medium {
       margin: 0 $s-md 96px 0;
@@ -17,6 +18,7 @@
 
   &__caption {
     margin: 0 0 $s-md $s-md;
+    @include typography($typo__small-caption);
 
     @include media-query__medium {
       margin: 0 0 $s-sm 0;

@@ -9,6 +9,7 @@ const shadowValues = [
 
 export const Shadows = () => {
   return (
+    // eslint-disable-next-line local-rules/single-bem-block
     <div className="shadow-box-container m-24">
       <p className="text-body-large">Shadows</p>
       {shadowValues.map((item, index) => (

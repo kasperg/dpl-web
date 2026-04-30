@@ -4,6 +4,7 @@ import {
   RecommendedMaterial,
   RecommendedMaterialProps,
 } from "../recommended-material/RecommendedMaterial";
+import "./material-grid.scss";
 
 type AllowedDisplayAmount = 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32;
 
@@ -67,7 +68,8 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
       </ul>
       {moreMaterialsThanInitialMaximum && !showAllMaterials && buttonText && (
         <button
-          className="material-grid__show-more btn-primary btn-outline btn-medium"
+          // eslint-disable-next-line local-rules/single-bem-block
+          className="material-grid__show-more button button--outline button--medium"
           data-show-more
           aria-expanded={showAllMaterials ? "true" : "false"}
           aria-controls="material-grid__items"

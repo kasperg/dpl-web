@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { IconType, LinkType } from "./LinkTypes";
+import "./link-with-icon.scss";
 
 export type LinksProps = {
   href: string;
@@ -36,6 +37,7 @@ export const LinkWithIcon = ({ href, linkText, linkType }: LinksProps) => {
     <a
       href={href}
       target={target}
+      // eslint-disable-next-line local-rules/single-bem-block
       className={clsx("link-with-icon arrow__hover--right-small")}
     >
       <div className={clsx("link-with-icon__icon", linkIconClass)}>

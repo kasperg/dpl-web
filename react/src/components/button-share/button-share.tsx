@@ -5,6 +5,7 @@ import CheckmarkIcon from "../icon-checkmark/icon-checkmark";
 import LinkIcon from "./link-icon";
 import { useText } from "../../core/utils/text";
 import useCopyToClipboard from "../../core/utils/useCopyToClipboard";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/button-share.css";
 
 type ButtonShareProps = {
   className?: string;

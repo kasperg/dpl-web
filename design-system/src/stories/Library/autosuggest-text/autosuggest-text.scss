@@ -4,6 +4,9 @@
     width: 100%;
     display: flex;
     align-items: center;
+    @include typography($typo__body-placeholder);
+    padding-left: $s-lg;
+    padding-right: $s-lg;
 
     @include media-query__medium {
       // Because the main autosuggest is a prominent feature we don't want the hover
@@ -19,7 +22,6 @@
 
     @include media-query__large {
       height: 40px;
-      padding-right: $s-lg;
     }
 
     &--highlight {
@@ -28,10 +30,18 @@
   }
 
   &__text {
+    @include typography($typo__body-placeholder);
+
     @include media-query__medium {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+  }
+
+  &__category-tag {
+    @include typography($typo__tags);
+    user-select: none;
+    margin-left: $s-sm;
   }
 }

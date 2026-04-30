@@ -7,6 +7,8 @@ import HorizontalTermLine, {
   HorizontalTermLineProps,
 } from "../horizontal-term-line/HorizontalTermLine";
 import { getCoverTint } from "../cover/helper";
+import "./card-list-item.scss";
+import "./card-list-item-skeleton.scss";
 
 export type CardListItemProps = {
   heartFill?: boolean;
@@ -35,6 +37,7 @@ export const CardListItem = ({
   ];
 
   return (
+    // eslint-disable-next-line local-rules/single-bem-block
     <a href="/" className="card-list-item arrow arrow__hover--right-small">
       <div className="card-list-item__cover">
         <Cover
@@ -52,6 +55,7 @@ export const CardListItem = ({
           )}
         </div>
 
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <h2 className="card-list-item__title text-header-h4 mb-4">
           <a href="">{title}</a>
         </h2>

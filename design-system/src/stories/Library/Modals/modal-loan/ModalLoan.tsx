@@ -10,6 +10,7 @@ import { WarningStatus } from "../../warning-status/WarningStatus";
 import Modal from "../Modal";
 import ResultPager from "../../card-list-page/ResultPager";
 import GroupModalItemSkeleton from "../GroupModalItemSkeleton";
+import "./modal-loan.scss";
 
 type LoanMaterials = Array<{
   materialType?: string;
@@ -133,14 +134,12 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
               </div>
             )}
             <div>
-              <h2 className="modal-loan__title text-header-h2">{title}</h2>
-              <p className="text-body-medium-regular color-secondary-gray mt-4">
-                {description}
-              </p>
+              <h2 className="modal-loan__title">{title}</h2>
+              <p className="modal-loan__subtitle">{description}</p>
             </div>
           </div>
           {isExpired && (
-            <div className="modal-loan__warning mt-48 mb-48">
+            <div className="modal-loan__warning">
               <WarningStatus
                 url="/"
                 description="Afleveringsdatoen for lånet er overskredet, derfor pålægges du et gebyr, når materialet afleveres"

@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import { useState } from "react";
 import AvailabilityLabel from "../../Library/availability-label/AvailabilityLabel";
 import { Button } from "../../Library/Buttons/button/Button";
@@ -9,6 +10,7 @@ import { CopyLink } from "../../Library/copy-link/CopyLink";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import MaterialContents from "../../Library/material-contents/MaterialContents";
 import { Content } from "../../Library/material-contents/types";
+import "./material-manifestation-item.scss";
 
 export type MaterialMainfestationItemProps = {
   title: string;

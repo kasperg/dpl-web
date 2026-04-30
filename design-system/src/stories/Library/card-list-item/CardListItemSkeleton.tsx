@@ -1,5 +1,6 @@
 export const CardListItemSkeleton = () => {
   return (
+    // eslint-disable-next-line local-rules/single-bem-block
     <div className="card-list-item arrow arrow__hover--right-small ssc">
       <div className="ssc-square cover--size-small">&nbsp;</div>
       <div className="ssc-wrapper">

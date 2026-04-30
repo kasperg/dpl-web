@@ -28,18 +28,18 @@ const DisclosureSummary: React.FunctionComponent<DisclosureSummaryProps> = ({
   return (
     <summary
       ref={itemRef}
-      className={clsx("disclosure__headline text-body-large ", className)}
+      className={clsx("disclosure__headline", className)}
       data-cy={dataCy}
     >
       {mainIconPath && (
-        <div className="disclosure__icon bg-identity-tint-120">
+        <div className="disclosure__icon">
           <img className="invert" src={mainIconPath} alt="" />
         </div>
       )}
 
       <Heading
         level={headingLevel}
-        className={`text-body-large disclosure__text${
+        className={`disclosure__text${
           isAvailable !== undefined ? "--shorter" : ""
         }`}
       >
@@ -56,7 +56,7 @@ const DisclosureSummary: React.FunctionComponent<DisclosureSummaryProps> = ({
         />
       )}
       <img
-        className="disclosure__expand noselect"
+        className="disclosure__expand"
         src={ExpandMoreIcon}
         alt=""
       />

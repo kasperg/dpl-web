@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { PromoBarIcon, PromoBarIconType } from "./PromoBarIcon";
+import "./promo-bar.scss";
 
 type PromoBarProps = {
   text: string;
@@ -17,7 +18,7 @@ const PromoBar: React.FunctionComponent<PromoBarProps> = ({
 }) => {
   return (
     <section
-      className={clsx("promo-bar px-35", {
+      className={clsx("promo-bar", {
         "promo-bar--sticky": sticky,
         "promo-bar--dark": theme === "dark",
       })}

@@ -454,5 +454,15 @@
                 "3105637: Edit, install and uninstall permission": "https://www.drupal.org/files/issues/2024-02-01/theme-permission-edit-install-uninstall-3105637-7.patch"
             }
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\novel\\": "web/themes/custom/novel/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\Tests\\novel\\": "web/themes/custom/novel/tests/src/"
+        }
     }
 }

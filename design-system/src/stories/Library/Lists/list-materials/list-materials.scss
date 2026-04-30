@@ -36,6 +36,7 @@
 .list-materials__checkbox {
   display: flex;
   align-items: center;
+  margin-right: $s-xl;
 }
 
 .list-materials__content {
@@ -45,6 +46,7 @@
 .list-materials__content__header {
   @include text-ellipsis-truncation();
   @include typography($typo__h5);
+  margin-top: $s-sm;
 }
 
 .list-materials--disabled {

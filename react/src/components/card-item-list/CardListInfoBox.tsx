@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "../atoms/links/Link";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/card-list-info-box.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/card-list-item.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/cover.css";
 
 export type CardListInfoBoxProps = {
   title?: string;
@@ -21,7 +24,7 @@ const CardListInfoBox = ({
       <div className="card-list-info-box__icon cover cover--size-small cover--aspect-small" />
       <div className="card-list-info-box__content">
         <div className="card-list-info-box__text">
-          <h3 className="card-list-info-box__title text-header-h4 mb-8">
+          <h3 className="card-list-info-box__title">
             {title}
           </h3>
           <div
@@ -35,7 +38,7 @@ const CardListInfoBox = ({
           <div className="card-list-info-box__button-wrapper">
             <Link
               href={buttonUrl}
-              className="btn-primary btn-outline btn-xsmall"
+              className="button button--outline button--xsmall"
             >
               {buttonLabel}
             </Link>

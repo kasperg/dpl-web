@@ -4,6 +4,12 @@ import CheckBox from "../checkbox/Checkbox";
 import { useText } from "../../core/utils/text";
 import { getRenewableMaterials } from "../../core/utils/helpers/general";
 import { ListType } from "../../core/utils/types/list-type";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-loan.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-details.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/counter.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/list-materials.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/button-box.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/result-pager.css";
 
 interface GroupModalContentProps {
   amountOfSelectableMaterials: number;

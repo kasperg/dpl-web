@@ -8,6 +8,7 @@ import { PeriodicalEdition } from "../material/periodical/helper";
 import FindOnShelfModalBody from "./FindOnShelfModalBody";
 import { useText } from "../../core/utils/text";
 import { constructModalId } from "../../core/utils/helpers/modal-helpers";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-find-on-shelf.css";
 
 export const findOnShelfModalId = (faustIds: FaustId[]) => {
   return constructModalId("find-on-shelf-modal", faustIds.sort());

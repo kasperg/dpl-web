@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 import { ReactComponent as ExpandMoreIcon } from "../../../../../public/icons/collection/ExpandMore.svg";
+import "./button-expand.scss";
 
 export type ButtonExpandProps = {
   showMore: boolean;

@@ -25,7 +25,7 @@ export default {
 } as Meta<typeof Textarea>;
 
 const Template: StoryFn<typeof Textarea> = (args) => (
-  <div className="dpl-form">
+  <div className="form">
     <Textarea {...args} />
   </div>
 );

@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import clsx from "clsx";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/media-container.css";
 
 type MediaImageProps = {
   src?: string;

@@ -51,8 +51,8 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       data-cy={dataCy || "button"}
       type={type}
-      className={`btn-primary btn-${variant} btn-${size} ${
-        disabled ? "btn-outline" : ""
+      className={`button button--${variant} button--${size} ${
+        disabled ? "button--outline" : ""
       } arrow__hover--right-small ${classNames ?? ""}`}
       disabled={disabled || isLoadingRef.current}
       onMouseUp={handleClick}

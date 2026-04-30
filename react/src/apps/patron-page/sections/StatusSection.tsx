@@ -56,7 +56,7 @@ const StatusSection: FC = () => {
   }
 
   return (
-    <section className="dpl-status-loans">
+    <section className="status-loans">
       {libraryProfile && (
         <>
           <h2 className="text-header-h4 mt-64 mb-16">
@@ -73,13 +73,13 @@ const StatusSection: FC = () => {
               }
             })}
           </div>
-          <div className="dpl-status-loans__column">
+          <div className="status-loans__column">
             <div className="dpl-status mt-32">
               <h3 className="text-small-caption">
                 {t("patronPageStatusSectionLoanHeaderText")}
               </h3>
-              <div className="dpl-progress-bar text-small-caption color-secondary-gray">
-                <div className="dpl-progress-bar__header">
+              <div className="progress-bar">
+                <div className="progress-bar__header">
                   <label
                     className="text-label text-body-medium-medium"
                     htmlFor="patron-page-status-section-out-of-text"
@@ -100,7 +100,7 @@ const StatusSection: FC = () => {
                     </div>
                   )}
                 </div>
-                <div className="dpl-progress-bar__progress-bar bg-global-secondary">
+                <div className="progress-bar__progress-bar">
                   {maxConcurrentEbookLoansPerBorrower !== undefined && (
                     <div
                       className="bg-identity-primary"
@@ -119,8 +119,8 @@ const StatusSection: FC = () => {
                   )}
                 </div>
               </div>
-              <div className="dpl-progress-bar text-small-caption color-secondary-gray">
-                <div className="dpl-progress-bar__header">
+              <div className="progress-bar">
+                <div className="progress-bar__header">
                   <label
                     className="text-label"
                     htmlFor="max-concurrent-audio-loans-per-borrower"
@@ -141,7 +141,7 @@ const StatusSection: FC = () => {
                     </div>
                   )}
                 </div>
-                <div className="dpl-progress-bar__progress-bar bg-global-secondary">
+                <div className="progress-bar__progress-bar">
                   {maxConcurrentAudioLoansPerBorrower !== undefined && (
                     <div
                       role="figure"

@@ -1,3 +1,4 @@
+{{ attach_library('novel/filtered-event-list') }}
 {{ attach_library('novel/show-more') }}
   <div {{ attributes.addClass('filtered-event-list') }} data-show-more-list-wrapper>
     {% if content.field_title %}
@@ -14,8 +15,8 @@
         </li>
       {% endfor %}
     </ul>
-    <button class="filtered-event-list__button btn-primary btn-outline
-    btn-medium"
+    <button class="filtered-event-list__button button button--outline
+    button--medium"
             type="button"
             aria-expanded="false"
             data-show-more-button

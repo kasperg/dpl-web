@@ -1,5 +1,6 @@
 import { Dropdown } from "../dropdown/Dropdown";
 import { ReactComponent as MinusIcon } from "../../../public/icons/collection/MinusButton.svg";
+import "./input-with-dropdown.scss";
 
 export interface InputWithDropdownProps {
   inputPlaceholder: string;
@@ -11,6 +12,7 @@ export const InputWithDropdown: React.FC<InputWithDropdownProps> = ({
   return (
     <div className="input-with-dropdown">
       <input
+        // eslint-disable-next-line local-rules/single-bem-block
         className="input-with-dropdown__input focus-styling__input"
         type="text"
         placeholder={inputPlaceholder}

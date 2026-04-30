@@ -1,6 +1,7 @@
 import React, { FC, ReactElement, ReactNode } from "react";
 import clsx from "clsx";
 import { DisclosureSummaryProps } from "./DisclosureSummary";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/disclosure.css";
 
 export interface DisclosureProps {
   children?: ReactNode;
@@ -19,7 +20,7 @@ const Disclosure: FC<DisclosureProps> = ({
 }) => {
   return (
     <details
-      className={clsx("disclosure text-body-large", className)}
+      className={clsx("disclosure", className)}
       open={open}
       data-cy={dataCy}
     >

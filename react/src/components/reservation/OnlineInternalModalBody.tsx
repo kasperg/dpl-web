@@ -138,13 +138,13 @@ const OnlineInternalModalBody = ({
   if (reservationStatus === "idle" || loanStatus === "idle") {
     return (
       <section className="reservation-modal">
-        <header className="reservation-modal-header">
+        <header className="reservation-modal__header">
           <Cover ids={[manifestation.pid]} size="medium" animate />
-          <div className="reservation-modal-description">
-            <div className="reservation-modal-tag">
+          <div className="reservation-modal__description">
+            <div className="reservation-modal__tag">
               {getMaterialType(selectedManifestations)}
             </div>
-            <h2 className="text-header-h2 mt-22 mb-8">
+            <h2 className="reservation-modal__description-title">
               {manifestation.titles.main}
             </h2>
             {authorLine && (
@@ -154,7 +154,7 @@ const OnlineInternalModalBody = ({
         </header>
 
         <div>
-          <div className="reservation-modal-submit">
+          <div className="reservation-modal__submit">
             {identifier && (
               <MaterialAvailabilityTextOnline
                 isbns={[identifier]}
@@ -175,7 +175,7 @@ const OnlineInternalModalBody = ({
           </div>
           {canBeReserved && (
             <>
-              <div className="reservation-modal-list">
+              <div className="reservation-modal__list">
                 {userData?.patron && (
                   <OnlineInternalModalUserListItems
                     patron={userData.patron}
@@ -183,7 +183,7 @@ const OnlineInternalModalBody = ({
                   />
                 )}
               </div>
-              <p className="mt-16 text-small-caption">
+              <p className="material-header__cta-text">
                 {t("onlineInternalModalEnsureNotificationText")}
               </p>
             </>

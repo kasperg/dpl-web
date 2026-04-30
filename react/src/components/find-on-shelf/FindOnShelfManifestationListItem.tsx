@@ -27,7 +27,7 @@ const FindOnShelfManifestationListItem: FC<
   ].filter((el) => el);
 
   return (
-    <li className="find-on-shelf__row text-body-medium-regular" role="row">
+    <li className="find-on-shelf__row" role="row">
       <span className="find-on-shelf__material-text" role="cell">
         {title}
         {publicationYear && ` (${publicationYear})`}

@@ -39,7 +39,7 @@ const ReviewLibrarian: React.FC<ReviewLibrarianProps> = ({
 
   return (
     <li
-      className="review text-small-caption"
+      className="review"
       id={id}
       data-scroll-target={id}
       data-cy={dataCy}
@@ -57,12 +57,12 @@ const ReviewLibrarian: React.FC<ReviewLibrarianProps> = ({
           return (
             <>
               {librarianReview?.heading && (
-                <h3 className="review__headline mb-8">
+                <h3 className="review__headline">
                   {librarianReview.heading}
                 </h3>
               )}
               {librarianReview?.content && (
-                <div className="review__body mb-8">
+                <div className="review__body">
                   {librarianReview.content}
                 </div>
               )}

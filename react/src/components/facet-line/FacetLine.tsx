@@ -6,6 +6,8 @@ import useGetSearchBranches from "../../core/utils/branches";
 import FacetLineFiltersSkeleton from "./FacetLineFiltersSkeleton";
 import useFilterHandler from "../../apps/search-result/useFilterHandler";
 import { createFilters } from "../../apps/search-result/helper";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/facet-line.css";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/tag.css";
 
 type FacetLineProps = {
   q: string;

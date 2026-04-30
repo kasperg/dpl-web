@@ -18,7 +18,7 @@ const ReservationForm = ({
 }: ReservationFormProps) => {
   return (
     <div>
-      <div className="reservation-modal-submit">
+      <div className="reservation-modal__submit">
         <p className="text-small-caption">{submitInfo}</p>
         <Button
           label={submitButton}
@@ -29,7 +29,7 @@ const ReservationForm = ({
           variant="filled"
         />
       </div>
-      <div className="reservation-modal-list">
+      <div className="reservation-modal__list">
         <ReservationFormItem
           icon="Various"
           title="Udgave"

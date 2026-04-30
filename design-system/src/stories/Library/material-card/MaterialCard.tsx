@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ButtonUI } from "../Buttons/button-ui/ButtonUI";
 import Cover from "../cover/Cover";
 import { CoverProps } from "../cover/types";
+import "./material-card.scss";
 
 export type MaterialCardProps = {
   title: string;

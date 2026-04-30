@@ -3,6 +3,7 @@ import { FC, useState } from "react";
 import CoverImage from "./CoverImage";
 import { tintClasses } from "./helper";
 import { CoverProps } from "./types";
+import "./cover.scss";
 
 const Cover: FC<CoverProps> = ({
   size,

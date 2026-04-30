@@ -83,7 +83,7 @@ const ReviewInfomedia: React.FC<ReviewInfomediaProps> = ({
   if (infomedia.error) {
     return (
       <li
-        className="review text-small-caption"
+        className="review"
         id={id}
         data-scroll-target={id}
         data-cy={dataCy}
@@ -96,7 +96,7 @@ const ReviewInfomedia: React.FC<ReviewInfomediaProps> = ({
           />
         )}
         {review?.rating && <ReviewHearts amountOfHearts={review.rating} />}
-        <div className="review__headline mb-8">
+        <div className="review__headline">
           {infomedia.error === "BORROWER_NOT_LOGGED_IN" ? (
             <Button
               label={t("loginToSeeReviewText")}
@@ -122,7 +122,7 @@ const ReviewInfomedia: React.FC<ReviewInfomediaProps> = ({
   ) as Pick<AccessUrl, "origin" | "url">[];
 
   return (
-    <li className="review text-small-caption" id={id} data-scroll-target={id}>
+    <li className="review" id={id} data-scroll-target={id}>
       {(authors || date || publication) && (
         <ReviewMetadata
           author={authors}
@@ -132,13 +132,13 @@ const ReviewInfomedia: React.FC<ReviewInfomediaProps> = ({
       )}
       {review?.rating && <ReviewHearts amountOfHearts={review.rating} />}
       {infomedia.article?.headLine && (
-        <h3 className="review__headline mb-8">{infomedia.article.headLine}</h3>
+        <h3 className="review__headline">{infomedia.article.headLine}</h3>
       )}
       {/* We consider infomedia to be a trustworthy source & decided not to
       sanitize the text data that we render as HTML. */}
       {infomedia.article?.text && (
         <p
-          className="review__body mb-8"
+          className="review__body"
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: infomedia.article?.text }}
         />

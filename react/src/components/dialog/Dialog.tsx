@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import clsx from "clsx";
 import iconCross from "@danskernesdigitalebibliotek/dpl-design-system/build/icons/collection/CloseLarge.svg";
 import useEscapeKey from "./useEscapeKey";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/dialog.css";
 
 type DialogType = {
   children: React.ReactNode;

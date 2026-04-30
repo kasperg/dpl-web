@@ -456,3 +456,43 @@ function novel_preprocess_media(array &$variables): void {
     $variables['download_url'] = $url;
   }
 }
+
+/**
+ * Implements hook_library_info_build().
+ *
+ * Auto-discovers per-component CSS files from the design system build
+ * and registers them as Drupal libraries. Each CSS file in
+ * assets/dpl-design-system/css/components/ becomes a library that can
+ * be attached via {{ attach_library('novel/<component-name>') }}.
+ *
+ * @return mixed[]
+ *   An associative array of library definitions.
+ */
+function novel_library_info_build(): array {
+  $libraries = [];
+  $component_path = 'assets/dpl-design-system/css/components';
+  $theme_path = \Drupal::service('extension.list.theme')->getPath('novel');
+  $dir = $theme_path . '/' . $component_path;
+
+  if (!is_dir($dir)) {
+    return $libraries;
+  }
+
+  $files = glob($dir . '/*.css');
+  if ($files === FALSE) {
+    return $libraries;
+  }
+
+  foreach ($files as $file) {
+    $name = basename($file, '.css');
+    $libraries[$name] = [
+      'css' => [
+        'component' => [
+          $component_path . '/' . $name . '.css' => [],
+        ],
+      ],
+    ];
+  }
+
+  return $libraries;
+}

@@ -3,6 +3,7 @@
 
   &__header-row {
     display: none;
+    @include typography($typo__small-caption);
 
     @include media-query__small {
       display: flex;
@@ -33,6 +34,7 @@
     border-top: solid 1px $color__global-primary;
     padding: $s-lg $s-md;
     gap: $s-md;
+    @include typography($typo__body-placeholder);
 
     @include media-query__small {
       padding: 0 $s-xl 0 $s-xl;

@@ -15,7 +15,7 @@ const ResultPager = ({
   const total = totalResults.toLocaleString("da-Dk");
   return (
     <div className={clsx("result-pager", classNames)}>
-      <p className="text-small-caption result-pager__title">
+      <p className="result-pager__title">
         {`Showing ${currentResults} out of ${total} results`}
       </p>
       {!(currentResults === totalResults) && (

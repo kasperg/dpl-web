@@ -2,14 +2,15 @@ import { FC } from "react";
 import Pagefold from "../../Library/pagefold/Pagefold";
 import { DropdownItem } from "../../Library/dropdown/Dropdown";
 import FooterAccordions from "../../Library/footer-accordions/FooterAccordions";
-import FooterColumns from "../../Library/footer-colums/FooterColumns";
+import FooterColumns from "../../Library/footer-columns/FooterColumns";
 import FooterInfo, {
   FooterInfoLinksType,
   FooterSocialMediaType,
 } from "../../Library/footer-info/FooterInfo";
 import FooterSeparator from "../../Library/footer-separator/FooterSeparator";
 import FooterWidgets from "../../Library/footer-widgets/FooterWidgets";
-import { FooterColumnType } from "../../Library/footer-colums/FooterColumn";
+import { FooterColumnType } from "../../Library/footer-columns/FooterColumn";
+import "./footer.scss";
 
 export type FooterType = {
   footerContent: FooterColumnType[];

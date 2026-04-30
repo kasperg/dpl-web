@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Button } from "../../Library/Buttons/button/Button";
+import "./registration-form-page.scss";
 
 export interface RedirectToLoginMessageProps {
   infoTopText: string;

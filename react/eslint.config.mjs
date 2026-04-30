@@ -1,4 +1,5 @@
 import noOnlyTests from "eslint-plugin-no-only-tests";
+import localRules from "eslint-plugin-local-rules";
 import globals from "globals";
 import tsParser from "@typescript-eslint/parser";
 import path from "node:path";
@@ -45,7 +46,8 @@ export default [
   ),
   {
     plugins: {
-      "no-only-tests": noOnlyTests
+      "no-only-tests": noOnlyTests,
+      "local-rules": localRules
     },
 
     languageOptions: {
@@ -91,6 +93,23 @@ export default [
     },
 
     rules: {
+      "local-rules/require-design-system-css": ["warn", {
+        "ignorePatterns": [
+          // skeleton-screen-css (nullilac/skeleton-screen-css) —
+          // provides loading placeholder elements and layout utilities.
+          "^ssc",                // skeleton elements (.ssc-line, .ssc-circle etc.)
+          "^m[btrl]s?$",        // margin helpers (mb, mt, mr, ml, mbs, mts etc.)
+          "^w-\\d+$",           // width helpers (w-10 through w-100)
+          "^(inline-)?flex(-column(-reverse)?|-row(-reverse)?)?$",
+          "^justify-(start|center|end|between|around)$",
+
+          // Headless UI — third-party component library.
+          "^hui-",
+
+
+
+        ]
+      }],
       "no-console": "error",
       "no-alert": "error",
       "no-script-url": "error",
@@ -208,6 +227,22 @@ export default [
 
     rules: {
       "@typescript-eslint/no-unused-vars": "off"
+    }
+  },
+  {
+    files: ["eslint-rules/**/*.js"],
+
+    languageOptions: {
+      globals: {
+        ...globals.node
+      },
+      parserOptions: {
+        project: null
+      }
+    },
+
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
     }
   }
 ];

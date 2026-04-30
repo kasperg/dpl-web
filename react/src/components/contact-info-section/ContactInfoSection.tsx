@@ -24,9 +24,9 @@ const ContactInfoSection: FC<ContactInfoSectionProps> = ({
   showCheckboxes,
   requiredFields = []
 }) => {
-  const inputsClass = clsx("dpl-input", [
+  const inputsClass = clsx("input", [
     { input__desktop: inLine },
-    { "dpl-input--double": isDouble }
+    { "input--double": isDouble }
   ]);
   const config = useConfig();
   const textNotificationsEnabledConfig =

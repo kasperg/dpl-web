@@ -8,6 +8,7 @@ import { WarningStatus } from "../../warning-status/WarningStatus";
 import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
+import "./modal-details.scss";
 
 const listDetails: Array<ListDetailsProps> = [
   {
@@ -68,7 +69,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
             <StatusLabel label={type} status="outline" />
             {showWarning && <StatusLabel label="overskredet" status="danger" />}
           </div>
-          <h2 className="modal-details__title text-header-h2">{title}</h2>
+          <h2 className="modal-details__title">{title}</h2>
           <p className="text-body-medium-regular">{author}</p>
         </div>
       </div>
@@ -96,12 +97,14 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
         ))}
       </div>
       <div className="modal-details__buttons modal-details__buttons--bottom">
+        {/* eslint-disable-next-line local-rules/single-bem-block */}
         <button type="button" className="link-tag mx-16">
           {cancelText}
         </button>
         <button
           type="button"
-          className="btn-primary btn-filled btn-small arrow__hover--right-small "
+          // eslint-disable-next-line local-rules/single-bem-block
+          className="button button--filled button--small arrow__hover--right-small "
         >
           {saveText}
         </button>

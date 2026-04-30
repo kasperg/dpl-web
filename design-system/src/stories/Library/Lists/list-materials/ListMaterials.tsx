@@ -2,6 +2,7 @@ import { useState, FC } from "react";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
+import "./list-materials.scss";
 
 export type ListMaterialsProps = {
   title: string;
@@ -36,17 +37,18 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
             disabled ? "list-materials--disabled" : ""
           }`}
         >
-          <div className="list-materials__checkbox mr-32">
+          <div className="list-materials__checkbox">
             <Checkbox isChecked={false} hiddenLabel label={`Select ${title}`} />
           </div>
           <div className="list-materials__content">
             <div className="list-materials__content-status">
               <StatusLabel {...statusMaterialType} />
             </div>
+            {/* eslint-disable-next-line local-rules/single-bem-block */}
             <div className="status-label status-label--neutral hide-on-desktop ml-16">
               Afleveres 27-04-2023
             </div>
-            <p className="list-materials__content__header mt-8">{title}</p>
+            <p className="list-materials__content__header">{title}</p>
             <p className="text-small-caption">
               {author} ({year})
             </p>
@@ -68,6 +70,7 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
               </span>
             )}
           </div>
+          {/* eslint-disable-next-line local-rules/single-bem-block */}
           <div className="list-materials__arrow arrow-button">
             <ArrowSmallRight />
           </div>
@@ -75,7 +78,7 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
       </li>
       <li>
         <div className="list-materials">
-          <div className="list-materials__checkbox mr-32">
+          <div className="list-materials__checkbox">
             <Checkbox
               callback={handleToggle}
               isChecked={isItChecked}
@@ -86,11 +89,12 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
           <div className="list-materials__content">
             <div className="list-materials__content-status">
               <div className="status-label status-label--outline">Bog</div>
+              {/* eslint-disable-next-line local-rules/single-bem-block */}
               <div className="status-label status-label--neutral hide-on-desktop ml-16">
                 Afleveres 27-04-2023
               </div>
             </div>
-            <p className="list-materials__content__header mt-8">{title}</p>
+            <p className="list-materials__content__header">{title}</p>
             <p className="text-small-caption">
               {author} ({year})
             </p>
@@ -102,6 +106,7 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
               </div>
             </div>
           </div>
+          {/* eslint-disable-next-line local-rules/single-bem-block */}
           <div className="list-materials__arrow arrow-button">
             <ArrowSmallRight />
           </div>

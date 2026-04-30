@@ -6,6 +6,7 @@ import { useUrls } from "../../../core/utils/url";
 import Link from "../../atoms/links/Link";
 import { useSetHasBeenVisible } from "../../../core/blockedModal.slice";
 import { useBlockedModalHasBeenVisible } from "../helper";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/modal-text.css";
 
 interface BlockedModalProps {
   blockedStatus: BlockedTypes;

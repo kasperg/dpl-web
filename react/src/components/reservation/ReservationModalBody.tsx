@@ -284,11 +284,11 @@ export const ReservationModalBody = ({
     <>
       {!reservationResults && !openOrderResponse && (
         <section className="reservation-modal">
-          <header className="reservation-modal-header">
+          <header className="reservation-modal__header">
             <Cover ids={[manifestation.pid]} size="medium" animate />
-            <div className="reservation-modal-description">
-              <div className="reservation-modal-tag">{materialType}</div>
-              <h2 className="text-header-h2 mt-22 mb-8">
+            <div className="reservation-modal__description">
+              <div className="reservation-modal__tag">{materialType}</div>
+              <h2 className="reservation-modal__description-title">
                 {getManifestationTitle(manifestation)}
                 {selectedPeriodical && ` ${selectedPeriodical.displayText}`}
               </h2>
@@ -298,7 +298,7 @@ export const ReservationModalBody = ({
             </div>
           </header>
           <div>
-            <div className="reservation-modal-submit">
+            <div className="reservation-modal__submit">
               <MaterialAvailabilityTextParagraph>
                 {materialIsReservableFromAnotherLibrary ? (
                   userHasEmail ? (
@@ -314,7 +314,7 @@ export const ReservationModalBody = ({
                 )}
               </MaterialAvailabilityTextParagraph>
               <Button
-                dataCy="reservation-modal-submit-button"
+                dataCy="reservation-modal__submit-button"
                 label={t("approveReservationText")}
                 buttonType="none"
                 variant="filled"
@@ -324,7 +324,7 @@ export const ReservationModalBody = ({
                 onClick={saveReservation}
               />
             </div>
-            <div className="reservation-modal-list">
+            <div className="reservation-modal__list">
               {instantLoanEnabled &&
                 instantLoanBranchHoldingsAboveThreshold.length > 0 && (
                   <InstantLoan
@@ -344,7 +344,7 @@ export const ReservationModalBody = ({
               />
               {!materialIsFiction(work) && otherManifestationPreferred && (
                 <PromoBar
-                  classNames="px-35"
+                  classNames=""
                   sticky
                   type="info"
                   text={t("materialIsAvailableInAnotherEditionText", {

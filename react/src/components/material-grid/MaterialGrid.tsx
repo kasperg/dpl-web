@@ -5,6 +5,7 @@ import { WorkId } from "../../core/utils/types/ids";
 import { ManifestationMaterialType } from "../../core/utils/types/material-type";
 import MaterialListItem from "../card-item-list/MaterialListItem";
 import RecommendedMaterial from "../../apps/recommended-material/RecommendedMaterial";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/material-grid.css";
 
 export type MaterialGridItemProps = {
   wid: WorkId;
@@ -99,7 +100,7 @@ const MaterialGrid: React.FC<MaterialGridProps> = ({
       </ul>
       {moreMaterialsThanInitialMaximum && !showAllMaterials && buttonText && (
         <button
-          className="material-grid__show-more btn-primary btn-outline btn-medium"
+          className="material-grid__show-more button button--outline button--medium"
           data-show-more
           aria-expanded={showAllMaterials ? "true" : "false"}
           type="button"

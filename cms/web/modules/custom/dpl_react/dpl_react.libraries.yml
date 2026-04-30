@@ -18,6 +18,9 @@ search-header:
     gpl-compatible: true
   js:
     /libraries/dpl-react/search-header.js: { preprocess: false }
+  css:
+    component:
+      /libraries/dpl-react/search-header.css: {}
   dependencies:
     - dpl_react/base
     - dpl_react/handler
@@ -90,6 +93,9 @@ material:
     gpl-compatible: true
   js:
     /libraries/dpl-react/material.js: { preprocess: false }
+  css:
+    component:
+      /libraries/dpl-react/material.css: {}
   dependencies:
     - dpl_react/base
     - dpl_react/handler
@@ -138,6 +144,9 @@ fee-list:
     gpl-compatible: true
   js:
     /libraries/dpl-react/FeeList.js: { preprocess: false }
+  css:
+    component:
+      /libraries/dpl-react/FeeList.css: {}
   dependencies:
     - dpl_react/base
     - dpl_react/handler
@@ -163,6 +172,9 @@ reservation-list:
     gpl-compatible: true
   js:
     /libraries/dpl-react/reservation-list.js: { preprocess: false }
+  css:
+    component:
+      /libraries/dpl-react/reservation-list.css: {}
   dependencies:
     - dpl_react/base
     - dpl_react/handler
@@ -333,6 +345,9 @@ branch-list:
     gpl-compatible: true
   js:
     /libraries/dpl-react/branch-list.js: { preprocess: false }
+  css:
+    component:
+      /libraries/dpl-react/branch-list.css: {}
   dependencies:
     - dpl_react/base
     - dpl_react/handler
@@ -350,6 +365,7 @@ base:
   css:
     theme:
       /libraries/dpl-react/components.css: {}
+      /libraries/dpl-react/bundle.css: {}
 
 admin_base:
   css:

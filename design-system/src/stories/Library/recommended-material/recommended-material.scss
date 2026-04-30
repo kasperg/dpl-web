@@ -4,8 +4,8 @@
 $cover_height_small: $MATERIAL_MEDIUM_MOBILE;
 $cover_height_large: $MATERIAL_LARGE_DESKTOP;
 $cover_aspect_ratio: 0.79;
-$_recommended-material-max-height: 432px;
-$_recommended-material-max-width: 378px;
+// $_recommended-material-max-width and $_recommended-material-max-height
+// moved to variables.layout.scss for cross-component access.
 
 .recommended-material {
   background-color: $color__global-secondary;

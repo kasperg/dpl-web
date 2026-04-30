@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { ReactComponent as CloseSidebarIcon } from "../Icons/icon-close-large/icon-close-large.svg";
 import { MenuItemsProps } from "../header-menu-list/HeaderMenuListData";
 import MenuItemList from "../header-menu-list/HeaderMenuList";
+import "./header-sidebar-nav.scss";
 
 export type HeaderSidebarNavProps = {
   menuLinks: MenuItemsProps[];

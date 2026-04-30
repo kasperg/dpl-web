@@ -11,8 +11,8 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
   buttonType,
   collapsible,
 }) => {
-  const iconClassName = `ml-16 btn-icon ${
-    collapsible ? "btn-collapsible" : ""
+  const iconClassName = `ml-16 button__icon ${
+    collapsible ? "button__collapsible" : ""
   }`;
 
   if (buttonType === "default") {

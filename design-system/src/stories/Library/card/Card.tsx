@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import clsx from "clsx";
 import MediaContainer from "../media-container/MediaContainer";
+import "./card.scss";
 
 type CardProps = {
   variant?: string;

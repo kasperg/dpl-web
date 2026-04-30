@@ -571,6 +571,23 @@ tasks:
     env:
       SPEC_PATH: "cypress/e2e/paragraphs/*.ts"
 
+  ci:cypress:visual-regression:
+    desc: Run visual regression tests
+    deps: [ci:wiremock:create-mappings]
+    cmds:
+      - task ci:cypress:run
+    env:
+      SPEC_PATH: "cypress/e2e/visual-regression.cy.ts"
+
+  ci:cypress:visual-regression:update:
+    desc: Update visual regression baseline snapshots
+    deps: [ci:wiremock:create-mappings]
+    cmds:
+      - task ci:cypress:run
+    env:
+      SPEC_PATH: "cypress/e2e/visual-regression.cy.ts"
+      CYPRESS_updateSnapshots: "true"
+
   ci:cypress:local:
     desc: Run Cypress functional tests locally
     deps: [ci:wiremock:create-mappings, ci:local]

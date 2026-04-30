@@ -1,3 +1,4 @@
+/* eslint-disable local-rules/single-bem-block */
 import React from "react";
 import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDropdown";
 import { Multiselect } from "../../Library/multiselect/Multiselect";
@@ -11,6 +12,7 @@ import Input from "../../Library/Forms/input/Input";
 import { Checkbox } from "../../Library/Forms/checkbox/Checkbox";
 import Textarea from "../../Library/Forms/textarea/Textarea";
 import { Links } from "../../Library/links/Links";
+import "./advanced-search.scss";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;

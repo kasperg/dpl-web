@@ -24,8 +24,8 @@ const Input = (props: InputProps) => {
   const invalid = validation ? "true" : "false";
   return (
     <div
-      className={clsx("dpl-input", classNames, {
-        "dpl-input--invalid": !!validation,
+      className={clsx("input", classNames, {
+        "input--invalid": !!validation,
       })}
     >
       <Label id={id} className={labelClassName}>
@@ -39,12 +39,12 @@ const Input = (props: InputProps) => {
         type={type}
       />
       {description && (
-        <div className="dpl-input__description" id={`description-${id}`}>
+        <div className="input__description" id={`description-${id}`}>
           {description}
         </div>
       )}
       {validation && (
-        <div id={`validation-${id}`} className="dpl-input__validation">
+        <div id={`validation-${id}`} className="input__validation">
           {validation}
         </div>
       )}

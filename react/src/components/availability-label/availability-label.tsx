@@ -11,6 +11,7 @@ import { FaustId } from "../../core/utils/types/ids";
 import useAvailabilityData from "./useAvailabilityData";
 import { AccessTypeCodeEnum } from "../../core/dbc-gateway/generated/graphql";
 import { AccessTypes } from "../../core/utils/types/entities";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/availability-label.css";
 
 export interface AvailabilityLabelProps {
   manifestText: string;

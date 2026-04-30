@@ -5,6 +5,8 @@ import { generateId } from "../horizontal-term-line/HorizontalTermLine";
 import Cover from "../cover/Cover";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodicalSelect from "./MaterialPeriodicalSelect";
+import "./material-header.scss";
+import "./material-periodical-select.scss";
 
 const listOfAvailabilityLabels = [
   {
@@ -91,7 +93,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
               classNames="capitalize-all"
             />
           </div>
-          {ctaText && <p className="mt-16 text-small-caption">{ctaText}</p>}
+          {ctaText && <p className="material-header__cta-text">{ctaText}</p>}
         </div>
       </div>
     </header>

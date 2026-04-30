@@ -1,10 +1,10 @@
-.dpl-list-buttons {
+.list-buttons {
   display: flex;
   justify-content: space-between;
   @include typography($typo__body-medium);
 }
 
-.dpl-list-buttons__header {
+.list-buttons__header {
   all: unset;
   height: 35px;
   position: relative;
@@ -13,7 +13,7 @@
   align-items: flex-end;
 }
 
-.dpl-list-buttons__power {
+.list-buttons__power {
   @include typography($typo__small-caption);
 
   margin-left: 2px;
@@ -21,18 +21,18 @@
   vertical-align: super;
 }
 
-.dpl-list-buttons__buttons {
+.list-buttons__buttons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.dpl-list-buttons__buttons__button {
+.list-buttons__buttons__button {
   margin-left: $s-xl;
   display: flex;
 }
 
-.dpl-list-buttons__buttons__button--hide-on-mobile {
+.list-buttons__buttons__button--hide-on-mobile {
   display: none;
 
   @include media-query__small {
@@ -40,7 +40,7 @@
   }
 }
 
-.dpl-list-buttons__screen-reader-description {
+.list-buttons__screen-reader-description {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;

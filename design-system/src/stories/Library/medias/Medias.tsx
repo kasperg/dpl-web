@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import clsx from "clsx";
+import "./medias.scss";
 
 type MediasProps = {
   items: ReactNode[];

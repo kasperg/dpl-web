@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React, { FC } from "react";
 import Label from "../label/Label";
+import "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/input.css";
 
 export interface TextInputProps {
   label?: string;
@@ -42,8 +43,8 @@ const TextInput: FC<TextInputProps> = ({
   };
   return (
     <div
-      className={clsx("dpl-input", className, [
-        { "dpl-input--invalid": !!validation }
+      className={clsx("input", className, [
+        { "input--invalid": !!validation }
       ])}
     >
       {label && (
@@ -68,14 +69,14 @@ const TextInput: FC<TextInputProps> = ({
         placeholder={placeholder}
       />
       {description && (
-        <div className="dpl-input__description" id={`description-${id}`}>
+        <div className="input__description" id={`description-${id}`}>
           {description}
         </div>
       )}
       {validation && (
         <div
           id={`validation-${id}`}
-          className="dpl-input__validation"
+          className="input__validation"
           role="alert"
         >
           {validation}

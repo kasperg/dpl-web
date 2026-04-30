@@ -1,6 +1,6 @@
-import "../../../styles/css/base.css";
 import clsx from "clsx";
 import logo from "./logo.png";
+import "./logo.scss";
 
 export type LogoProps = {
   hasImage: boolean;

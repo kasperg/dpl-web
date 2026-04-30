@@ -61,7 +61,7 @@ describe("Material - Periodical", () => {
       fixtureFilePath: "material/reservations.json"
     });
 
-    cy.getBySel("reservation-modal-submit-button", true).click();
+    cy.getBySel("reservation-modal__submit-button", true).click();
 
     cy.getBySel("reservation-success-title-text")
       .should("be.visible")

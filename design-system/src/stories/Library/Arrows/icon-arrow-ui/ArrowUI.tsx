@@ -60,6 +60,7 @@ export const IconArrow: React.FC<IconArrowProps> = ({
   const ArrowComp = getDynamicArrow();
 
   return hover ? (
+    // eslint-disable-next-line local-rules/single-bem-block
     <div className={`arrow arrow__hover--${direction}-${size}`}>
       {children}
       <ArrowComp />

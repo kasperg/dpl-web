@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import Cover from "../cover/Cover";
+import "./recommended-material.scss";
+import "./recommended-material-skeleton.scss";
 
 export type RecommendedMaterialProps = {
   author: string;
