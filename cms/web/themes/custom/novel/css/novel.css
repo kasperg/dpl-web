@@ -1,6 +1,6 @@
 .dpl-react-app-container--page {
   min-height: 100vh;
-  background-color: var(--c-global-primary);
+  background-color: lightyellow;
 }
 
 /* select2 theme */
