@@ -5,7 +5,7 @@
   padding-left: $page-left-spacing-small;
 
   row-gap: $s-sm;
-  border-bottom: 1px solid $color__global-tertiary-1;
+  border-bottom: 3px solid red;
 
   > a {
     @extend %text-inline-link;
