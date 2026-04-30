@@ -1,18 +1,17 @@
 import React from "react";
-import "./search-sort-select.scss";
 
 const SearchSortSelect: React.FC = () => {
   return (
-    <div className="search__sort-select">
+    <div className="search__sort">
       <label
-        className="search__sort-select__label"
+        className="search__sort-label"
         htmlFor="advanced-sort-select"
       >
         Sorter efter
       </label>
-      <div className="search__sort-select__select-wrapper">
+      <div className="search__sort-wrapper">
         <select
-          className="search__sort-select__select"
+          className="search__sort-input"
           id="advanced-sort-select"
         >
           <option value="relevance">Bedste match</option>
