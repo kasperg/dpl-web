@@ -25,25 +25,25 @@ export const Infomedia = ({
 }: InfomediaProps) => {
   return (
     <Modal shownModal={showModal} classNames="">
-      <article className="infomedia-article">
-        <InfomediaIcon className="infomedia-logo" />
-        <h2 className="infomedia-headline">{title}</h2>
-        <p className="infomedia-hedline">{hedLine}</p>
-        <p className="infomedia-byline">{byLine}</p>
+      <article className="infomedia__article">
+        <InfomediaIcon className="infomedia__logo" />
+        <h2 className="infomedia__headline">{title}</h2>
+        <p className="infomedia__subheadline">{hedLine}</p>
+        <p className="infomedia__byline">{byLine}</p>
 
-        <div className="infomedia-meta">
+        <div className="infomedia__meta">
           <span>{paper}</span>
           <span>{dateLine}</span>
         </div>
 
         <div
-          className="infomedia-content"
+          className="infomedia__content"
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: text }}
         />
 
         <footer className="infomedia-footer">
-          <p className="infomedia-copyright">{footerText}</p>
+          <p className="infomedia__copyright">{footerText}</p>
         </footer>
       </article>
     </Modal>

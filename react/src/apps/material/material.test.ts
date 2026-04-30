@@ -414,7 +414,7 @@ describe("Material", () => {
 
     cy.getBySel("material-description").scrollIntoView({ duration: 500 });
 
-    cy.getBySel("reservation-modal-list-item-text")
+    cy.getBySel("reservation-modal__list-item-text")
       .should("be.visible")
       .and("contain", "Pick up at")
       .and("contain", "Hovedbiblioteket")
@@ -445,13 +445,13 @@ describe("Material", () => {
 
     cy.getBySel("material-description").scrollIntoView({ duration: 500 });
 
-    cy.getBySel("reservation-modal-submit-button", true)
+    cy.getBySel("reservation-modal__submit-button", true)
       .should("be.visible")
       .and("contain", "Approve reservation");
     // We need to wait here because no other fixes work.
     // eslint-disable-next-line
     cy.wait(500);
-    cy.getBySel("reservation-modal-submit-button").click();
+    cy.getBySel("reservation-modal__submit-button").click();
 
     cy.getBySel("reservation-success-title-text")
       .should("be.visible")
