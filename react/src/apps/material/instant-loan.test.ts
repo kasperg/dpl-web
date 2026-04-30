@@ -61,16 +61,16 @@ describe("Instant Loan", () => {
 
     cy.getBySel("instant-loan").should("have.attr", "aria-expanded", "true");
 
-    cy.getBySel("instant-loan-branches").scrollIntoView({ duration: 500 });
-    cy.getBySel("instant-loan-branches").children().should("have.length", 1);
+    cy.getBySel("instant-loan__branches").scrollIntoView({ duration: 500 });
+    cy.getBySel("instant-loan__branches").children().should("have.length", 1);
   });
 
   it("should render InstantLoan branch", () => {
     cy.getBySel("instant-loan").scrollIntoView();
     cy.getBySel("instant-loan").click();
 
-    cy.getBySel("instant-loan-branches").scrollIntoView();
-    cy.getBySel("instant-loan-branches")
+    cy.getBySel("instant-loan__branches").scrollIntoView();
+    cy.getBySel("instant-loan__branches")
       .get("li")
       .contains("li", "Ørestad")
       .should("contain", "Ørestad")

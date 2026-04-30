@@ -26,12 +26,12 @@ const InstantLoan: React.FunctionComponent<InstantLoanProps> = ({
       summary={
         <InstantLoanSummary
           pid={pid}
-          className="instant-loan-summary cursor-pointer p-24"
+          className="instant-loan__summary cursor-pointer p-24"
         />
       }
       cyData="instant-loan"
     >
-      <ul className="instant-loan-branches" data-cy="instant-loan-branches">
+      <ul className="instant-loan__branches" data-cy="instant-loan__branches">
         {instantLoanBranchHoldings.map((branch) => {
           return (
             <li key={branch.branch.branchId}>

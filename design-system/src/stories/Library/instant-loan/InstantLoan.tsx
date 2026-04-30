@@ -27,7 +27,7 @@ const InstantLoan: React.FunctionComponent<InstantLoanProps> = ({
     showContent={showDisclosureContent}
     id="instant-loan"
     detailsClassName="instant-loan pagefold-parent--small"
-    summaryClassName="instant-loan-summary cursor-pointer p-24"
+    summaryClassName="instant-loan__summary cursor-pointer p-24"
     summary={
       <InstantLoanSummary
         title={title}
