@@ -11,50 +11,13 @@
  */
 
 const path = require("path");
-const fs = require("fs");
 
 const DS_CSS_PREFIX =
   "@danskernesdigitalebibliotek/dpl-design-system/build/css/components/";
 
-// Load the block→CSS mapping from the design system package.
-let blockCssMap = {};
-try {
-  const mapPath = require.resolve(
-    "@danskernesdigitalebibliotek/dpl-design-system/build/block-css-map.json"
-  );
-  blockCssMap = JSON.parse(fs.readFileSync(mapPath, "utf8"));
-} catch {
-  // Map not available — fall back to filename = block name only.
-}
-
-// Default patterns for utility classes to ignore.
-const DEFAULT_IGNORE_PATTERNS = [
-  /^ssc/,
-  /^m[btrl]s?$/,
-  /^m[btrlxy]-\d+$/,
-  /^p[btrlxy]?-\d+$/,
-  /^w-\d+$/,
-  /^(inline-)?flex(-column(-reverse)?|-row(-reverse)?)?$/,
-  /^align-(center|start|end|stretch)$/,
-  /^justify-(start|center|end|between|around)$/,
-  /^js-form-/,
-  /^js-webform-/,
-  /^form-(item|type|wrapper|composite|checkboxes)/,
-  /^webform-/,
-  /^fieldgroup$/,
-  /^swiper/,
-  /^text-(header|body|small|label|links|tags)/,
-  /^color-/,
-  /^bg-/,
-  /^cursor-/,
-  /^(no)?select$/,
-  /^hide-/,
-  /^uppercase$/,
-  /^capitalize/,
-  /^overflow-/,
-  /^invert$/,
-  /^btn-$/, // Incomplete block from template literals like `btn-${size}`
-];
+// No default ignore patterns — all patterns should be configured
+// via the ignorePatterns option in the ESLint config.
+const DEFAULT_IGNORE_PATTERNS = [];
 
 /**
  * Extract the BEM block name from a class.
@@ -140,9 +103,10 @@ function getAvailableCssFiles() {
     const dir = path.resolve(
       path.dirname(
         require.resolve(
-          "@danskernesdigitalebibliotek/dpl-design-system/build/block-css-map.json"
+          "@danskernesdigitalebibliotek/dpl-design-system/package.json"
         )
       ),
+      "build",
       "css",
       "components"
     );
@@ -162,21 +126,13 @@ function getAvailableCssFiles() {
 
 /**
  * Resolve which CSS file provides a given BEM block.
- * Returns the CSS filename (without extension) or null.
+ * Returns the CSS filename (without extension) or null if no matching file.
  */
 function resolveCssFile(block) {
-  // If a CSS file matching the block name exists, use it directly.
-  // This takes priority over the map (which tracks cross-file references).
   if (getAvailableCssFiles().has(block)) {
     return block;
   }
-  // Check the map for blocks that don't match any filename.
-  if (blockCssMap[block]) {
-    const mapped = blockCssMap[block];
-    return Array.isArray(mapped) ? mapped[0] : mapped;
-  }
-  // Default: assume block name = CSS filename
-  return block;
+  return null;
 }
 
 module.exports = {

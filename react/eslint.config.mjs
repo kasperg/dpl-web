@@ -93,7 +93,23 @@ export default [
     },
 
     rules: {
-      "local-rules/require-design-system-css": "warn",
+      "local-rules/require-design-system-css": ["warn", {
+        "ignorePatterns": [
+          // skeleton-screen-css (nullilac/skeleton-screen-css) —
+          // provides loading placeholder elements and layout utilities.
+          "^ssc",                // skeleton elements (.ssc-line, .ssc-circle etc.)
+          "^m[btrl]s?$",        // margin helpers (mb, mt, mr, ml, mbs, mts etc.)
+          "^w-\\d+$",           // width helpers (w-10 through w-100)
+          "^(inline-)?flex(-column(-reverse)?|-row(-reverse)?)?$",
+          "^justify-(start|center|end|between|around)$",
+
+          // Headless UI — third-party component library.
+          "^hui-",
+
+
+
+        ]
+      }],
       "no-console": "error",
       "no-alert": "error",
       "no-script-url": "error",
