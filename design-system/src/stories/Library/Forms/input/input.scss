@@ -1,4 +1,4 @@
-.dpl-input {
+.input {
   display: flex;
   flex-direction: column;
   @include typography($typo__body-medium);
@@ -31,13 +31,13 @@
     }
   }
 
-  &.dpl-input--invalid {
+  &.input--invalid {
     input {
       background-color: $color__global-secondary;
     }
   }
 
-  &.dpl-input--double {
+  &.input--double {
     width: 100%;
   }
 

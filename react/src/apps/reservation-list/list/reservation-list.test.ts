@@ -327,13 +327,13 @@ describe("Reservation list", () => {
 
     // ID 11 Systemet viser reserveringsoversigten med
     // ID 11 2.a. The function: Pause physical reservations
-    cy.get(".dpl-pause-reservation-component")
+    cy.get(".pause-reservation")
       // ID 11 2.a.i. Text  "Pause reservations on physical items"
       .should("exist")
-      .find(".dpl-pause-reservation-component__flex__text")
+      .find(".pause-reservation__flex__text")
       .should("have.text", "Pause your reservations");
     // ID 11 2.a.ii. Toggle switch: which show whether the users reservation is paused
-    cy.get(".dpl-pause-reservation-component")
+    cy.get(".pause-reservation")
       .find(".btn-primary")
       .should("exist");
 
@@ -433,7 +433,7 @@ describe("Reservation list", () => {
     // ID 11 2.c The list "physical reservations"
     cy.getBySel("list-reservation-container").eq(1).should("exist");
     // ID 11 2.c.i. Header: "Physical" and number of reservations in queue
-    cy.get(".dpl-list-buttons")
+    cy.get(".list-buttons")
       .eq(1)
       .getBySel("reservation-list-header")
       .eq(1)
@@ -827,7 +827,7 @@ describe("Reservation list", () => {
       .should("have.text", "Your reservations");
 
     // ID 11 2.b. Text: "At the moment you have 0 reservations"
-    cy.get(".dpl-list-empty")
+    cy.get(".list-empty")
       .should("exist")
       .should("have.text", "At the moment you have 0 reservations");
   });

@@ -28,7 +28,7 @@
     }
   }
 
-  .dpl-input {
+  .input {
     @include typography($typo__body-placeholder);
     margin-bottom: $s-lg;
     max-width: 550px;

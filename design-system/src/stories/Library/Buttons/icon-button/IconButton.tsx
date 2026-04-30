@@ -4,7 +4,7 @@ interface IconButtonProps {
 }
 const IconButton: React.FC<IconButtonProps> = ({ src, altText }) => {
   return (
-    <button className="dpl-icon-button" type="button">
+    <button className="icon-button" type="button">
       <img src={src} alt={altText} />
     </button>
   );

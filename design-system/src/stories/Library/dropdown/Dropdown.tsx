@@ -114,7 +114,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   }
 
   return (
-    <div className="dpl-input">
+    <div className="input">
       <DropdownElement
         labelComponent={labelComponent}
         arrowIcon={arrowIcon}

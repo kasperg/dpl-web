@@ -16,32 +16,32 @@ export const ListButton: React.FC<ListButtonProps> = ({
   number,
 }) => {
   return (
-    <div className="dpl-list-buttons">
+    <div className="list-buttons">
       <div
-        className="dpl-list-buttons__screen-reader-description"
+        className="list-buttons__screen-reader-description"
         id="renew-multiple-modal"
       >
         This button opens a modal that covers the entire page and contains loans
         with different due dates, if some of the loans in the modal are
         renewable you can renew them
       </div>
-      <h2 className="dpl-list-buttons__header">
+      <h2 className="list-buttons__header">
         {header}
-        <div className="dpl-list-buttons__power">{number}</div>
+        <div className="list-buttons__power">{number}</div>
       </h2>
-      <div className="dpl-list-buttons__buttons">
-        <div className="dpl-list-buttons__buttons__button">
+      <div className="list-buttons__buttons">
+        <div className="list-buttons__buttons__button">
           <button
-            className="dpl-icon-button"
+            className="icon-button"
             type="button"
             aria-label="list view"
           >
             <MenuIcon />
           </button>
         </div>
-        <div className="dpl-list-buttons__buttons__button">
+        <div className="list-buttons__buttons__button">
           <button
-            className="dpl-icon-button"
+            className="icon-button"
             type="button"
             aria-label="stacked view"
           >
@@ -49,7 +49,7 @@ export const ListButton: React.FC<ListButtonProps> = ({
           </button>
         </div>
         <div
-          className="dpl-list-buttons__buttons__button"
+          className="list-buttons__buttons__button"
           aria-describedby="renew-multiple-modal"
         >
           <Button

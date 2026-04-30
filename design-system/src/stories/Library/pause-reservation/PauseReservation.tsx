@@ -16,24 +16,24 @@ export const PauseReservation = ({
   classNames,
 }: PauseReservationProps) => {
   return (
-    <div className={`dpl-pause-reservation-component ${classNames}`}>
-      <div className="dpl-pause-reservation-component__pagefold" />
-      <div className="dpl-pause-reservation-component__flex">
-        <div className="dpl-pause-reservation-component__flex__reservation-icon">
+    <div className={`pause-reservation ${classNames}`}>
+      <div className="pause-reservation__pagefold" />
+      <div className="pause-reservation__flex">
+        <div className="pause-reservation__flex__reservation-icon">
           <ReservationsIcon />
         </div>
-        <div className="dpl-pause-reservation-component__flex__text">
+        <div className="pause-reservation__flex__text">
           {isChecked ? isPausedtext : pauseText}
         </div>
         {isChecked && dates && (
           <span
             aria-label="Reservationer er sat på pause i følgende periode"
-            className="dpl-pause-reservation-component__flex__badge"
+            className="pause-reservation__flex__badge"
           >
             {dates}
           </span>
         )}
-        <div className="dpl-pause-reservation-component__flex__button">
+        <div className="pause-reservation__flex__button">
           {/* eslint-disable-next-line local-rules/single-bem-block */}
           <button type="button" className="btn-primary btn-filled btn-small">
             Settings

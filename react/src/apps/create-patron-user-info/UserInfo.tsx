@@ -112,12 +112,12 @@ const UserInfo: FC<UserInfoProps> = ({ cpr, registerSuccessCallback }) => {
           >
             <section
               data-cy="patron-page-contact-info"
-              className="create-patron-page__row dpl-input__double-row"
+              className="create-patron-page__row input__double-row"
             >
-              <div className="dpl-input__double-row">
-                <div className="dpl-input dpl-input--double">
+              <div className="input__double-row">
+                <div className="input input--double">
                   <ContactInfoPhone
-                    className="dpl-input"
+                    className="input"
                     changePatron={changePatron}
                     patron={patron}
                     isRequired={true}
@@ -136,7 +136,7 @@ const UserInfo: FC<UserInfoProps> = ({ cpr, registerSuccessCallback }) => {
                   </div>
                 </div>
                 <ContactInfoEmail
-                  className="dpl-input dpl-input--double"
+                  className="input input--double"
                   changePatron={changePatron}
                   patron={patron}
                   isRequired={true}
@@ -214,7 +214,7 @@ const UserInfo: FC<UserInfoProps> = ({ cpr, registerSuccessCallback }) => {
         </div>
       )}
       {!validCpr && (
-        <div className="dpl-patron-page">
+        <div className="patron-page">
           <h1 className="text-header-h1 mb-48">
             {t("createPatronInvalidSsnHeaderText")}
           </h1>

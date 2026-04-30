@@ -51,7 +51,7 @@ export const DropdownWithLabel: React.FC<DropdownWithLabelProps> = ({
   };
 
   return (
-    <div className="dpl-input">
+    <div className="input">
       {label}
       <div className={classes.root}>
         <select className={classes.select} aria-label={ariaLabel}>

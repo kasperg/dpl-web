@@ -41,7 +41,7 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   );
 
   const EmptyList = () => (
-    <div className="dpl-list-empty mt-24">Your favorites list is empty</div>
+    <div className="list-empty mt-24">Your favorites list is empty</div>
   );
 
   let content;

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Links } from "../links/Links";
 import Pagefold from "../pagefold/Pagefold";
 import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
-import "./input-preview.scss";
+import "./input-and-preview.scss";
 
 export interface InputPreviewProps {
   cqlPreviewText: string;

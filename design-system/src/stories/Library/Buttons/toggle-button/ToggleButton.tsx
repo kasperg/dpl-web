@@ -8,8 +8,8 @@ const ToggleButton = ({ isChecked }: ToggleButtonProps) => {
     // open a modal, so semantically it is closer to a button than a radio button.
     <button
       aria-label="Åben reservationsmodal"
-      className={`dpl-toggle-button ${
-        isChecked ? "dpl-toggle-button--active" : "dpl-toggle-button--inactive"
+      className={`toggle-button ${
+        isChecked ? "toggle-button--active" : "toggle-button--inactive"
       }`}
     />
   );

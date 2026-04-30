@@ -24,7 +24,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
       <div
         // eslint-disable-next-line local-rules/single-bem-block
         className={clsx(
-          "dpl-input js-form-item form-item js-form-type-checkbox form-item-title-example js-form-item-title-example checkbox-override",
+          "input js-form-item form-item js-form-type-checkbox form-item-title-example js-form-item-title-example checkbox-override",
           { classNames },
         )}
       >

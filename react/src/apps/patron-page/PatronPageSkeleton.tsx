@@ -7,7 +7,7 @@ const PatronPageSkeleton: React.FC = () => {
   const t = useText();
 
   return (
-    <form className="dpl-patron-page">
+    <form className="patron-page">
       <h1 className="text-header-h1 my-32">{t("patronPageHeaderText")}</h1>
       <h2 className="text-header-h4 mt-32 mb-16">
         {t("patronPageBasicDetailsHeaderText")}

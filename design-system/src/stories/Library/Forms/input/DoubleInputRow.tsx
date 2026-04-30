@@ -19,14 +19,14 @@ const DoubleInputRow: React.FC<DoubleInputRowProps> = ({
   validationRight,
 }) => {
   return (
-    <div className="dpl-input__double-row">
+    <div className="input__double-row">
       <Input
         id={leftLabel}
         label={leftLabel}
         description={descriptionLeft}
         validation={validationLeft}
         type="text"
-        classNames="dpl-input dpl-input--double mr-16"
+        classNames="input input--double mr-16"
       />
       <Input
         id={rightLabel}
@@ -34,7 +34,7 @@ const DoubleInputRow: React.FC<DoubleInputRowProps> = ({
         description={descriptionRight}
         validation={validationRight}
         type="text"
-        classNames="dpl-input dpl-input--double"
+        classNames="input input--double"
       />
     </div>
   );

@@ -44,19 +44,19 @@ const LoanPage: React.FC<LoanPageProps> = ({
       <h1 className="text-header-h1 my-32">{headline}</h1>
 
       <div>
-        <div className="dpl-list-buttons m-32">
+        <div className="list-buttons m-32">
           <h2
             data-cy="reservation-list-header"
-            className="dpl-list-buttons__header"
+            className="list-buttons__header"
           >
             Physical loans
-            <div className="dpl-list-buttons__power">{physicalLoans}</div>
+            <div className="list-buttons__power">{physicalLoans}</div>
           </h2>
-          <div className="dpl-list-buttons__buttons">
-            <div className="dpl-list-buttons__buttons__button">
+          <div className="list-buttons__buttons">
+            <div className="list-buttons__buttons__button">
               <button
                 aria-pressed={!isStacked}
-                className="dpl-icon-button dpl-icon-button--selected"
+                className="icon-button icon-button--selected"
                 id="test-list"
                 type="button"
                 aria-label="This button shows all loans in the list"
@@ -64,18 +64,18 @@ const LoanPage: React.FC<LoanPageProps> = ({
                 <ListIcon />
               </button>
             </div>
-            <div className="dpl-list-buttons__buttons__button">
+            <div className="list-buttons__buttons__button">
               <button
                 aria-pressed={isStacked}
-                className="dpl-icon-button"
+                className="icon-button"
                 type="button"
                 aria-label="This button filters the list, so only one the materials that have the same due date is shown"
               >
                 <VariousIcon />
               </button>
             </div>
-            <div className="dpl-list-buttons__buttons__button">
-              <div className="dpl-list-buttons__buttons__button--hide-on-mobile">
+            <div className="list-buttons__buttons__button">
+              <div className="list-buttons__buttons__button--hide-on-mobile">
                 <Button
                   buttonType="none"
                   label="Renew several"
@@ -117,10 +117,10 @@ const LoanPage: React.FC<LoanPageProps> = ({
       </div>
 
       <div>
-        <div className="dpl-list-buttons m-32">
-          <h2 className="dpl-list-buttons__header">
+        <div className="list-buttons m-32">
+          <h2 className="list-buttons__header">
             Digital reservations
-            <div className="dpl-list-buttons__power">{digitalLoans}</div>
+            <div className="list-buttons__power">{digitalLoans}</div>
           </h2>
         </div>
         {!!digitalLoans && (

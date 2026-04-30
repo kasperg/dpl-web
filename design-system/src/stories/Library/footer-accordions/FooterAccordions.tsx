@@ -1,6 +1,6 @@
 import { FC } from "react";
 import FooterAccordion from "./FooterAccordion";
-import { FooterColumnType } from "../footer-colums/FooterColumn";
+import { FooterColumnType } from "../footer-columns/FooterColumn";
 
 export type FooterAccordionsType = {
   footerContent: FooterColumnType[];

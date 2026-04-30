@@ -1,7 +1,7 @@
 import { Button } from "../Buttons/button/Button";
 import { Links } from "../links/Links";
 import { ReactComponent as WarningIcon } from "../../../public/icons/basic/icon-warning.svg";
-import "./warning-status.scss";
+import "./warning-bar.scss";
 
 export type WarningStatusProps = {
   title?: string;

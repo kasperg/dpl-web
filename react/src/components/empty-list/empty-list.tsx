@@ -12,7 +12,7 @@ const EmptyList: FC<EmptyListProps> = ({
   classNames = ""
 }) => {
   return (
-    <div data-cy={dataCy} className={`dpl-list-empty ${classNames}`}>
+    <div data-cy={dataCy} className={`list-empty ${classNames}`}>
       {emptyListText}
     </div>
   );

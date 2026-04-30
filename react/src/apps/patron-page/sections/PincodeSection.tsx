@@ -68,8 +68,8 @@ const PincodeSection: FC<PincodeSectionProps> = ({
     <section data-cy="pincode-section" className="create-patron-page__row">
       <div
         className={clsx([
-          { "dpl-pincode-container": !isFlex },
-          { "dpl-input__flex": isFlex }
+          { "pincode-container": !isFlex },
+          { "input__flex": isFlex }
         ])}
       >
         <TextInput

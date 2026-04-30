@@ -6,7 +6,7 @@ import { Links } from "../../Library/links/Links";
 import FindLibraryDialog from "../find-library-dialog/FindLibraryDialog";
 
 import LibrarySelect from "../library-select/LibrarySelect";
-import "./create-patron.scss";
+import "./create-patron-page.scss";
 
 export interface CreatePatronProps {
   headline: string;

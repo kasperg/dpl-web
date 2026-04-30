@@ -25,7 +25,7 @@ const Textarea: FC<TextareaProps> = ({
   labelClassName,
 }) => {
   return (
-    <div className="dpl-input">
+    <div className="input">
       <Label id={id} className={labelClassName}>
         {label}
       </Label>

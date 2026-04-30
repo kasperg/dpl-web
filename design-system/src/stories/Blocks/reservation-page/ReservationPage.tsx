@@ -46,13 +46,13 @@ const ReservationPage: React.FC<ReservationPageProps> = ({
       />
 
       <div>
-        <div className="dpl-list-buttons m-32">
+        <div className="list-buttons m-32">
           <h2
             data-cy="reservation-list-header"
-            className="dpl-list-buttons__header"
+            className="list-buttons__header"
           >
             Ready for pickup
-            <div className="dpl-list-buttons__power">{readyForPickup}</div>
+            <div className="list-buttons__power">{readyForPickup}</div>
           </h2>
         </div>
         {!!readyForPickup && (
@@ -74,13 +74,13 @@ const ReservationPage: React.FC<ReservationPageProps> = ({
       </div>
 
       <div>
-        <div className="dpl-list-buttons m-32">
+        <div className="list-buttons m-32">
           <h2
             data-cy="reservation-list-header"
-            className="dpl-list-buttons__header"
+            className="list-buttons__header"
           >
             Physical reservations
-            <div className="dpl-list-buttons__power">
+            <div className="list-buttons__power">
               {physicalReservations}
             </div>
           </h2>
@@ -104,13 +104,13 @@ const ReservationPage: React.FC<ReservationPageProps> = ({
       </div>
 
       <div>
-        <div className="dpl-list-buttons m-32">
+        <div className="list-buttons m-32">
           <h2
             data-cy="reservation-list-header"
-            className="dpl-list-buttons__header"
+            className="list-buttons__header"
           >
             Digital reservations
-            <div className="dpl-list-buttons__power">{digitalReservations}</div>
+            <div className="list-buttons__power">{digitalReservations}</div>
           </h2>
         </div>
         {!!digitalReservations && (

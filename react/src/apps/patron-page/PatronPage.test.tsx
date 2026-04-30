@@ -108,41 +108,41 @@ describe("Patron page", () => {
   it.skip("Patron page", () => {
     // ID 36 2. The system shows
     // ID 36 2.a. Header
-    cy.get(".dpl-patron-page")
+    cy.get(".patron-page")
       .find("h1")
       .should("have.text", "Patron profile page");
 
     // ID 36 2.b. Digital loans - quota
-    cy.get(".dpl-patron-page .dpl-status-loans")
+    cy.get(".patron-page .status-loans")
       .find("h2")
       .should("have.text", "Digital loans");
 
     // ID 36 2.b.i. Number of digital loans (ebook - audiobooks) the patron has left in "this" month
-    cy.get(".dpl-patron-page .dpl-status-loans")
+    cy.get(".patron-page .status-loans")
       .find(".text-label")
       .eq(1)
       .should("have.text", "2 out of 7");
-    cy.get(".dpl-patron-page .dpl-status-loans")
+    cy.get(".patron-page .status-loans")
       .find(".text-label")
       .eq(3)
       .should("have.text", "2 out of 8");
 
     // ID 36 2.c. basic information
     // ID 36 2.c.i. Name
-    cy.get(".dpl-patron-page .dpl-patron-info")
+    cy.get(".patron-page .dpl-patron-info")
       .find("h4.dpl-patron-info__label")
       .eq(0)
       .should("have.text", "Name");
-    cy.get(".dpl-patron-page .dpl-patron-info")
+    cy.get(".patron-page .dpl-patron-info")
       .find(".dpl-patron-info__text")
       .eq(0)
       .should("have.text", "Testkort ITK CMS Merkur");
     // ID 36 2.c.ii. Address
-    cy.get(".dpl-patron-page .dpl-patron-info")
+    cy.get(".patron-page .dpl-patron-info")
       .find("h4.dpl-patron-info__label")
       .eq(1)
       .should("have.text", "Address");
-    cy.get(".dpl-patron-page .dpl-patron-info")
+    cy.get(".patron-page .dpl-patron-info")
       .find(".dpl-patron-info__text")
       .eq(1)
       .should("have.text", "Hack Kampmanns Plads 28000Aarhus CDK");
