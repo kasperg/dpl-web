@@ -459,5 +459,10 @@
         "psr-4": {
             "Drupal\\novel\\": "web/themes/custom/novel/src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\Tests\\novel\\": "web/themes/custom/novel/tests/src/"
+        }
     }
 }

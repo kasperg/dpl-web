@@ -1,24 +1,21 @@
 <?php
 
-use Drupal\novel\TwigCsFixer\Rules\RequireDesignSystemLibraryRule;
+use Drupal\novel\TwigCsFixerRules\RequireDesignSystemLibraryRule;
 use TwigCsFixer\Config\Config;
 use TwigCsFixer\File\Finder;
 use TwigCsFixer\Ruleset\Ruleset;
 use TwigCsFixer\Standard\TwigCsFixer;
 
-$themePath = __DIR__ . '/web/themes/custom/novel/assets/dpl-design-system';
-
 $ruleset = new Ruleset();
 $ruleset->addStandard(new TwigCsFixer());
 $ruleset->addRule(new RequireDesignSystemLibraryRule(
-    componentCssDir: $themePath . '/css/components',
     ignorePatterns: [
         // skeleton-screen-css (nullilac/skeleton-screen-css) —
         // provides loading placeholder elements and layout utilities.
-        '/^ssc/',             // skeleton elements (.ssc-line, .ssc-circle etc.)
-        '/^w-\d+$/',          // width helpers (w-10 through w-100)
-        '/^(inline-)?flex/',  // flexbox layout helpers
-        '/^justify-/',        // justify-content helpers
+        '/^ssc/',
+        '/^w-\d+$/',
+        '/^(inline-)?flex/',
+        '/^justify-/',
 
         // Swiper — third-party carousel library.
         '/^swiper/',
@@ -27,9 +24,8 @@ $ruleset->addRule(new RequireDesignSystemLibraryRule(
         // form API that must match the rendered HTML.
         '/^js-form-/',
         '/^form-(item|type|wrapper|composite|checkboxes)/',
-
-
     ],
+    libraryPrefix: 'novel/',
 ));
 
 return (new Config())
@@ -38,4 +34,5 @@ return (new Config())
   ->setFinder((new Finder())
     ->path('web/themes/custom/')
     ->path('web/modules/custom/')
+    ->exclude('tests')
   );

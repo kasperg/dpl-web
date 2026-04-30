@@ -39,6 +39,7 @@
   <testsuites>
     <testsuite name="Custom Unit/Kernel tests">
       <directory>./web/modules/custom</directory>
+      <directory>./web/themes/custom</directory>
     </testsuite>
   </testsuites>
   <listeners>
