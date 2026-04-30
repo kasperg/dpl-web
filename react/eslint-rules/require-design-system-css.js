@@ -102,9 +102,7 @@ function getAvailableCssFiles() {
   try {
     const dir = path.resolve(
       path.dirname(
-        require.resolve(
-          "@danskernesdigitalebibliotek/dpl-design-system/package.json"
-        )
+        require.resolve("@danskernesdigitalebibliotek/dpl-design-system/package.json")
       ),
       "build",
       "css",
@@ -140,7 +138,7 @@ module.exports = {
     type: "suggestion",
     docs: {
       description:
-        "Require design system CSS imports for BEM blocks used in className",
+        "Require design system CSS imports for BEM blocks used in className"
     },
     schema: [
       {
@@ -148,28 +146,28 @@ module.exports = {
         properties: {
           ignorePatterns: {
             type: "array",
-            items: { type: "string" },
+            items: { type: "string" }
           },
           ignoreBlocks: {
             type: "array",
             items: { type: "string" },
-            description: "Block names to ignore (not from design system)",
-          },
+            description: "Block names to ignore (not from design system)"
+          }
         },
-        additionalProperties: false,
-      },
+        additionalProperties: false
+      }
     ],
     messages: {
       missingCssImport:
-        'BEM block "{{block}}" requires CSS import: import "{{importPath}}"',
-    },
+        'BEM block "{{block}}" requires CSS import: import "{{importPath}}"'
+    }
   },
 
   create(context) {
     const options = context.options[0] || {};
     const utilityPatterns = [
       ...DEFAULT_IGNORE_PATTERNS,
-      ...(options.ignorePatterns || []).map((p) => new RegExp(p)),
+      ...(options.ignorePatterns || []).map((p) => new RegExp(p))
     ];
     const ignoreBlocks = new Set(options.ignoreBlocks || []);
 
@@ -203,21 +201,18 @@ module.exports = {
           if (!cssFile) continue;
 
           // Check if this CSS file (or the block itself as filename) is imported
-          if (
-            !importedCssFiles.has(cssFile) &&
-            !importedCssFiles.has(block)
-          ) {
+          if (!importedCssFiles.has(cssFile) && !importedCssFiles.has(block)) {
             context.report({
               node,
               messageId: "missingCssImport",
               data: {
                 block,
-                importPath: `${DS_CSS_PREFIX}${cssFile}.css`,
-              },
+                importPath: `${DS_CSS_PREFIX}${cssFile}.css`
+              }
             });
           }
         }
-      },
+      }
     };
-  },
+  }
 };

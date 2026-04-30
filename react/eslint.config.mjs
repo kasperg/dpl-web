@@ -228,5 +228,21 @@ export default [
     rules: {
       "@typescript-eslint/no-unused-vars": "off"
     }
+  },
+  {
+    files: ["eslint-rules/**/*.js"],
+
+    languageOptions: {
+      globals: {
+        ...globals.node
+      },
+      parserOptions: {
+        project: null
+      }
+    },
+
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
   }
 ];
