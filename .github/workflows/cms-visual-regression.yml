@@ -50,7 +50,7 @@ jobs:
           name: visual-regression-cms-screenshots
           path: cms/cypress/screenshots
 
-      - uses: reg-viz/reg-actions@v2
+      - uses: reg-viz/reg-actions@v3
         if: always()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

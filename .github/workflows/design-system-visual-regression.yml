@@ -42,7 +42,7 @@ jobs:
           npx wait-on http://localhost:6006
           yarn test:visual:update
 
-      - uses: reg-viz/reg-actions@v2
+      - uses: reg-viz/reg-actions@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           image-directory-path: design-system/__visual_snapshots__
