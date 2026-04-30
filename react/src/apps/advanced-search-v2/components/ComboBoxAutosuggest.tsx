@@ -40,14 +40,14 @@ const ComboBoxAutosuggest: React.FC<ComboBoxAutosuggestProps> = ({
   return (
     <Combobox value={hiddenOption} onChange={handleItemSelect}>
       <ComboboxInput
-        className={clsx("combobox-input")}
+        className={clsx("combobox__input")}
         onChange={(e) => onInputChange(e.target.value)}
         displayValue={() => value}
         placeholder={placeholder}
       />
 
       {filtered.length > 0 && (
-        <ComboboxOptions className="combobox-options">
+        <ComboboxOptions className="combobox__options">
           {/* Hidden option to prevent auto-selection of first item */}
           <ComboboxOption value={hiddenOption} style={{ display: "none" }}>
             {""}
@@ -58,9 +58,9 @@ const ComboBoxAutosuggest: React.FC<ComboBoxAutosuggestProps> = ({
               key={item.value}
               value={item}
               className={({ focus, selected }) =>
-                clsx("combobox-option", {
-                  "combobox-option--focused": focus,
-                  "combobox-option--selected": selected
+                clsx("combobox__option", {
+                  "combobox__option--focused": focus,
+                  "combobox__option--selected": selected
                 })
               }
             >

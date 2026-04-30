@@ -5,7 +5,7 @@ const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
   return (
     <div className="search-filter__combobox-wrapper">
       <input
-        className="combobox-input"
+        className="combobox__input"
         placeholder="Search in all material…"
         type="text"
         data-focus
@@ -13,7 +13,7 @@ const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
       />
       {open && (
         <div
-          className="combobox-options"
+          className="combobox__options"
           aria-label="Search suggestions"
           role="listbox"
           data-open=""
@@ -32,80 +32,80 @@ const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
             style={{ display: "none" }}
           />
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_73_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_73_"
             role="option"
             aria-selected="false"
           >
             Harry Potter
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_74_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_74_"
             role="option"
             aria-selected="false"
           >
             Harry Bosch
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_75_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_75_"
             role="option"
             aria-selected="false"
           >
             Harry Hole
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_76_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_76_"
             role="option"
             aria-selected="false"
           >
             Harry Potter og De Vises Sten
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_77_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_77_"
             role="option"
             aria-selected="false"
           >
             Potter, Harry (Fictitious character) -- Juvenile fiction
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_78_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_78_"
             role="option"
             aria-selected="false"
           >
             Harry Potter-film
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_7b_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_7b_"
             role="option"
             aria-selected="false"
           >
             Harry Potter og Fønixordenen
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_7c_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_7c_"
             role="option"
             aria-selected="false"
           >
             Harry Potter og Hemmelighedernes Kammer
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_7d_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_7d_"
             role="option"
             aria-selected="false"
           >
             Harry Potter og fangen fra Azkaban
           </div>
           <div
-            className="combobox-option"
-            id="headlessui-combobox-option-_r_7e_"
+            className="combobox__option"
+            id="headlessui-combobox__option-_r_7e_"
             role="option"
             aria-selected="false"
           >

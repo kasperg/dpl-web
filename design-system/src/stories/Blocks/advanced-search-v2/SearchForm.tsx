@@ -25,7 +25,7 @@ const SearchForm: React.FC = () => {
             </div>
             <div className="search-filter__combobox-wrapper">
               <input
-                className="combobox-input"
+                className="combobox__input"
                 placeholder="Søg efter bøger, film, musik og mere"
                 type="text"
               />
@@ -78,7 +78,7 @@ const SearchForm: React.FC = () => {
             </div>
             <div className="search-filter__combobox-wrapper">
               <input
-                className="combobox-input"
+                className="combobox__input"
                 placeholder="Søg efter bøger, film, musik og mere"
                 type="text"
               />
