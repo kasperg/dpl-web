@@ -61,7 +61,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
         aria-describedby="edit-multiple-checkboxes-title--wrapper--description"
         id="edit-multiple-checkboxes-title--wrapper"
         // eslint-disable-next-line local-rules/single-bem-block
-        className="checkboxes--wrapper fieldgroup form-composite webform-composite-visible-title js-webform-type-checkboxes webform-type-checkboxes js-form-item form-item js-form-wrapper form-wrapper dpl-fieldset"
+        className="checkboxes--wrapper fieldgroup form-composite webform-composite-visible-title js-webform-type-checkboxes webform-type-checkboxes js-form-item form-item js-form-wrapper form-wrapper fieldset"
       >
         <legend>
           <span className="fieldset-legend">Multiple checkboxes title</span>
@@ -89,7 +89,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
   };
 
   return (
-    <div className="dpl-form">
+    <div className="form">
       {includeHeadline && checkboxElementMultiple(label || "")}
       {!includeHeadline && checkboxElement(label || "label")}
     </div>

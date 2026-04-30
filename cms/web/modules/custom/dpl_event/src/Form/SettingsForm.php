@@ -117,7 +117,7 @@ final class SettingsForm extends ConfigFormBase {
     $form['unpublish']['unpublish_disable_warning'] = [
       '#type' => 'container',
       // js-form-wrapper is important - otherwise, Drupal states will not work.
-      '#prefix' => '<div class="dpl-form-warning js-form-wrapper">',
+      '#prefix' => '<div class="form-warning js-form-wrapper">',
       '#markup' => $this->t('Notice - if you do not choose that eventinstances get unpublished, they may show up in automatic and manual lists, across the site.', [], ['context' => 'DPL event']),
       '#suffix' => '</div>',
       '#states' => [

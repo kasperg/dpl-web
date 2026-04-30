@@ -19,13 +19,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
   withoutSubtitle = false,
 }) => {
   return (
-    <div className="dpl-form">
-      <div className="dpl-form__header">
-        <h1 className="dpl-form__title">{title}</h1>
-        {!withoutSubtitle && <p className="dpl-form__subtitle">{subtitle}</p>}
+    <div className="form">
+      <div className="form__header">
+        <h1 className="form__title">{title}</h1>
+        {!withoutSubtitle && <p className="form__subtitle">{subtitle}</p>}
       </div>
       <section>
-        <div className="dpl-form__body">
+        <div className="form__body">
           <form>
             <Input id="name" type="text" label="Your name" />
             <Input id="email" type="text" label="Your email" />
@@ -46,7 +46,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             <Input id="subject" type="text" label="Subject" />
             <Textarea id="message" name="message" label="Message" />
             <SubmitButton buttonText="Send message" />
-            <p className="dpl-form__info-message">
+            <p className="form__info-message">
               BEMÆRK!: Indsæt aldrig CPR-nummer eller følsomme oplysninger i
               formularen. Læs mere om{" "}
               <Links

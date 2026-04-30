@@ -8,8 +8,8 @@ export const RadioDrupal: React.FC<CheckboxProps> = ({
   description,
 }) => {
   return (
-    <div className="dpl-form">
-      <fieldset className="dpl-fieldset">
+    <div className="form">
+      <fieldset className="fieldset">
         <legend>
           <span className="fieldset-legend">{legend}</span>
         </legend>

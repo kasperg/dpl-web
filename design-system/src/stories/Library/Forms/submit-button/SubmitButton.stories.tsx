@@ -23,7 +23,7 @@ export default {
 } as Meta<typeof SubmitButton>;
 
 const Template: StoryFn<typeof SubmitButton> = (args) => (
-  <div className="dpl-form">
+  <div className="form">
     <SubmitButton {...args} />
   </div>
 );
